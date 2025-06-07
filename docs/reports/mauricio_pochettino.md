@@ -7,6 +7,12 @@
 
 Mauricio Pochettino represents the emotional choice with declining analytical justification
 
+## Visual Profile
+
+![Mauricio Pochettino Unified Scoring Analysis](../assets/radar_mauricio_pochettino.png)
+
+*Comprehensive radar chart showing Pochettino's unified final scoring breakdown. His #4 ranking (70.6/100) shows strong Spurs-Fit alignment but declining potential trajectory limits overall appeal.*
+
 ## Unified Final Scoring Breakdown
 
 ### Peer Analysis (40% of Final Score): 5.6/10

@@ -7,6 +7,12 @@
 
 Kieran McKenna represents the highest-ceiling choice with perfect age-trajectory alignment
 
+## Visual Profile
+
+![Kieran McKenna Unified Scoring Analysis](../assets/radar_kieran_mckenna.png)
+
+*Comprehensive radar chart showing McKenna's unified final scoring breakdown across peer analysis categories, Spurs-Fit components, and final ranking position. His #1 ranking (79.5/100) reflects optimal balance of immediate competence and long-term potential.*
+
 ## Unified Final Scoring Breakdown
 
 ### Peer Analysis (40% of Final Score): 5.8/10

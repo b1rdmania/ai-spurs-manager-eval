@@ -7,6 +7,12 @@
 
 Thomas Frank represents the value engineering specialist with financial efficiency
 
+## Visual Profile
+
+![Thomas Frank Unified Scoring Analysis](../assets/radar_thomas_frank.png)
+
+*Comprehensive radar chart showing Frank's unified final scoring breakdown. His #3 ranking (70.9/100) reflects exceptional value engineering with negative net spend (-£50M) and strong youth development.*
+
 ## Unified Final Scoring Breakdown
 
 ### Peer Analysis (40% of Final Score): 5.6/10

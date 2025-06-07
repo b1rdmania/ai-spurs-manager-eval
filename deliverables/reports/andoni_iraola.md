@@ -7,6 +7,12 @@
 
 Andoni Iraola represents the tactical purist fundamentally wrong for Spurs
 
+## Visual Profile
+
+![Andoni Iraola Unified Scoring Analysis](../assets/radar_andoni_iraola.png)
+
+*Comprehensive radar chart showing Iraola's unified final scoring breakdown. His #8 ranking (51.8/100) reflects worst big game record (1-8-5 vs Big 8) and fundamental performance deficiencies across all metrics.*
+
 ## Unified Final Scoring Breakdown
 
 ### Peer Analysis (40% of Final Score): 3.9/10

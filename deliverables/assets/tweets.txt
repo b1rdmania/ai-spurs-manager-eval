@@ -7,7 +7,7 @@ Using our revolutionary hybrid system (40% Peer Analysis + 60% Spurs-Fit Model):
 
 🥇 Kieran McKenna: 79.5/100
 
-Full dataset + methodology: bit.ly/spurs-eval-2025
+Full dataset + methodology: [REPO_LINK]
 
 #THFC #SpursAnalytics #DataDriven
 
@@ -23,7 +23,7 @@ Based on our comprehensive analysis (18 KPIs + Spurs-specific factors):
 🟡 Thomas Frank (Value Engineer)
 🟢 Mauricio Pochettino (Homecoming Hero)
 
-Full analysis: bit.ly/spurs-eval-2025
+Full analysis: [REPO_LINK]
 
 #THFC #SpursNext #DataDriven
 
@@ -35,7 +35,7 @@ Full analysis: bit.ly/spurs-eval-2025
 • Age 38 advantage maximizes potential
 • Perfect fit for Spurs DNA
 
-Full report: bit.ly/spurs-mckenna-report
+Full report: [PDF_LINK]
 #THFC #McKenna #SpursNext
 
 ### Roberto De Zerbi  
@@ -44,7 +44,7 @@ Full report: bit.ly/spurs-mckenna-report
 • Highest Fit Index: Perfect tactical alignment
 • Risk: Age 44 limits potential
 
-Full report: bit.ly/spurs-dezerbi-report
+Full report: [PDF_LINK]
 #THFC #DeZerbi #SpursNext
 
 ### Thomas Frank
@@ -53,7 +53,7 @@ Full report: bit.ly/spurs-dezerbi-report
 • Net spend -£50M with squad value +£120M
 • Youth integration specialist
 
-Full report: bit.ly/spurs-frank-report
+Full report: [PDF_LINK]
 #THFC #ThomasFrank #SpursNext
 
 ### Mauricio Pochettino
@@ -62,7 +62,7 @@ Full report: bit.ly/spurs-frank-report
 • High Spurs-Fit but declining trajectory
 • Emotional appeal vs analytical reality
 
-Full report: bit.ly/spurs-poch-report
+Full report: [PDF_LINK]
 #THFC #Pochettino #SpursNext
 
 ### Xavi Hernández
@@ -71,7 +71,7 @@ Full report: bit.ly/spurs-poch-report
 • Highest Fit Index but terrible potential trends
 • Squad management concerns
 
-Full report: bit.ly/spurs-xavi-report
+Full report: [PDF_LINK]
 #THFC #Xavi #SpursNext
 
 ### Marco Silva
@@ -80,7 +80,7 @@ Full report: bit.ly/spurs-xavi-report
 • Squad management excellence (100% availability)
 • Conservative fit with Spurs DNA
 
-Full report: bit.ly/spurs-silva-report
+Full report: [PDF_LINK]
 #THFC #MarcoSilva #SpursNext
 
 ### Oliver Glasner
@@ -89,7 +89,7 @@ Full report: bit.ly/spurs-silva-report
 • Limited youth development track record
 • Mid-table performance ceiling
 
-Full report: bit.ly/spurs-glasner-report
+Full report: [PDF_LINK]
 #THFC #Glasner #SpursNext
 
 ### Andoni Iraola
@@ -98,7 +98,7 @@ Full report: bit.ly/spurs-glasner-report
 • Big game struggles (1-8-5 vs Big 8)
 • Poor youth development alignment
 
-Full report: bit.ly/spurs-iraola-report
+Full report: [PDF_LINK]
 #THFC #Iraola #SpursNext
 
 ---
@@ -110,18 +110,6 @@ Full report: bit.ly/spurs-iraola-report
 - Each tweet includes relevant hashtags and links
 - Engage with replies to drive discussion
 
-**Updated Bitly Links to Create:**
-
-**Main Site:**
-- **Create**: `bit.ly/spurs-eval-2025`
-- **Target**: `https://b1rdmania.github.io/ai-spurs-manager-eval/`
-
-**Manager Reports:**
-- **Create**: `bit.ly/spurs-mckenna-report` → `https://b1rdmania.github.io/ai-spurs-manager-eval/reports/kieran_mckenna.md`
-- **Create**: `bit.ly/spurs-dezerbi-report` → `https://b1rdmania.github.io/ai-spurs-manager-eval/reports/roberto_de_zerbi.md`
-- **Create**: `bit.ly/spurs-frank-report` → `https://b1rdmania.github.io/ai-spurs-manager-eval/reports/thomas_frank.md`
-- **Create**: `bit.ly/spurs-poch-report` → `https://b1rdmania.github.io/ai-spurs-manager-eval/reports/mauricio_pochettino.md`
-- **Create**: `bit.ly/spurs-xavi-report` → `https://b1rdmania.github.io/ai-spurs-manager-eval/reports/xavi_hernandez.md`
-- **Create**: `bit.ly/spurs-silva-report` → `https://b1rdmania.github.io/ai-spurs-manager-eval/reports/marco_silva.md`
-- **Create**: `bit.ly/spurs-glasner-report` → `https://b1rdmania.github.io/ai-spurs-manager-eval/reports/oliver_glasner.md`
-- **Create**: `bit.ly/spurs-iraola-report` → `https://b1rdmania.github.io/ai-spurs-manager-eval/reports/andoni_iraola.md`
+**Links to replace:**
+- [REPO_LINK] → Shortened GitHub repo URL
+- [PDF_LINK] → Individual manager PDF shortened URLs
