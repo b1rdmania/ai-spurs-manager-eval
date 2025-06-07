@@ -225,25 +225,28 @@ def create_category_scores(kpi_df):
     return category_scores
 
 def create_score_matrix(scores_df):
-    """Create a summary score matrix visualization"""
+    """Create a unified scoring matrix visualization"""
     
     fig, ax = plt.subplots(figsize=(14, 8))
     
-    # Prepare data for heatmap
+    # Prepare data for heatmap - use only the peer analysis categories
     display_df = scores_df.copy()
     display_df = display_df.set_index('name')
     
-    # Remove fit_score for heatmap, we'll add it separately
-    fit_scores = display_df['fit_score']
-    heatmap_df = display_df.drop('fit_score', axis=1)
+    # Select peer analysis columns for the heatmap
+    peer_columns = ['tactical_style', 'attacking_potency', 'defensive_solidity', 
+                    'big_game_performance', 'youth_development', 'squad_management']
+    
+    # Create heatmap with peer analysis scores
+    heatmap_df = display_df[peer_columns]
     
     # Create heatmap
     sns.heatmap(heatmap_df, annot=True, cmap='RdYlGn', center=5, 
                 vmin=0, vmax=10, fmt='.1f', cbar_kws={'label': 'Score (0-10)'})
     
-    plt.title('Manager Evaluation Matrix\n12-Category Breakdown', 
+    plt.title('Unified Final Scoring System - Peer Analysis Component\nShowing 6 Key Categories (40% of Final Score)', 
               fontsize=16, fontweight='bold', pad=20)
-    plt.xlabel('Evaluation Categories', fontsize=12)
+    plt.xlabel('Peer Analysis Categories (40% Weight)', fontsize=12)
     plt.ylabel('Manager Candidates', fontsize=12)
     
     # Rotate x-axis labels for readability
@@ -252,7 +255,7 @@ def create_score_matrix(scores_df):
     plt.tight_layout()
     plt.savefig('deliverables/assets/score_matrix.png', dpi=300, bbox_inches='tight')
     plt.close()
-    print("📊 Created score matrix visualization")
+    print("📊 Created unified scoring matrix visualization")
 
 # Generate tweet content (updated for Unified Final scores)
 def create_tweet_content(scores_df):
