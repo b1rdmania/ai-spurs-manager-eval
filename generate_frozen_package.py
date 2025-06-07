@@ -2,7 +2,7 @@
 """
 Generate frozen dataset package for AI-Driven Manager Evaluation
 Creates all deliverables: CSV, PDFs, assets, site
-Updated for Spurs-Fit 2-Layer Model
+Updated for Unified Final Scoring System (40% Peer + 60% Spurs-Fit)
 """
 
 import pandas as pd
@@ -17,11 +17,11 @@ import sys
 
 # Add scripts directory to path
 sys.path.append('scripts')
-from score_engine import calculate_spursfit_scores
+from score_engine import calculate_unified_scores
 
 print("🎯 Generating Frozen Dataset Package for Spurs Manager Evaluation")
-print("🔄 Using NEW Spurs-Fit 2-Layer Model")
-print("=" * 60)
+print("🔄 Using NEW Unified Final Scoring System (40% Peer + 60% Spurs-Fit)")
+print("=" * 70)
 
 # Create deliverables structure
 def setup_deliverables():
@@ -31,24 +31,24 @@ def setup_deliverables():
         Path(dir_path).mkdir(parents=True, exist_ok=True)
     print("📁 Created deliverables structure")
 
-# Generate curated KPI dataset and Spurs-Fit scores
-def create_spursfit_dataset():
-    """Create the master dataset using Spurs-Fit 2-layer scoring"""
+# Generate curated KPI dataset and Unified Final scores
+def create_unified_dataset():
+    """Create the master dataset using Unified Final scoring"""
     
-    # Run the new Spurs-Fit scoring system
-    print("🚀 Running Spurs-Fit 2-Layer Scoring System...")
-    df = calculate_spursfit_scores()
+    # Run the new Unified Final scoring system
+    print("🚀 Running Unified Final Scoring System...")
+    df = calculate_unified_scores()
     
     if df is None:
-        print("❌ Failed to generate Spurs-Fit scores")
+        print("❌ Failed to generate Unified Final scores")
         return None
     
     # Load the generated scores
-    spursfit_df = pd.read_csv('deliverables/data/scores_spursfit.csv')
+    unified_df = pd.read_csv('deliverables/data/scores_unified.csv')
     
     # Ensure consistent naming for compatibility
-    if 'manager_name' in spursfit_df.columns and 'name' not in spursfit_df.columns:
-        spursfit_df['name'] = spursfit_df['manager_name']
+    if 'manager_name' in unified_df.columns and 'name' not in unified_df.columns:
+        unified_df['name'] = unified_df['manager_name']
     
     # Add club information for display
     club_mapping = {
@@ -62,10 +62,10 @@ def create_spursfit_dataset():
         'Roberto De Zerbi': 'Marseille'
     }
     
-    spursfit_df['club'] = spursfit_df['name'].map(club_mapping)
+    unified_df['club'] = unified_df['name'].map(club_mapping)
     
     # Copy to legacy format for compatibility  
-    kpi_df = spursfit_df.copy()
+    kpi_df = unified_df.copy()
     
     # Save processed KPI data
     output_path = Path('deliverables/data/kpi_merged.csv')
@@ -74,37 +74,72 @@ def create_spursfit_dataset():
     
     return kpi_df
 
-# Generate radar charts for each manager (updated for Spurs-Fit)
+# Generate radar charts for each manager (updated for Unified Scoring)
 def create_radar_charts(scores_df):
-    """Create radar charts showing Fit vs Potential breakdown"""
+    """Create radar charts showing Peer vs Spurs-Fit vs Final breakdown"""
     
-    # Create a simplified radar showing the two key dimensions
-    def create_spursfit_radar(manager_data, manager_name, save_path):
-        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 8))
+    # Create a comprehensive radar showing all three dimensions
+    def create_unified_radar(manager_data, manager_name, save_path):
+        fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(16, 12))
         
-        # Left chart: Fit Index breakdown
-        fit_categories = ['Front-Foot Play', 'Youth Development', 'Talent Inflation', 'Big Games']
-        fit_scores = [25, 25, 25, 25]  # Placeholder - would need detailed breakdown
+        # Top left: Peer Score breakdown (12 categories)
+        peer_categories = ['Tactical', 'Attack', 'Defense', 'Big Games', 'Youth', 'Squad Mgmt']
+        peer_scores = [
+            manager_data.get('tactical_style', 5),
+            manager_data.get('attacking_potency', 5),
+            manager_data.get('defensive_solidity', 5),
+            manager_data.get('big_game_performance', 5),
+            manager_data.get('youth_development', 5),
+            manager_data.get('squad_management', 5)
+        ]
         
-        ax1.bar(fit_categories, fit_scores, color=['#1E3A8A', '#3B82F6', '#60A5FA', '#93C5FD'])
-        ax1.set_title(f'{manager_name}\nFit Index: {manager_data["fit_index"]:.1f}/100', fontsize=16, fontweight='bold')
-        ax1.set_ylabel('Score (0-25)')
-        ax1.set_ylim(0, 25)
-        plt.setp(ax1.xaxis.get_majorticklabels(), rotation=45, ha='right')
+        ax1.barh(peer_categories, peer_scores, color=['#DC2626', '#EA580C', '#D97706', '#CA8A04', '#65A30D', '#16A34A'])
+        ax1.set_title(f'Peer Score: {manager_data["peer_score"]:.1f}/10', fontsize=14, fontweight='bold')
+        ax1.set_xlabel('Score (0-10)')
+        ax1.set_xlim(0, 10)
         
-        # Right chart: Potential factors
-        potential_categories = ['Age Factor', 'Trend', 'Resource Leverage', 'Temperament']
-        potential_scores = [25, 25, 25, 25]  # Placeholder
+        # Top right: Spurs-Fit breakdown
+        spursfit_categories = ['Fit Index', 'Potential Index']
+        spursfit_scores = [manager_data["fit_index"], manager_data["potential_index"]]
         
-        ax2.bar(potential_categories, potential_scores, color=['#059669', '#10B981', '#34D399', '#6EE7B7'])
-        ax2.set_title(f'Potential Index: {manager_data["potential_index"]:.1f}/100', fontsize=16, fontweight='bold')
-        ax2.set_ylabel('Score (0-25)')
-        ax2.set_ylim(0, 25)
-        plt.setp(ax2.xaxis.get_majorticklabels(), rotation=45, ha='right')
+        bars = ax2.bar(spursfit_categories, spursfit_scores, color=['#1E3A8A', '#059669'])
+        ax2.set_title(f'Spurs-Fit: {manager_data["spursfit_total"]:.1f}/100', fontsize=14, fontweight='bold')
+        ax2.set_ylabel('Score (0-100)')
+        ax2.set_ylim(0, 100)
         
-        # Add total score
-        fig.suptitle(f'TOTAL SPURS-FIT SCORE: {manager_data["total_score"]:.1f}/100', 
-                    fontsize=20, fontweight='bold', y=0.95)
+        # Add value labels on bars
+        for bar, value in zip(bars, spursfit_scores):
+            ax2.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 1, 
+                    f'{value:.1f}', ha='center', va='bottom', fontweight='bold')
+        
+        # Bottom left: Final Score composition
+        composition_labels = ['Peer (40%)', 'Spurs-Fit (60%)']
+        composition_values = [
+            manager_data["peer_score"] * 10 * 0.4,
+            manager_data["spursfit_total"] * 0.6
+        ]
+        
+        colors = ['#7C3AED', '#DC2626']
+        wedges, texts, autotexts = ax3.pie(composition_values, labels=composition_labels, 
+                                          colors=colors, autopct='%1.1f', startangle=90)
+        ax3.set_title(f'Final Score Breakdown', fontsize=14, fontweight='bold')
+        
+        # Bottom right: Final ranking visualization
+        all_scores = [79.5, 75.6, 70.9, 70.6, 63.7, 60.7, 55.6, 51.8]  # Current rankings
+        manager_score = manager_data["final_score"]
+        manager_rank = manager_data["rank"]
+        
+        bars = ax4.bar(range(1, 9), all_scores, color=['#10B981' if i+1 == manager_rank else '#6B7280' for i in range(8)])
+        ax4.axhline(y=manager_score, color='red', linestyle='--', linewidth=2)
+        ax4.set_title(f'Final Ranking: #{manager_rank}', fontsize=14, fontweight='bold')
+        ax4.set_xlabel('Manager Rank')
+        ax4.set_ylabel('Final Score (0-100)')
+        ax4.set_xticks(range(1, 9))
+        ax4.set_ylim(0, 100)
+        
+        # Add overall title
+        fig.suptitle(f'{manager_name}\nFINAL SCORE: {manager_data["final_score"]:.1f}/100', 
+                    fontsize=18, fontweight='bold', y=0.98)
         
         plt.tight_layout()
         plt.savefig(save_path, dpi=300, bbox_inches='tight')
@@ -117,9 +152,9 @@ def create_radar_charts(scores_df):
     for idx, row in scores_df.iterrows():
         manager_name = row['name']
         chart_path = charts_dir / f"radar_{manager_name.lower().replace(' ', '_')}.png"
-        create_spursfit_radar(row, manager_name, chart_path)
+        create_unified_radar(row, manager_name, chart_path)
     
-    print(f"📊 Created {len(scores_df)} Spurs-Fit radar charts in {charts_dir}")
+    print(f"📊 Created {len(scores_df)} Unified scoring radar charts in {charts_dir}")
 
 # Generate 12-category scores using simplified PCA approach
 def create_category_scores(kpi_df):
@@ -219,399 +254,342 @@ def create_score_matrix(scores_df):
     plt.close()
     print("📊 Created score matrix visualization")
 
-# Generate tweet content
+# Generate tweet content (updated for Unified Final scores)
 def create_tweet_content(scores_df):
-    """Create social media content for the new Spurs-Fit system"""
+    """Generate tweet content showcasing the new Unified Final scores"""
     
-    tweets = []
+    # Sort by final score
+    top_manager = scores_df.nlargest(1, 'final_score').iloc[0]
     
-    # Overall announcement tweet
-    top_manager = scores_df.iloc[0]
-    announcement = f"""🚨 SPURS-FIT MANAGER RANKINGS 2025
+    # Intro tweet showcasing our methodology
+    intro_tweet = f"""🔥 SPURS MANAGER EVALUATION: UNIFIED FINAL RANKINGS
 
-NEW 2-Layer Model:
-• Fit Index (60%): How well they meet our benchmarks
-• Potential Index (40%): Ceiling they can reach
+Using our revolutionary hybrid system (40% Peer Analysis + 60% Spurs-Fit Model):
 
-🥇 {top_manager['name']}: {top_manager['total_score']:.1f}/100
-(Fit: {top_manager['fit_index']:.1f} • Potential: {top_manager['potential_index']:.1f})
+🥇 {top_manager['name']}: {top_manager['final_score']:.1f}/100
 
-Full rankings 👇
+Full dataset + methodology: [REPO_LINK]
 
-#COYS #SpursManager #Data"""
-    tweets.append(("ANNOUNCEMENT", announcement))
-    
-    # Manager-specific descriptions using Spurs-Fit metrics
-    manager_descriptions = {
-        'Kieran McKenna': f"🏴󠁧󠁢󠁥󠁮󠁧󠁿 The Young Virtuoso\n• Overall: {scores_df[scores_df['name']=='Kieran McKenna'].iloc[0]['total_score']:.1f}/100 (Fit: {scores_df[scores_df['name']=='Kieran McKenna'].iloc[0]['fit_index']:.1f} • Potential: {scores_df[scores_df['name']=='Kieran McKenna'].iloc[0]['potential_index']:.1f})\n• Age: 38 - Peak years ahead\n• Championship dominance\n• Youth integration champion\n\nIpswich's miracle worker ready for N17? 🚀",
+#THFC #SpursAnalytics #DataDriven
+
+Which manager would YOU choose? 🤔"""
+
+    # Manager specific tweets (Updated with final scores)
+    manager_tweets = {
+        'Kieran McKenna': f"🏴󠁧󠁢󠁥󠁮󠁧󠁿 The Young Virtuoso\n• Final Score: {scores_df[scores_df['name']=='Kieran McKenna'].iloc[0]['final_score']:.1f}/100 (Peer: {scores_df[scores_df['name']=='Kieran McKenna'].iloc[0]['peer_score']:.1f}/10 • Spurs-Fit: {scores_df[scores_df['name']=='Kieran McKenna'].iloc[0]['spursfit_total']:.1f}/100)\n• Age 38 advantage maximizes potential\n• Perfect fit for Spurs DNA\n\nFull report: [PDF_LINK]\n#THFC #McKenna #SpursNext",
         
-        'Roberto De Zerbi': f"🇮🇹 The Technical Virtuoso\n• Overall: {scores_df[scores_df['name']=='Roberto De Zerbi'].iloc[0]['total_score']:.1f}/100 (Fit: {scores_df[scores_df['name']=='Roberto De Zerbi'].iloc[0]['fit_index']:.1f} • Potential: {scores_df[scores_df['name']=='Roberto De Zerbi'].iloc[0]['potential_index']:.1f})\n• Perfect Spurs fit score\n• xG sequence: 0.14 (elite)\n• Big-8 record: 8W-9L-5D\n\nBrighton's architect ready for glory? 🎨",
+        'Roberto De Zerbi': f"🇮🇹 The Technical Virtuoso\n• Final Score: {scores_df[scores_df['name']=='Roberto De Zerbi'].iloc[0]['final_score']:.1f}/100 (Peer: {scores_df[scores_df['name']=='Roberto De Zerbi'].iloc[0]['peer_score']:.1f}/10 • Spurs-Fit: {scores_df[scores_df['name']=='Roberto De Zerbi'].iloc[0]['spursfit_total']:.1f}/100)\n• Highest Fit Index: Perfect tactical alignment\n• Risk: Age 44 limits potential\n\nFull report: [PDF_LINK]\n#THFC #DeZerbi #SpursNext",
         
-        'Thomas Frank': f"🇩🇰 The Value Engineer\n• Overall: {scores_df[scores_df['name']=='Thomas Frank'].iloc[0]['total_score']:.1f}/100 (Fit: {scores_df[scores_df['name']=='Thomas Frank'].iloc[0]['fit_index']:.1f} • Potential: {scores_df[scores_df['name']=='Thomas Frank'].iloc[0]['potential_index']:.1f})\n• Net spend: -£50M (only profit)\n• Brentford overachievement\n• Media mastery: 8.7/10\n\nMaximum ROI guaranteed? 💰",
+        'Thomas Frank': f"🇩🇰 The Value Engineer\n• Final Score: {scores_df[scores_df['name']=='Thomas Frank'].iloc[0]['final_score']:.1f}/100 (Peer: {scores_df[scores_df['name']=='Thomas Frank'].iloc[0]['peer_score']:.1f}/10 • Spurs-Fit: {scores_df[scores_df['name']=='Thomas Frank'].iloc[0]['spursfit_total']:.1f}/100)\n• Net spend -£50M with squad value +£120M\n• Youth integration specialist\n\nFull report: [PDF_LINK]\n#THFC #ThomasFrank #SpursNext",
         
-        'Mauricio Pochettino': f"🇦🇷 The Homecoming Hero\n• Overall: {scores_df[scores_df['name']=='Mauricio Pochettino'].iloc[0]['total_score']:.1f}/100 (Fit: {scores_df[scores_df['name']=='Mauricio Pochettino'].iloc[0]['fit_index']:.1f} • Potential: {scores_df[scores_df['name']=='Mauricio Pochettino'].iloc[0]['potential_index']:.1f})\n• Academy debuts: 12 (highest)\n• Fan connection: Perfect 10/10\n• Squad value: +£210M boost\n\nData justifies the emotion 💙",
+        'Mauricio Pochettino': f"🇦🇷 The Homecoming Hero\n• Final Score: {scores_df[scores_df['name']=='Mauricio Pochettino'].iloc[0]['final_score']:.1f}/100 (Peer: {scores_df[scores_df['name']=='Mauricio Pochettino'].iloc[0]['peer_score']:.1f}/10 • Spurs-Fit: {scores_df[scores_df['name']=='Mauricio Pochettino'].iloc[0]['spursfit_total']:.1f}/100)\n• High Spurs-Fit but declining trajectory\n• Emotional appeal vs analytical reality\n\nFull report: [PDF_LINK]\n#THFC #Pochettino #SpursNext",
         
-        'Xavi Hernández': f"🇪🇸 The Flawed Visionary\n• Overall: {scores_df[scores_df['name']=='Xavi Hernández'].iloc[0]['total_score']:.1f}/100 (Fit: {scores_df[scores_df['name']=='Xavi Hernández'].iloc[0]['fit_index']:.1f} • Potential: {scores_df[scores_df['name']=='Xavi Hernández'].iloc[0]['potential_index']:.1f})\n• xG per shot: 0.12 (elite)\n• Youth minutes: 22%\n• Media volatility: Crisis level\n\nTalent vs temperament dilemma 🧬",
+        'Xavi Hernández': f"🇪🇸 The Flawed Visionary\n• Final Score: {scores_df[scores_df['name']=='Xavi Hernández'].iloc[0]['final_score']:.1f}/100 (Peer: {scores_df[scores_df['name']=='Xavi Hernández'].iloc[0]['peer_score']:.1f}/10 • Spurs-Fit: {scores_df[scores_df['name']=='Xavi Hernández'].iloc[0]['spursfit_total']:.1f}/100)\n• Highest Fit Index but terrible potential trends\n• Squad management concerns\n\nFull report: [PDF_LINK]\n#THFC #Xavi #SpursNext",
         
-        'Marco Silva': f"🇵🇹 The Steady Hand\n• Overall: {scores_df[scores_df['name']=='Marco Silva'].iloc[0]['total_score']:.1f}/100 (Fit: {scores_df[scores_df['name']=='Marco Silva'].iloc[0]['fit_index']:.1f} • Potential: {scores_df[scores_df['name']=='Marco Silva'].iloc[0]['potential_index']:.1f})\n• Squad availability: 93%\n• Media relations: Perfect 10/10\n• Fulham stability specialist\n\nSafe choice, limited ceiling? 🛡️",
+        'Marco Silva': f"🇵🇹 The Steady Hand\n• Final Score: {scores_df[scores_df['name']=='Marco Silva'].iloc[0]['final_score']:.1f}/100 (Peer: {scores_df[scores_df['name']=='Marco Silva'].iloc[0]['peer_score']:.1f}/10 • Spurs-Fit: {scores_df[scores_df['name']=='Marco Silva'].iloc[0]['spursfit_total']:.1f}/100)\n• Squad management excellence (100% availability)\n• Conservative fit with Spurs DNA\n\nFull report: [PDF_LINK]\n#THFC #MarcoSilva #SpursNext",
         
-        'Oliver Glasner': f"🇦🇹 The Quick-Fix Specialist\n• Overall: {scores_df[scores_df['name']=='Oliver Glasner'].iloc[0]['total_score']:.1f}/100 (Fit: {scores_df[scores_df['name']=='Oliver Glasner'].iloc[0]['fit_index']:.1f} • Potential: {scores_df[scores_df['name']=='Oliver Glasner'].iloc[0]['potential_index']:.1f})\n• Palace mid-season rescue\n• Big games: 8.2/10\n• Youth development: Minimal\n\nShort-term impact, long-term concerns? ⚡",
+        'Oliver Glasner': f"🇦🇹 The Quick-Fix Specialist\n• Final Score: {scores_df[scores_df['name']=='Oliver Glasner'].iloc[0]['final_score']:.1f}/100 (Peer: {scores_df[scores_df['name']=='Oliver Glasner'].iloc[0]['peer_score']:.1f}/10 • Spurs-Fit: {scores_df[scores_df['name']=='Oliver Glasner'].iloc[0]['spursfit_total']:.1f}/100)\n• Limited youth development track record\n• Mid-table performance ceiling\n\nFull report: [PDF_LINK]\n#THFC #Glasner #SpursNext",
         
-        'Andoni Iraola': f"🇪🇸 The Wrong Fit\n• Overall: {scores_df[scores_df['name']=='Andoni Iraola'].iloc[0]['total_score']:.1f}/100 (Fit: {scores_df[scores_df['name']=='Andoni Iraola'].iloc[0]['fit_index']:.1f} • Potential: {scores_df[scores_df['name']=='Andoni Iraola'].iloc[0]['potential_index']:.1f})\n• Big-8 record: 1W-8L-5D\n• Fan sentiment: 20%\n• Tactical style interesting\n\nPurist approach, wrong venue? 🍒"
+        'Andoni Iraola': f"🇪🇸 The Wrong Fit\n• Final Score: {scores_df[scores_df['name']=='Andoni Iraola'].iloc[0]['final_score']:.1f}/100 (Peer: {scores_df[scores_df['name']=='Andoni Iraola'].iloc[0]['peer_score']:.1f}/10 • Spurs-Fit: {scores_df[scores_df['name']=='Andoni Iraola'].iloc[0]['spursfit_total']:.1f}/100)\n• Big game struggles (1-8-5 vs Big 8)\n• Poor youth development alignment\n\nFull report: [PDF_LINK]\n#THFC #Iraola #SpursNext"
     }
-    
-    # Create manager tweets
-    for manager, description in manager_descriptions.items():
-        safe_name = manager.lower().replace(' ', '_').replace('ñ', 'n')
-        tweet = f"""{description}
 
-📊 Full breakdown: [PDF_LINK_{safe_name.upper()}]
-📈 All data: [REPO_LINK]
+    # Poll tweet
+    poll_tweet = """🏟️ SPURS NEXT MANAGER POLL
 
-#COYS #SpursManager #{safe_name.replace('_', '').capitalize()}"""
-        
-        tweets.append((manager.upper().replace(' ', '_'), tweet))
-    
-    # System explanation tweet
-    system_explanation = """🔬 NEW SPURS-FIT MODEL EXPLAINED
+Based on our comprehensive analysis (18 KPIs + Spurs-specific factors):
 
-Instead of generic peer comparison, we now measure:
+🔵 Kieran McKenna (Young Virtuoso)
+🔴 Roberto De Zerbi (Technical Master) 
+🟡 Thomas Frank (Value Engineer)
+🟢 Mauricio Pochettino (Homecoming Hero)
 
-🎯 FIT INDEX (60%):
-• Front-foot play ✓
-• Youth development ✓  
-• Transfer efficiency ✓
-• Big game performance ✓
+Full analysis: [REPO_LINK]
 
-📈 POTENTIAL INDEX (40%):
-• Age factor (younger=higher)
-• 3-year trajectory 
-• Resource leverage
-• Temperament stability
+#THFC #SpursNext #DataDriven"""
 
-= Total 0-100 score showing floor vs ceiling
+    # Save all tweet content
+    tweet_content = f"""# Spurs Manager Evaluation - Tweet Content
 
-#DataDriven #COYS"""
-    tweets.append(("SYSTEM_EXPLANATION", system_explanation))
-    
-    # Save tweet content
-    with open('deliverables/assets/tweets.txt', 'w') as f:
-        for tweet_type, content in tweets:
-            f.write(f"=== {tweet_type} ===\n")
-            f.write(content)
-            f.write("\n\n")
-    
-    print("🐦 Created Spurs-Fit tweet content")
-    return tweets
+## Launch Tweet (Pin)
+{intro_tweet}
 
-# Generate PDF reports (markdown templates)
-def create_pdf_reports(spursfit_df):
-    """Create comprehensive PDF reports for each manager using new template"""
-    
-    # Enhanced comprehensive template
-    template = """# {manager_name} — {club}  
-**Spurs-Fit {total_score} / 100** (Fit {fit_index} • Potential {potential_index})
+## Poll Tweet (Day 1 - 2 hours after launch)
+{poll_tweet}
 
-![radar](../assets/radar_{safe_name}.png)
+## Manager Profile Tweets (Days 2-3, every 12 minutes during peak hours)
+
+### Kieran McKenna
+{manager_tweets['Kieran McKenna']}
+
+### Roberto De Zerbi  
+{manager_tweets['Roberto De Zerbi']}
+
+### Thomas Frank
+{manager_tweets['Thomas Frank']}
+
+### Mauricio Pochettino
+{manager_tweets['Mauricio Pochettino']}
+
+### Xavi Hernández
+{manager_tweets['Xavi Hernández']}
+
+### Marco Silva
+{manager_tweets['Marco Silva']}
+
+### Oliver Glasner
+{manager_tweets['Oliver Glasner']}
+
+### Andoni Iraola
+{manager_tweets['Andoni Iraola']}
 
 ---
 
-## 1 Executive Snapshot  
-{manager_name} {executive_summary}
+**Posting Strategy:**
+- Launch: Pin intro tweet
+- +2 hours: Poll tweet  
+- Days 2-3: Manager profiles every 12 minutes during 9am-6pm GMT
+- Each tweet includes relevant hashtags and links
+- Engage with replies to drive discussion
 
----
-
-## 2 KPI Table  
-| Metric | Value | Benchmark | Status |
-|--------|--------|-----------|---------|
-| **PPDA** | {ppda} | ≤11 | {ppda_status} |
-| **npxG Diff/90** | {npxgd_90} | ≥0.10 | {npxgd_status} |
-| **xG per Shot** | {xg_per_shot} | ≥0.11 | {xg_shot_status} |
-| **U23 Minutes %** | {u23_minutes_pct}% | ≥10% | {u23_status} |
-| **Academy Debuts** | {academy_debuts} | ≥3 | {academy_status} |
-| **Squad Value Δ** | £{squad_value_delta_m}M | ≥£20M | {squad_delta_status} |
-| **Net Spend** | £{net_spend_m}M | Efficient | {net_spend_status} |
-| **KO Win Rate** | {ko_win_rate}% | ≥50% | {ko_status} |
-| **Big-8 Record** | {big8_w}W-{big8_l}L-{big8_d}D | Competitive | {big8_status} |
-
----
-
-## 3 Traditional Categories (Legacy Peer Model)  
-{traditional_breakdown}
-
----
-
-## 4 Spurs-Fit Breakdown  
-**Front-Foot Tactics ({front_foot_score}/25)** — {front_foot_analysis}  
-**Youth Pathway ({youth_score}/25)** — {youth_analysis}  
-**Talent Inflation ({talent_score}/25)** — {talent_analysis}  
-**Big-Game Progression ({big_game_score}/25)** — {big_game_analysis}  
-**Fit Index {fit_index} / 100**
-
-**Potential Drivers ({potential_index})** — Age {age} ({age_factor:.1f}), Trend {trend_score}, Resource Leverage {resource_leverage}, Temperament {temperament_score}.
-
----
-
-## 5 Cultural & Board Fit  
-{cultural_fit}
-
----
-
-## 6 Big-Match Analysis  
-{big_match_analysis}
-
----
-
-## 7 Financial Impact  
-{financial_impact}
-
----
-
-## 8 Injury & Conditioning  
-Player availability {player_availability}%. {injury_analysis}
-
----
-
-## 9 Summary & Recommendation  
-{summary_recommendation}
-
----
-
-## Appendix  
-**Data Sources:** FBref, Transfermarkt, Premier Injuries, Opta/StatsBomb  
-**Cut-off Date:** 7 June 2025  
-**Methodology:** Spurs-Fit 2-Layer Model (60% Fit Index + 40% Potential Index)  
-**Generated:** {timestamp}
+**Links to replace:**
+- [REPO_LINK] → Shortened GitHub repo URL
+- [PDF_LINK] → Individual manager PDF shortened URLs
 """
     
-    # Manager-specific content
+    with open('deliverables/assets/tweets.txt', 'w') as f:
+        f.write(tweet_content)
+    
+    print("📱 Created tweet content")
+
+# Generate PDFs for each manager (updated for Unified Final scoring)
+def create_pdf_reports(unified_df):
+    """Generate comprehensive manager reports using Unified Final scores"""
+    
+    # Report template (updated for Unified Final scoring)
+    report_template = """# {name} - Manager Analysis Report
+
+## Executive Summary
+
+**Final Score: {final_score}/100** (Peer {peer_score}/10 • Spurs-Fit {spursfit_total}/100)
+**Rank: #{rank} of 8**
+
+{name} represents {summary_description}
+
+## Unified Final Scoring Breakdown
+
+### Peer Analysis (40% of Final Score): {peer_score}/10
+- **Peer Ranking:** #{peer_rank} of 8
+- **Tactical Style:** {tactical_style:.1f}/10
+- **Attacking Potency:** {attacking_potency:.1f}/10  
+- **Defensive Solidity:** {defensive_solidity:.1f}/10
+- **Big Game Performance:** {big_game_performance:.1f}/10
+- **Youth Development:** {youth_development:.1f}/10
+- **Squad Management:** {squad_management:.1f}/10
+
+### Spurs-Fit Analysis (60% of Final Score): {spursfit_total}/100
+
+#### Fit Index (60% of Spurs-Fit): {fit_index}/100
+- **Front-Foot Play Alignment:** {front_foot_status}
+- **Youth Development Focus:** {youth_status}  
+- **Talent Inflation Capability:** {inflation_status}
+- **Big Game Mentality:** {big_game_status}
+
+#### Potential Index (40% of Spurs-Fit): {potential_index}/100
+- **Age Factor:** {age_status} (Age {age})
+- **3-Year Performance Trend:** {trend_status}
+- **Resource Leverage:** {resource_status}
+- **Temperament:** {temperament_status}
+
+## Key Performance Indicators
+
+### Tactical Metrics
+- **PPDA:** {ppda} (lower = more aggressive)
+- **OPPDA:** {oppda} (higher = forces opponent pressure)
+- **High Press Regains/90:** {high_press_regains_90}
+
+### Financial Profile  
+- **Net Spend:** £{net_spend_m}M
+- **Squad Value Change:** £{squad_value_delta_m}M
+- **Transfer Efficiency:** {transfer_efficiency}
+
+### Squad Development
+- **U23 Minutes %:** {u23_minutes_pct}%
+- **Academy Debuts:** {academy_debuts}
+- **Player Availability:** {player_availability}%
+
+## Strategic Assessment
+
+### Strengths
+{strengths}
+
+### Concerns  
+{concerns}
+
+### Spurs Fit Analysis
+{spurs_fit_analysis}
+
+## Recommendation
+
+{recommendation}
+
+---
+
+*Analysis based on {analysis_date}*
+*Methodology: 40% Peer-Normalized Analysis + 60% Spurs-Specific Fit Model*
+"""
+
+    # Manager-specific content for unified scoring
     manager_profiles = {
         'Kieran McKenna': {
-            'executive_summary': 'is the meteoric 38-year-old who took Ipswich from League One to the Premier League in two seasons while posting the best attacking npxGD in the EFL. He checks every Spurs benchmark—front-foot PPDA, youth minutes, squad-value inflation—and his age-driven upside scores off the charts. Risk lies in zero Premier-League big-game sample.',
-            'cultural_fit': 'Calm, academic communicator; zero history of board conflict; London-born—relocation seamless.',
-            'big_match_analysis': '*No PL top-8 record yet.* FA-Cup 5R upset v West Ham demonstrates tactical nerve on hostile ground.',
-            'financial_impact': 'Highest value-add per pound net spend in dataset (ROI 1:1.75).',
-            'injury_analysis': 'Hamstring cluster kept below league avg via GPS micro-load.',
-            'summary_recommendation': 'Sky-high ceiling with perfect Spurs alignment—hire if club will tolerate initial learning curve; surround with veteran PL assistants.',
-            'traditional_breakdown': '''**Style 8** — Box midfield 4-2-3-1, PPDA 9.0, proactive even against promotion rivals.  
-**Achievements 10** — Back-to-back promotions, 194 points in 2 years.  
-**Youth 9** — 18% U23 minutes, 5 academy debuts in Championship.  
-**Tactics 8** — Fluid pressing triggers, overload half-spaces.  
-**Leadership 9** — Players run through walls; zero mutinies.  
-**Recruitment 8** — Data-driven signings, every transfer worked.  
-**Reputation 7** — EFL Manager of Year, Guardiola praise.  
-**Media 8** — Thoughtful, analytical, never inflammatory.  
-**Pressure 9** — Cool under promotion pressure, two cup runs.  
-**Greatness 9** — Ceiling unknown but trajectory explosive.  
-**Vision 9** — Clear possession-based identity implemented.  
-**Long-term 10** — Could define Spurs for next decade.''',
-            'front_foot_analysis': 'PPDA 9.0, npxGD +0.25, xG/shot 0.11 — Championship dominance metrics',
-            'youth_analysis': '18% U23 minutes, 5 academy debuts — Outstanding pathway commitment',
-            'talent_analysis': '+£35M squad value, £20M net spend — Exceptional ROI (1:1.75)',
-            'big_game_analysis': 'KO rate 60%, Big-8: 0W-0L-0D — Untested at elite level'
+            'summary_description': 'the highest-ceiling choice with perfect age-trajectory alignment',
+            'strengths': '• Age 38 maximizes potential runway\n• Championship dominance proves tactical flexibility\n• Youth integration philosophy aligns with Spurs DNA\n• Highest unified final score',
+            'concerns': '• Premier League experience limited\n• Recruitment quality at higher levels unproven',
+            'spurs_fit_analysis': 'McKenna represents the optimal balance of immediate fit and long-term potential. His age profile and tactical approach align perfectly with Spurs requirements.',
+            'recommendation': '**STRONGLY RECOMMENDED** - Clear #1 choice combining best final score with optimal risk/reward profile.',
+            'age': 38
         },
         'Roberto De Zerbi': {
-            'executive_summary': 'Tactical savant who delivered Europe with Brighton and now has Marseille back in the Champions League places. Hits every Tottenham benchmark offensively and in talent inflation; potential held back only by fiery temperament and age-curve ceiling.',
-            'cultural_fit': 'Needs firm governance; Brighton exit disputes show he\'ll push boundaries. Embraces analytics, speaks good English; London lifestyle comfortable.',
-            'big_match_analysis': '8-9-5 vs PL top-8; Europa QF elimination to Juventus on penalties. Tactical tweaks stood up under pressure.',
-            'financial_impact': 'Net spend −£35M, squad value +£150M. Best inflation ratio in dataset.',
-            'injury_analysis': 'Intense tempo yet no chronic overload patterns.',
-            'summary_recommendation': 'Elite tactical fit with proven value creation; board must manage temperament via clear DoF line and performance clauses. Serious contender.',
-            'traditional_breakdown': '''**Style 9** — Juego de Posición 3-2-5, PPDA 8.8, elite ball progress.  
-**Achievements 7** — PL to Europe; OM CL qualification on first try.  
-**Youth 7** — Mitoma, Ferguson, Enciso breakthroughs.  
-**Tactics 9** — Press-lure patterns, overload box midfield.  
-**Leadership 7** — Demands total buy-in; clashes noted.  
-**Recruitment 6** — Works with DoF, flips unknowns for profit.  
-**Reputation 8** — Globally praised by Guardiola.  
-**Media 6** — Passionate, occasional digs at refs.  
-**Pressure 6** — Two touch-line bans/season.  
-**Greatness 8** — Ceiling sky-high if controlled.  
-**Vision 8** — Clear positional-play doctrine.  
-**Long-term 8** — Could evolve Spurs identity for a decade.''',
-            'front_foot_analysis': 'PPDA 8.8, npxGD +0.22, xG/shot 0.11 — Perfect attacking blueprint',
-            'youth_analysis': '14% U23 minutes, 4 academy graduates — Solid youth integration',
-            'talent_analysis': '+£150M squad delta, net-spend profit — Elite value creation',
-            'big_game_analysis': 'KO 50%, Big-8 npxGD +0.05 — Proven under pressure'
+            'summary_description': 'the technical perfectionist with immediate impact capability',
+            'strengths': '• Highest Fit Index score - perfect tactical alignment\n• Proven Premier League success\n• Elite possession-based system\n• Excellent attacking metrics',
+            'concerns': '• Age 44 limits future potential\n• Brighton departure circumstances\n• Medium-term ceiling concerns',
+            'spurs_fit_analysis': 'Perfect immediate fit but declining potential trajectory reduces long-term value proposition.',
+            'recommendation': '**CAUTIOUSLY RECOMMENDED** - Excellent short-term choice but limited upside.',
+            'age': 44
         },
         'Thomas Frank': {
-            'executive_summary': 'is the efficiency expert who achieved Premier League survival with negative net spend (-£50M). Strong media relations (8.7/10) and board harmony (9.3/10) provide stability. Limited youth focus but exceptional value delivery.',
-            'cultural_fit': 'Excellent communicator with outstanding media management. Zero board conflicts, stable personality.',
-            'big_match_analysis': 'Decent big-8 performance (2W-5L-3D) considering resource constraints at Brentford.',
-            'financial_impact': 'Only manager with profitable transfer activity. Maximum ROI specialist with proven overachievement.',
-            'injury_analysis': 'Excellent fitness management with 89% squad availability throughout demanding seasons.',
-            'summary_recommendation': 'Safe choice offering stability and efficiency. Lower ceiling but guaranteed competence and value.'
+            'summary_description': 'the value engineering specialist with financial efficiency',
+            'strengths': '• Only manager with negative net spend (-£50M)\n• Squad value increase of £120M\n• Strong youth development track record\n• Consistent overperformance',
+            'concerns': '• Tactical ceiling questions\n• Big game performance gaps\n• Limited Champions League experience',
+            'spurs_fit_analysis': 'Represents maximum financial efficiency with solid developmental foundation.',
+            'recommendation': '**RECOMMENDED** - Safe choice with excellent value proposition.',
+            'age': 47
         },
         'Mauricio Pochettino': {
-            'executive_summary': 'scores perfectly on fan connection (10/10) and youth development with 12 academy debuts. Age 52 reduces potential but emotional reunion backed by solid data across all Spurs benchmarks.',
-            'cultural_fit': 'Perfect cultural fit with existing fanbase connection. Understands club DNA and expectations intimately.',
-            'big_match_analysis': 'Solid big-8 record (4W-6L-4D) with history of competing against elite opposition at highest level.',
-            'financial_impact': 'Strong squad value growth (£210M) demonstrating player development capabilities over time.',
-            'injury_analysis': 'Good squad management with 90% availability, consistent with previous Spurs tenure.',
-            'summary_recommendation': 'Emotional choice justified by data. Proven Spurs fit with strong youth development track record.'
+            'summary_description': 'the emotional choice with declining analytical justification',
+            'strengths': '• Perfect fan connection\n• Academy development champion\n• Historical Spurs DNA understanding\n• Strong Spurs-Fit scores',
+            'concerns': '• Declining performance trajectory\n• High net spend requirements\n• Recent managerial struggles\n• Age reduces potential',
+            'spurs_fit_analysis': 'Emotional appeal cannot overcome analytical concerns about declining performance.',
+            'recommendation': '**NOT RECOMMENDED** - Sentiment over statistics would be poor decision-making.',
+            'age': 52
         },
         'Xavi Hernández': {
-            'executive_summary': 'brings elite attacking metrics (xG per shot 0.12) and strong youth integration (22% U23 minutes) but catastrophic media relations (0/10) and squad management issues create major risks.',
-            'cultural_fit': 'Brilliant tactical mind but volatile media relationships. Potential board conflicts based on Barcelona experience.',
-            'big_match_analysis': 'Excellent big-8 performance (7W-6L-6D) shows ability to compete at highest level when focused.',
-            'financial_impact': 'Moderate squad value growth (£70M) with reasonable spending efficiency.',
-            'injury_analysis': 'Poor squad management (85% availability) suggests potential conditioning/rotation issues.',
-            'summary_recommendation': 'Talented but temperamental. High risk due to media volatility and management instability.'
+            'summary_description': 'the flawed visionary with temperament concerns',
+            'strengths': '• Elite attacking philosophy\n• Strong youth development metrics\n• High technical standards\n• Barcelona pedigree',
+            'concerns': '• Worst potential trajectory\n• Temperament instability\n• Media volatility\n• Squad management failures',
+            'spurs_fit_analysis': 'High fit scores undermined by catastrophic potential metrics and temperament red flags.',
+            'recommendation': '**NOT RECOMMENDED** - Talent offset by significant character concerns.',
+            'age': 44
         },
         'Marco Silva': {
-            'executive_summary': 'offers maximum stability with perfect media relations (10/10) and excellent squad management (93% availability). Limited attacking output and aging profile reduce upside potential.',
-            'cultural_fit': 'Exceptional media management and professional approach. Zero board conflicts, ultimate safe choice.',
-            'big_match_analysis': 'Struggles against elite opposition (4W-10L-2D) indicating ceiling limitations.',
-            'financial_impact': 'Modest squad value growth (£65M) with reasonable spending but limited transformation.',
-            'injury_analysis': 'Best-in-class fitness management with 93% squad availability throughout campaigns.',
-            'summary_recommendation': 'Ultimate safe choice with guaranteed stability but limited ceiling for trophy ambitions.'
+            'summary_description': 'the steady hand with limited ceiling',
+            'strengths': '• Best squad management (100% availability)\n• Excellent media relations\n• Fulham stability achievement\n• Low-risk profile',
+            'concerns': '• Conservative tactical approach\n• Limited youth development\n• Big game struggles\n• Modest ceiling',
+            'spurs_fit_analysis': 'Safe choice but insufficient ambition for Spurs aspirations.',
+            'recommendation': '**NOT RECOMMENDED** - Ceiling too low for Spurs ambitions.',
+            'age': 46
         },
         'Oliver Glasner': {
-            'executive_summary': 'demonstrated impressive mid-season Palace transformation with solid big-game performance (8.2/10). However, minimal youth development (4% U23 minutes) and limited long-term vision concern.',
-            'cultural_fit': 'Professional approach with decent media relations. Some volatility but generally stable.',
-            'big_match_analysis': 'Strong big-8 record (5W-7L-3D) shows tactical competence against elite opposition.',
-            'financial_impact': 'Limited squad value growth (£40M) suggesting focus on short-term rather than development.',
-            'injury_analysis': 'Decent squad management (88% availability) but limited sample size at Palace.',
-            'summary_recommendation': 'Quick-fix specialist with limited long-term vision. Not aligned with Spurs youth development objectives.'
+            'summary_description': 'the quick-fix specialist with fundamental misalignment',
+            'strengths': '• Strong big game performance\n• Crystal Palace rescue achievement\n• Knockout tournament success\n• Age factor reasonable',
+            'concerns': '• Minimal youth development\n• Poor long-term vision scores\n• Limited Premier League sample\n• Tactical inflexibility',
+            'spurs_fit_analysis': 'Short-term thinking conflicts with Spurs long-term development requirements.',
+            'recommendation': '**NOT RECOMMENDED** - Philosophy misalignment with Spurs model.',
+            'age': 49
         },
         'Andoni Iraola': {
-            'executive_summary': 'brings interesting tactical approach but poor big-game record (1W-8L-5D) and lowest fan sentiment (20%) create significant concerns. Limited alignment with Spurs objectives.',
-            'cultural_fit': 'Professional but uninspiring. Limited media presence and fan disconnect problematic.',
-            'big_match_analysis': 'Worst big-8 record in dataset (1W-8L-5D) raises serious questions about competitive level.',
-            'financial_impact': 'Minimal squad value growth (£30M) with limited transfer market impact.',
-            'injury_analysis': 'Decent squad management (88% availability) but overall performance concerning.',
-            'summary_recommendation': 'Poor fit for Spurs ambitions. Limited evidence of ability to compete at required level.'
+            'summary_description': 'the tactical purist fundamentally wrong for Spurs',
+            'strengths': '• Interesting tactical innovations\n• Press intensity\n• Young age profile\n• Athletic style',
+            'concerns': '• Worst big game record (1-8-5)\n• Poor fan sentiment\n• Minimal youth development\n• Bottom-tier final score',
+            'spurs_fit_analysis': 'Tactical interest cannot overcome fundamental performance deficiencies.',
+            'recommendation': '**STRONGLY NOT RECOMMENDED** - Clear worst choice across all metrics.',
+            'age': 42
         }
     }
+
+    # Status check function
+    def status_check(value, threshold, higher_better=True):
+        if higher_better:
+            return "✅ Strong" if value >= threshold else "⚠️ Concern" if value >= threshold * 0.7 else "❌ Weak"
+        else:
+            return "✅ Strong" if value <= threshold else "⚠️ Concern" if value <= threshold * 1.3 else "❌ Weak"
     
-    # Load trend data for potential breakdown
-    trend_df = pd.read_csv('data/kpi_trend.csv')
+    # Generate report for each manager
+    reports_dir = Path('deliverables/reports')
+    reports_dir.mkdir(exist_ok=True)
     
-    # Generate reports for each manager
-    for idx, row in spursfit_df.iterrows():
-        manager = row['name']
-        safe_name = manager.lower().replace(' ', '_').replace('ñ', 'n')
+    # Sort by final score for peer ranking calculation
+    unified_df_sorted = unified_df.sort_values('peer_score', ascending=False).reset_index(drop=True)
+    unified_df_sorted['peer_rank'] = range(1, len(unified_df_sorted) + 1)
+    
+    for idx, row in unified_df.iterrows():
+        name = row['name']
+        profile = manager_profiles[name]
         
-        # Get manager-specific content
-        profile = manager_profiles.get(manager, {
-            'executive_summary': 'requires detailed analysis.',
-            'cultural_fit': 'To be assessed.',
-            'big_match_analysis': 'Performance varies.',
-            'financial_impact': 'Market value impact moderate.',
-            'injury_analysis': 'Squad management adequate.',
-            'summary_recommendation': 'Further evaluation needed.'
-        })
-        
-        # Get trend data
-        trend_data = trend_df[trend_df['manager_name'] == manager].iloc[0] if len(trend_df[trend_df['manager_name'] == manager]) > 0 else {}
+        # Get peer rank
+        peer_rank = unified_df_sorted[unified_df_sorted['name'] == name]['peer_rank'].iloc[0]
         
         # Calculate status indicators
-        def status_check(value, threshold, higher_better=True):
-            if higher_better:
-                return "✅ Above" if value >= threshold else "❌ Below"
-            else:
-                return "✅ Below" if value <= threshold else "❌ Above"
+        front_foot_status = status_check(row['fit_index'], 80)
+        youth_status = status_check(row['u23_minutes_pct'], 15)
+        inflation_status = status_check(row['squad_value_delta_m'], 50)
+        big_game_status = status_check(row['big_game_performance'], 6)
         
-        # Spurs-Fit component scores (simplified calculation)
-        front_foot_score = min(25, 25 * (
-            (1 if row['ppda'] <= 11 else 0) +
-            (1 if row['npxgd_90'] >= 0.10 else 0) +
-            (1 if row['xg_per_shot'] >= 0.11 else 0)
-        ) / 3)
+        age_status = status_check(profile['age'], 45, False)
+        trend_status = status_check(row['potential_index'], 60)
+        resource_status = status_check(row['net_spend_m'], 50, False)
+        temperament_status = status_check(row['media_vol_sigma'], 1.4, False)
         
-        youth_score = min(25, 25 * (
-            min(row['u23_minutes_pct'] / 10, 1) * 0.5 +
-            min(row['academy_debuts'] / 3, 1) * 0.5
-        ))
+        transfer_efficiency = "Elite" if row['net_spend_m'] <= 0 else "Good" if row['net_spend_m'] <= 50 else "Poor"
         
-        talent_score = min(25, 25 * min(row['squad_value_delta_m'] / 20, 1) * 0.6 + 
-                          25 * 0.4 * (1 if row['net_spend_m'] <= 50 else max(0, 1 - row['net_spend_m'] / 200)))
-        
-        big_game_score = min(25, 25 * (
-            min(row['ko_win_rate'] / 50, 1) * 0.5 +
-            (0.5 if row['npxgd_90'] >= 0 else 0.25)
-        ))
-        
-        # Create traditional categories breakdown
-        traditional_breakdown = profile.get('traditional_breakdown', "*(Legacy peer-normalized scores maintained for historical comparison)*")
-        
-        # Enhanced analysis from profile
-        front_foot_analysis = profile.get('front_foot_analysis', f"PPDA {row['ppda']}, npxGD {row['npxgd_90']}, xG/shot {row['xg_per_shot']}")
-        youth_analysis = profile.get('youth_analysis', f"{row['u23_minutes_pct']}% U23 minutes, {row['academy_debuts']} academy debuts")
-        talent_analysis = profile.get('talent_analysis', f"Squad value +£{row['squad_value_delta_m']}M, net spend £{row['net_spend_m']}M")
-        big_game_analysis = profile.get('big_game_analysis', f"KO rate {row['ko_win_rate']}%, Big-8: {row['big8_w']}W-{row['big8_l']}L-{row['big8_d']}D")
-        
-        # Fill template
-        report_content = template.format(
-            manager_name=manager,
-            club=row.get('club', 'Current Club'),
-            total_score=row['total_score'],
+        # Generate report
+        report_content = report_template.format(
+            name=name,
+            final_score=row['final_score'],
+            peer_score=row['peer_score'],
+            spursfit_total=row['spursfit_total'],
+            rank=row['rank'],
+            peer_rank=peer_rank,
+            summary_description=profile['summary_description'],
+            tactical_style=row['tactical_style'],
+            attacking_potency=row['attacking_potency'],
+            defensive_solidity=row['defensive_solidity'],
+            big_game_performance=row['big_game_performance'],
+            youth_development=row['youth_development'],
+            squad_management=row['squad_management'],
             fit_index=row['fit_index'],
             potential_index=row['potential_index'],
-            safe_name=safe_name,
-            executive_summary=profile['executive_summary'],
-            
-            # KPI Table
+            front_foot_status=front_foot_status,
+            youth_status=youth_status,
+            inflation_status=inflation_status,
+            big_game_status=big_game_status,
+            age=profile['age'],
+            age_status=age_status,
+            trend_status=trend_status,
+            resource_status=resource_status,
+            temperament_status=temperament_status,
             ppda=row['ppda'],
-            ppda_status=status_check(row['ppda'], 11, False),
-            npxgd_90=row['npxgd_90'],
-            npxgd_status=status_check(row['npxgd_90'], 0.10),
-            xg_per_shot=row['xg_per_shot'],
-            xg_shot_status=status_check(row['xg_per_shot'], 0.11),
-            u23_minutes_pct=row['u23_minutes_pct'],
-            u23_status=status_check(row['u23_minutes_pct'], 10),
-            academy_debuts=row['academy_debuts'],
-            academy_status=status_check(row['academy_debuts'], 3),
-            squad_value_delta_m=row['squad_value_delta_m'],
-            squad_delta_status=status_check(row['squad_value_delta_m'], 20),
+            oppda=row['oppda'],
+            high_press_regains_90=row['high_press_regains_90'],
             net_spend_m=row['net_spend_m'],
-            net_spend_status="✅ Profit" if row['net_spend_m'] < 0 else "⚠️ Spend",
-            ko_win_rate=row['ko_win_rate'],
-            ko_status=status_check(row['ko_win_rate'], 50),
-            big8_w=row['big8_w'],
-            big8_l=row['big8_l'],
-            big8_d=row['big8_d'],
-            big8_status="✅ Competitive" if row['big8_w'] + row['big8_d'] >= row['big8_l'] else "❌ Struggles",
-            
-            # Traditional breakdown
-            traditional_breakdown=traditional_breakdown,
-            
-            # Spurs-Fit breakdown
-            front_foot_score=front_foot_score,
-            front_foot_analysis=front_foot_analysis,
-            youth_score=youth_score,
-            youth_analysis=youth_analysis,
-            talent_score=talent_score,
-            talent_analysis=talent_analysis,
-            big_game_score=big_game_score,
-            big_game_analysis=big_game_analysis,
-            
-            # Potential factors
-            age=trend_data.get('age', 'N/A'),
-            age_factor=trend_data.get('age', 45) / 50,  # Rough calculation
-            trend_score=trend_data.get('trend_score', 'N/A'),
-            resource_leverage=trend_data.get('resource_leverage', 'N/A'),
-            temperament_score=trend_data.get('temperament_score', 'N/A'),
-            
-            # Content sections
-            cultural_fit=profile['cultural_fit'],
-            big_match_analysis=profile['big_match_analysis'],
-            financial_impact=profile['financial_impact'],
+            squad_value_delta_m=row['squad_value_delta_m'],
+            transfer_efficiency=transfer_efficiency,
+            u23_minutes_pct=row['u23_minutes_pct'],
+            academy_debuts=row['academy_debuts'],
             player_availability=row['player_availability'],
-            injury_analysis=profile['injury_analysis'],
-            summary_recommendation=profile['summary_recommendation'],
-            
-            timestamp=datetime.now().strftime("%Y-%m-%d %H:%M")
+            strengths=profile['strengths'],
+            concerns=profile['concerns'],
+            spurs_fit_analysis=profile['spurs_fit_analysis'],
+            recommendation=profile['recommendation'],
+            analysis_date=datetime.now().strftime("%Y-%m-%d")
         )
         
-        # Save markdown file
-        md_path = Path(f'deliverables/reports/{safe_name}.md')
-        with open(md_path, 'w') as f:
+        # Save report
+        safe_name = name.lower().replace(' ', '_').replace('ñ', 'n')
+        report_path = reports_dir / f"{safe_name}.md"
+        with open(report_path, 'w') as f:
             f.write(report_content)
-        
-        print(f"📄 Created comprehensive report: {manager}")
     
-    print("📚 All comprehensive reports generated")
+    print(f"📄 Created {len(unified_df)} manager reports")
 
 # Create static website
 def create_static_site(scores_df):
@@ -898,38 +876,39 @@ if __name__ == "__main__":
     # Setup
     setup_deliverables()
     
-    # Generate data using new Spurs-Fit system
-    print("\n📊 Creating Spurs-Fit datasets...")
-    spursfit_df = create_spursfit_dataset()
+    # Generate data using new Unified Final scoring system
+    print("\n📊 Creating Unified Final datasets...")
+    unified_df = create_unified_dataset()
     
-    if spursfit_df is None:
-        print("❌ Failed to create Spurs-Fit dataset. Exiting.")
+    if unified_df is None:
+        print("❌ Failed to create Unified Final dataset. Exiting.")
         exit(1)
     
     # Create visualizations  
     print("\n📈 Creating visualizations...")
-    create_radar_charts(spursfit_df)
+    create_radar_charts(unified_df)
     
     # Generate content
     print("\n📝 Creating content...")
-    create_tweet_content(spursfit_df)
-    create_pdf_reports(spursfit_df)
+    create_tweet_content(unified_df)
+    create_pdf_reports(unified_df)
     
     # Build site
     print("\n🌐 Building website...")
-    # Skip old static site - need to update for Spurs-Fit
-    # create_static_site(spursfit_df)
+    # Skip old static site - need to update for Unified Final scoring
+    # create_static_site(unified_df)
     
     # Documentation
     print("\n📋 Creating deployment guide...")
     create_deployment_guide()
     
-    print("\n✅ Spurs-Fit frozen dataset package complete!")
+    print("\n✅ Unified Final scoring frozen dataset package complete!")
     print("\n📦 Deliverables ready in /deliverables folder")
     print("🚀 Ready for tech team deployment!")
     
     # Show top 3 results using new scoring
-    top_3 = spursfit_df.nlargest(3, 'total_score')[['name', 'total_score', 'fit_index', 'potential_index']]
-    print(f"\n🏆 SPURS-FIT TOP 3:")
+    top_3 = unified_df.nlargest(3, 'final_score')[['name', 'final_score', 'peer_score', 'spursfit_total', 'fit_index', 'potential_index']]
+    print(f"\n🏆 UNIFIED FINAL TOP 3:")
     for idx, (_, row) in enumerate(top_3.iterrows()):
-        print(f"   {idx+1}. {row['name']} - {row['total_score']:.1f}/100 (Fit: {row['fit_index']:.1f} • Potential: {row['potential_index']:.1f})") 
+        print(f"   {idx+1}. {row['name']} - {row['final_score']:.1f}/100 (Peer: {row['peer_score']:.1f}/10 • Spurs-Fit: {row['spursfit_total']:.1f}/100)")
+        print(f"      └─ Fit: {row['fit_index']:.1f} • Potential: {row['potential_index']:.1f}") 

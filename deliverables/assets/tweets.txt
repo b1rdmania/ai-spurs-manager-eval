@@ -1,147 +1,115 @@
-=== ANNOUNCEMENT ===
-🚨 SPURS-FIT MANAGER RANKINGS 2025
+# Spurs Manager Evaluation - Tweet Content
 
-NEW 2-Layer Model:
-• Fit Index (60%): How well they meet our benchmarks
-• Potential Index (40%): Ceiling they can reach
+## Launch Tweet (Pin)
+🔥 SPURS MANAGER EVALUATION: UNIFIED FINAL RANKINGS
 
-🥇 Kieran McKenna: 93.9/100
-(Fit: 98.0 • Potential: 87.8)
+Using our revolutionary hybrid system (40% Peer Analysis + 60% Spurs-Fit Model):
 
-Full rankings 👇
+🥇 Kieran McKenna: 79.5/100
 
-#COYS #SpursManager #Data
+Full dataset + methodology: [REPO_LINK]
 
-=== KIERAN_MCKENNA ===
+#THFC #SpursAnalytics #DataDriven
+
+Which manager would YOU choose? 🤔
+
+## Poll Tweet (Day 1 - 2 hours after launch)
+🏟️ SPURS NEXT MANAGER POLL
+
+Based on our comprehensive analysis (18 KPIs + Spurs-specific factors):
+
+🔵 Kieran McKenna (Young Virtuoso)
+🔴 Roberto De Zerbi (Technical Master) 
+🟡 Thomas Frank (Value Engineer)
+🟢 Mauricio Pochettino (Homecoming Hero)
+
+Full analysis: [REPO_LINK]
+
+#THFC #SpursNext #DataDriven
+
+## Manager Profile Tweets (Days 2-3, every 12 minutes during peak hours)
+
+### Kieran McKenna
 🏴󠁧󠁢󠁥󠁮󠁧󠁿 The Young Virtuoso
-• Overall: 93.9/100 (Fit: 98.0 • Potential: 87.8)
-• Age: 38 - Peak years ahead
-• Championship dominance
-• Youth integration champion
+• Final Score: 79.5/100 (Peer: 5.8/10 • Spurs-Fit: 93.9/100)
+• Age 38 advantage maximizes potential
+• Perfect fit for Spurs DNA
 
-Ipswich's miracle worker ready for N17? 🚀
+Full report: [PDF_LINK]
+#THFC #McKenna #SpursNext
 
-📊 Full breakdown: [PDF_LINK_KIERAN_MCKENNA]
-📈 All data: [REPO_LINK]
-
-#COYS #SpursManager #Kieranmckenna
-
-=== ROBERTO_DE_ZERBI ===
+### Roberto De Zerbi  
 🇮🇹 The Technical Virtuoso
-• Overall: 88.6/100 (Fit: 100.0 • Potential: 71.5)
-• Perfect Spurs fit score
-• xG sequence: 0.14 (elite)
-• Big-8 record: 8W-9L-5D
+• Final Score: 75.6/100 (Peer: 5.6/10 • Spurs-Fit: 88.6/100)
+• Highest Fit Index: Perfect tactical alignment
+• Risk: Age 44 limits potential
 
-Brighton's architect ready for glory? 🎨
+Full report: [PDF_LINK]
+#THFC #DeZerbi #SpursNext
 
-📊 Full breakdown: [PDF_LINK_ROBERTO_DE_ZERBI]
-📈 All data: [REPO_LINK]
-
-#COYS #SpursManager #Robertodezerbi
-
-=== THOMAS_FRANK ===
+### Thomas Frank
 🇩🇰 The Value Engineer
-• Overall: 80.8/100 (Fit: 90.4 • Potential: 66.5)
-• Net spend: -£50M (only profit)
-• Brentford overachievement
-• Media mastery: 8.7/10
+• Final Score: 70.9/100 (Peer: 5.6/10 • Spurs-Fit: 80.8/100)
+• Net spend -£50M with squad value +£120M
+• Youth integration specialist
 
-Maximum ROI guaranteed? 💰
+Full report: [PDF_LINK]
+#THFC #ThomasFrank #SpursNext
 
-📊 Full breakdown: [PDF_LINK_THOMAS_FRANK]
-📈 All data: [REPO_LINK]
-
-#COYS #SpursManager #Thomasfrank
-
-=== MAURICIO_POCHETTINO ===
+### Mauricio Pochettino
 🇦🇷 The Homecoming Hero
-• Overall: 80.4/100 (Fit: 91.0 • Potential: 64.5)
-• Academy debuts: 12 (highest)
-• Fan connection: Perfect 10/10
-• Squad value: +£210M boost
+• Final Score: 70.6/100 (Peer: 5.6/10 • Spurs-Fit: 80.4/100)
+• High Spurs-Fit but declining trajectory
+• Emotional appeal vs analytical reality
 
-Data justifies the emotion 💙
+Full report: [PDF_LINK]
+#THFC #Pochettino #SpursNext
 
-📊 Full breakdown: [PDF_LINK_MAURICIO_POCHETTINO]
-📈 All data: [REPO_LINK]
-
-#COYS #SpursManager #Mauriciopochettino
-
-=== XAVI_HERNÁNDEZ ===
+### Xavi Hernández
 🇪🇸 The Flawed Visionary
-• Overall: 74.8/100 (Fit: 95.2 • Potential: 44.2)
-• xG per shot: 0.12 (elite)
-• Youth minutes: 22%
-• Media volatility: Crisis level
+• Final Score: 63.7/100 (Peer: 4.7/10 • Spurs-Fit: 74.8/100)
+• Highest Fit Index but terrible potential trends
+• Squad management concerns
 
-Talent vs temperament dilemma 🧬
+Full report: [PDF_LINK]
+#THFC #Xavi #SpursNext
 
-📊 Full breakdown: [PDF_LINK_XAVI_HERNÁNDEZ]
-📈 All data: [REPO_LINK]
-
-#COYS #SpursManager #Xavihernández
-
-=== MARCO_SILVA ===
+### Marco Silva
 🇵🇹 The Steady Hand
-• Overall: 67.1/100 (Fit: 75.0 • Potential: 55.2)
-• Squad availability: 93%
-• Media relations: Perfect 10/10
-• Fulham stability specialist
+• Final Score: 60.7/100 (Peer: 5.1/10 • Spurs-Fit: 67.1/100)
+• Squad management excellence (100% availability)
+• Conservative fit with Spurs DNA
 
-Safe choice, limited ceiling? 🛡️
+Full report: [PDF_LINK]
+#THFC #MarcoSilva #SpursNext
 
-📊 Full breakdown: [PDF_LINK_MARCO_SILVA]
-📈 All data: [REPO_LINK]
-
-#COYS #SpursManager #Marcosilva
-
-=== OLIVER_GLASNER ===
+### Oliver Glasner
 🇦🇹 The Quick-Fix Specialist
-• Overall: 62.6/100 (Fit: 63.9 • Potential: 60.7)
-• Palace mid-season rescue
-• Big games: 8.2/10
-• Youth development: Minimal
+• Final Score: 55.6/100 (Peer: 4.5/10 • Spurs-Fit: 62.6/100)
+• Limited youth development track record
+• Mid-table performance ceiling
 
-Short-term impact, long-term concerns? ⚡
+Full report: [PDF_LINK]
+#THFC #Glasner #SpursNext
 
-📊 Full breakdown: [PDF_LINK_OLIVER_GLASNER]
-📈 All data: [REPO_LINK]
-
-#COYS #SpursManager #Oliverglasner
-
-=== ANDONI_IRAOLA ===
+### Andoni Iraola
 🇪🇸 The Wrong Fit
-• Overall: 60.4/100 (Fit: 60.5 • Potential: 60.2)
-• Big-8 record: 1W-8L-5D
-• Fan sentiment: 20%
-• Tactical style interesting
+• Final Score: 51.8/100 (Peer: 3.9/10 • Spurs-Fit: 60.4/100)
+• Big game struggles (1-8-5 vs Big 8)
+• Poor youth development alignment
 
-Purist approach, wrong venue? 🍒
+Full report: [PDF_LINK]
+#THFC #Iraola #SpursNext
 
-📊 Full breakdown: [PDF_LINK_ANDONI_IRAOLA]
-📈 All data: [REPO_LINK]
+---
 
-#COYS #SpursManager #Andoniiraola
+**Posting Strategy:**
+- Launch: Pin intro tweet
+- +2 hours: Poll tweet  
+- Days 2-3: Manager profiles every 12 minutes during 9am-6pm GMT
+- Each tweet includes relevant hashtags and links
+- Engage with replies to drive discussion
 
-=== SYSTEM_EXPLANATION ===
-🔬 NEW SPURS-FIT MODEL EXPLAINED
-
-Instead of generic peer comparison, we now measure:
-
-🎯 FIT INDEX (60%):
-• Front-foot play ✓
-• Youth development ✓  
-• Transfer efficiency ✓
-• Big game performance ✓
-
-📈 POTENTIAL INDEX (40%):
-• Age factor (younger=higher)
-• 3-year trajectory 
-• Resource leverage
-• Temperament stability
-
-= Total 0-100 score showing floor vs ceiling
-
-#DataDriven #COYS
-
+**Links to replace:**
+- [REPO_LINK] → Shortened GitHub repo URL
+- [PDF_LINK] → Individual manager PDF shortened URLs

@@ -1,84 +1,75 @@
-# Roberto De Zerbi — Marseille  
-**Spurs-Fit 88.6 / 100** (Fit 100.0 • Potential 71.5)
+# Roberto De Zerbi - Manager Analysis Report
 
-![radar](../assets/radar_roberto_de_zerbi.png)
+## Executive Summary
 
----
+**Final Score: 75.6/100** (Peer 5.6/10 • Spurs-Fit 88.6/100)
+**Rank: #2 of 8**
 
-## 1 Executive Snapshot  
-Roberto De Zerbi Tactical savant who delivered Europe with Brighton and now has Marseille back in the Champions League places. Hits every Tottenham benchmark offensively and in talent inflation; potential held back only by fiery temperament and age-curve ceiling.
+Roberto De Zerbi represents the technical perfectionist with immediate impact capability
 
----
+## Unified Final Scoring Breakdown
 
-## 2 KPI Table  
-| Metric | Value | Benchmark | Status |
-|--------|--------|-----------|---------|
-| **PPDA** | 8.8 | ≤11 | ✅ Below |
-| **npxG Diff/90** | 0.22 | ≥0.10 | ✅ Above |
-| **xG per Shot** | 0.11 | ≥0.11 | ✅ Above |
-| **U23 Minutes %** | 14% | ≥10% | ✅ Above |
-| **Academy Debuts** | 4 | ≥3 | ✅ Above |
-| **Squad Value Δ** | £150M | ≥£20M | ✅ Above |
-| **Net Spend** | £-35M | Efficient | ✅ Profit |
-| **KO Win Rate** | 50% | ≥50% | ✅ Above |
-| **Big-8 Record** | 8W-9L-5D | Competitive | ✅ Competitive |
+### Peer Analysis (40% of Final Score): 5.6/10
+- **Peer Ranking:** #2 of 8
+- **Tactical Style:** 4.9/10
+- **Attacking Potency:** 7.4/10  
+- **Defensive Solidity:** 6.0/10
+- **Big Game Performance:** 4.2/10
+- **Youth Development:** 4.4/10
+- **Squad Management:** 6.0/10
 
----
+### Spurs-Fit Analysis (60% of Final Score): 88.6/100
 
-## 3 Traditional Categories (Legacy Peer Model)  
-**Style 9** — Juego de Posición 3-2-5, PPDA 8.8, elite ball progress.  
-**Achievements 7** — PL to Europe; OM CL qualification on first try.  
-**Youth 7** — Mitoma, Ferguson, Enciso breakthroughs.  
-**Tactics 9** — Press-lure patterns, overload box midfield.  
-**Leadership 7** — Demands total buy-in; clashes noted.  
-**Recruitment 6** — Works with DoF, flips unknowns for profit.  
-**Reputation 8** — Globally praised by Guardiola.  
-**Media 6** — Passionate, occasional digs at refs.  
-**Pressure 6** — Two touch-line bans/season.  
-**Greatness 8** — Ceiling sky-high if controlled.  
-**Vision 8** — Clear positional-play doctrine.  
-**Long-term 8** — Could evolve Spurs identity for a decade.
+#### Fit Index (60% of Spurs-Fit): 100.0/100
+- **Front-Foot Play Alignment:** ✅ Strong
+- **Youth Development Focus:** ⚠️ Concern  
+- **Talent Inflation Capability:** ✅ Strong
+- **Big Game Mentality:** ❌ Weak
 
----
+#### Potential Index (40% of Spurs-Fit): 71.5/100
+- **Age Factor:** ✅ Strong (Age 44)
+- **3-Year Performance Trend:** ✅ Strong
+- **Resource Leverage:** ✅ Strong
+- **Temperament:** ✅ Strong
 
-## 4 Spurs-Fit Breakdown  
-**Front-Foot Tactics (25/25)** — PPDA 8.8, npxGD +0.22, xG/shot 0.11 — Perfect attacking blueprint  
-**Youth Pathway (25/25)** — 14% U23 minutes, 4 academy graduates — Solid youth integration  
-**Talent Inflation (25/25)** — +£150M squad delta, net-spend profit — Elite value creation  
-**Big-Game Progression (25/25)** — KO 50%, Big-8 npxGD +0.05 — Proven under pressure  
-**Fit Index 100.0 / 100**
+## Key Performance Indicators
 
-**Potential Drivers (71.5)** — Age 45 (0.9), Trend 0.8, Resource Leverage 0.75, Temperament 0.65.
+### Tactical Metrics
+- **PPDA:** 8.8 (lower = more aggressive)
+- **OPPDA:** 12.1 (higher = forces opponent pressure)
+- **High Press Regains/90:** 8.8
 
----
+### Financial Profile  
+- **Net Spend:** £-35M
+- **Squad Value Change:** £150M
+- **Transfer Efficiency:** Elite
 
-## 5 Cultural & Board Fit  
-Needs firm governance; Brighton exit disputes show he'll push boundaries. Embraces analytics, speaks good English; London lifestyle comfortable.
+### Squad Development
+- **U23 Minutes %:** 14%
+- **Academy Debuts:** 4
+- **Player Availability:** 87%
 
----
+## Strategic Assessment
 
-## 6 Big-Match Analysis  
-8-9-5 vs PL top-8; Europa QF elimination to Juventus on penalties. Tactical tweaks stood up under pressure.
+### Strengths
+• Highest Fit Index score - perfect tactical alignment
+• Proven Premier League success
+• Elite possession-based system
+• Excellent attacking metrics
 
----
+### Concerns  
+• Age 44 limits future potential
+• Brighton departure circumstances
+• Medium-term ceiling concerns
 
-## 7 Financial Impact  
-Net spend −£35M, squad value +£150M. Best inflation ratio in dataset.
+### Spurs Fit Analysis
+Perfect immediate fit but declining potential trajectory reduces long-term value proposition.
 
----
+## Recommendation
 
-## 8 Injury & Conditioning  
-Player availability 87%. Intense tempo yet no chronic overload patterns.
-
----
-
-## 9 Summary & Recommendation  
-Elite tactical fit with proven value creation; board must manage temperament via clear DoF line and performance clauses. Serious contender.
+**CAUTIOUSLY RECOMMENDED** - Excellent short-term choice but limited upside.
 
 ---
 
-## Appendix  
-**Data Sources:** FBref, Transfermarkt, Premier Injuries, Opta/StatsBomb  
-**Cut-off Date:** 7 June 2025  
-**Methodology:** Spurs-Fit 2-Layer Model (60% Fit Index + 40% Potential Index)  
-**Generated:** 2025-06-07 13:41
+*Analysis based on 2025-06-07*
+*Methodology: 40% Peer-Normalized Analysis + 60% Spurs-Specific Fit Model*

@@ -1,73 +1,76 @@
-# Marco Silva — Fulham  
-**Spurs-Fit 67.1 / 100** (Fit 75.0 • Potential 55.2)
+# Marco Silva - Manager Analysis Report
 
-![radar](../assets/radar_marco_silva.png)
+## Executive Summary
+
+**Final Score: 60.7/100** (Peer 5.1/10 • Spurs-Fit 67.1/100)
+**Rank: #6 of 8**
+
+Marco Silva represents the steady hand with limited ceiling
+
+## Unified Final Scoring Breakdown
+
+### Peer Analysis (40% of Final Score): 5.1/10
+- **Peer Ranking:** #5 of 8
+- **Tactical Style:** 4.7/10
+- **Attacking Potency:** 5.4/10  
+- **Defensive Solidity:** 9.0/10
+- **Big Game Performance:** 3.0/10
+- **Youth Development:** 3.8/10
+- **Squad Management:** 9.0/10
+
+### Spurs-Fit Analysis (60% of Final Score): 67.1/100
+
+#### Fit Index (60% of Spurs-Fit): 75.0/100
+- **Front-Foot Play Alignment:** ⚠️ Concern
+- **Youth Development Focus:** ❌ Weak  
+- **Talent Inflation Capability:** ✅ Strong
+- **Big Game Mentality:** ❌ Weak
+
+#### Potential Index (40% of Spurs-Fit): 55.2/100
+- **Age Factor:** ⚠️ Concern (Age 46)
+- **3-Year Performance Trend:** ⚠️ Concern
+- **Resource Leverage:** ❌ Weak
+- **Temperament:** ✅ Strong
+
+## Key Performance Indicators
+
+### Tactical Metrics
+- **PPDA:** 10.1 (lower = more aggressive)
+- **OPPDA:** 14.3 (higher = forces opponent pressure)
+- **High Press Regains/90:** 7.9
+
+### Financial Profile  
+- **Net Spend:** £85M
+- **Squad Value Change:** £65M
+- **Transfer Efficiency:** Poor
+
+### Squad Development
+- **U23 Minutes %:** 7%
+- **Academy Debuts:** 8
+- **Player Availability:** 93%
+
+## Strategic Assessment
+
+### Strengths
+• Best squad management (100% availability)
+• Excellent media relations
+• Fulham stability achievement
+• Low-risk profile
+
+### Concerns  
+• Conservative tactical approach
+• Limited youth development
+• Big game struggles
+• Modest ceiling
+
+### Spurs Fit Analysis
+Safe choice but insufficient ambition for Spurs aspirations.
+
+## Recommendation
+
+**NOT RECOMMENDED** - Ceiling too low for Spurs ambitions.
 
 ---
 
-## 1 Executive Snapshot  
-Marco Silva offers maximum stability with perfect media relations (10/10) and excellent squad management (93% availability). Limited attacking output and aging profile reduce upside potential.
-
----
-
-## 2 KPI Table  
-| Metric | Value | Benchmark | Status |
-|--------|--------|-----------|---------|
-| **PPDA** | 10.1 | ≤11 | ✅ Below |
-| **npxG Diff/90** | 0.11 | ≥0.10 | ✅ Above |
-| **xG per Shot** | 0.09 | ≥0.11 | ❌ Below |
-| **U23 Minutes %** | 7% | ≥10% | ❌ Below |
-| **Academy Debuts** | 8 | ≥3 | ✅ Above |
-| **Squad Value Δ** | £65M | ≥£20M | ✅ Above |
-| **Net Spend** | £85M | Efficient | ⚠️ Spend |
-| **KO Win Rate** | 38% | ≥50% | ❌ Below |
-| **Big-8 Record** | 4W-10L-2D | Competitive | ❌ Struggles |
-
----
-
-## 3 Traditional Categories (Legacy Peer Model)  
-*(Legacy peer-normalized scores maintained for historical comparison)*
-
----
-
-## 4 Spurs-Fit Breakdown  
-**Front-Foot Tactics (16.666666666666668/25)** — PPDA 10.1, npxGD 0.11, xG/shot 0.09  
-**Youth Pathway (21.25/25)** — 7% U23 minutes, 8 academy debuts  
-**Talent Inflation (20.75/25)** — Squad value +£65M, net spend £85M  
-**Big-Game Progression (22.0/25)** — KO rate 38%, Big-8: 4W-10L-2D  
-**Fit Index 75.0 / 100**
-
-**Potential Drivers (55.2)** — Age 47 (0.9), Trend 0.45, Resource Leverage 0.55, Temperament 0.85.
-
----
-
-## 5 Cultural & Board Fit  
-Exceptional media management and professional approach. Zero board conflicts, ultimate safe choice.
-
----
-
-## 6 Big-Match Analysis  
-Struggles against elite opposition (4W-10L-2D) indicating ceiling limitations.
-
----
-
-## 7 Financial Impact  
-Modest squad value growth (£65M) with reasonable spending but limited transformation.
-
----
-
-## 8 Injury & Conditioning  
-Player availability 93%. Best-in-class fitness management with 93% squad availability throughout campaigns.
-
----
-
-## 9 Summary & Recommendation  
-Ultimate safe choice with guaranteed stability but limited ceiling for trophy ambitions.
-
----
-
-## Appendix  
-**Data Sources:** FBref, Transfermarkt, Premier Injuries, Opta/StatsBomb  
-**Cut-off Date:** 7 June 2025  
-**Methodology:** Spurs-Fit 2-Layer Model (60% Fit Index + 40% Potential Index)  
-**Generated:** 2025-06-07 13:41
+*Analysis based on 2025-06-07*
+*Methodology: 40% Peer-Normalized Analysis + 60% Spurs-Specific Fit Model*

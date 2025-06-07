@@ -1,84 +1,74 @@
-# Kieran McKenna — Ipswich Town  
-**Spurs-Fit 93.9 / 100** (Fit 98.0 • Potential 87.8)
+# Kieran McKenna - Manager Analysis Report
 
-![radar](../assets/radar_kieran_mckenna.png)
+## Executive Summary
 
----
+**Final Score: 79.5/100** (Peer 5.8/10 • Spurs-Fit 93.9/100)
+**Rank: #1 of 8**
 
-## 1 Executive Snapshot  
-Kieran McKenna is the meteoric 38-year-old who took Ipswich from League One to the Premier League in two seasons while posting the best attacking npxGD in the EFL. He checks every Spurs benchmark—front-foot PPDA, youth minutes, squad-value inflation—and his age-driven upside scores off the charts. Risk lies in zero Premier-League big-game sample.
+Kieran McKenna represents the highest-ceiling choice with perfect age-trajectory alignment
 
----
+## Unified Final Scoring Breakdown
 
-## 2 KPI Table  
-| Metric | Value | Benchmark | Status |
-|--------|--------|-----------|---------|
-| **PPDA** | 9.0 | ≤11 | ✅ Below |
-| **npxG Diff/90** | 0.25 | ≥0.10 | ✅ Above |
-| **xG per Shot** | 0.11 | ≥0.11 | ✅ Above |
-| **U23 Minutes %** | 18% | ≥10% | ✅ Above |
-| **Academy Debuts** | 5 | ≥3 | ✅ Above |
-| **Squad Value Δ** | £35M | ≥£20M | ✅ Above |
-| **Net Spend** | £20M | Efficient | ⚠️ Spend |
-| **KO Win Rate** | 60% | ≥50% | ✅ Above |
-| **Big-8 Record** | 0W-0L-0D | Competitive | ✅ Competitive |
+### Peer Analysis (40% of Final Score): 5.8/10
+- **Peer Ranking:** #1 of 8
+- **Tactical Style:** 4.8/10
+- **Attacking Potency:** 7.5/10  
+- **Defensive Solidity:** 8.5/10
+- **Big Game Performance:** 6.0/10
+- **Youth Development:** 5.7/10
+- **Squad Management:** 8.5/10
 
----
+### Spurs-Fit Analysis (60% of Final Score): 93.9/100
 
-## 3 Traditional Categories (Legacy Peer Model)  
-**Style 8** — Box midfield 4-2-3-1, PPDA 9.0, proactive even against promotion rivals.  
-**Achievements 10** — Back-to-back promotions, 194 points in 2 years.  
-**Youth 9** — 18% U23 minutes, 5 academy debuts in Championship.  
-**Tactics 8** — Fluid pressing triggers, overload half-spaces.  
-**Leadership 9** — Players run through walls; zero mutinies.  
-**Recruitment 8** — Data-driven signings, every transfer worked.  
-**Reputation 7** — EFL Manager of Year, Guardiola praise.  
-**Media 8** — Thoughtful, analytical, never inflammatory.  
-**Pressure 9** — Cool under promotion pressure, two cup runs.  
-**Greatness 9** — Ceiling unknown but trajectory explosive.  
-**Vision 9** — Clear possession-based identity implemented.  
-**Long-term 10** — Could define Spurs for next decade.
+#### Fit Index (60% of Spurs-Fit): 98.0/100
+- **Front-Foot Play Alignment:** ✅ Strong
+- **Youth Development Focus:** ✅ Strong  
+- **Talent Inflation Capability:** ⚠️ Concern
+- **Big Game Mentality:** ✅ Strong
 
----
+#### Potential Index (40% of Spurs-Fit): 87.8/100
+- **Age Factor:** ✅ Strong (Age 38)
+- **3-Year Performance Trend:** ✅ Strong
+- **Resource Leverage:** ✅ Strong
+- **Temperament:** ✅ Strong
 
-## 4 Spurs-Fit Breakdown  
-**Front-Foot Tactics (25/25)** — PPDA 9.0, npxGD +0.25, xG/shot 0.11 — Championship dominance metrics  
-**Youth Pathway (25/25)** — 18% U23 minutes, 5 academy debuts — Outstanding pathway commitment  
-**Talent Inflation (25/25)** — +£35M squad value, £20M net spend — Exceptional ROI (1:1.75)  
-**Big-Game Progression (25/25)** — KO rate 60%, Big-8: 0W-0L-0D — Untested at elite level  
-**Fit Index 98.0 / 100**
+## Key Performance Indicators
 
-**Potential Drivers (87.8)** — Age 38 (0.8), Trend 0.9, Resource Leverage 0.8, Temperament 0.95.
+### Tactical Metrics
+- **PPDA:** 9.0 (lower = more aggressive)
+- **OPPDA:** 13.1 (higher = forces opponent pressure)
+- **High Press Regains/90:** 7.6
 
----
+### Financial Profile  
+- **Net Spend:** £20M
+- **Squad Value Change:** £35M
+- **Transfer Efficiency:** Good
 
-## 5 Cultural & Board Fit  
-Calm, academic communicator; zero history of board conflict; London-born—relocation seamless.
+### Squad Development
+- **U23 Minutes %:** 18%
+- **Academy Debuts:** 5
+- **Player Availability:** 92%
 
----
+## Strategic Assessment
 
-## 6 Big-Match Analysis  
-*No PL top-8 record yet.* FA-Cup 5R upset v West Ham demonstrates tactical nerve on hostile ground.
+### Strengths
+• Age 38 maximizes potential runway
+• Championship dominance proves tactical flexibility
+• Youth integration philosophy aligns with Spurs DNA
+• Highest unified final score
 
----
+### Concerns  
+• Premier League experience limited
+• Recruitment quality at higher levels unproven
 
-## 7 Financial Impact  
-Highest value-add per pound net spend in dataset (ROI 1:1.75).
+### Spurs Fit Analysis
+McKenna represents the optimal balance of immediate fit and long-term potential. His age profile and tactical approach align perfectly with Spurs requirements.
 
----
+## Recommendation
 
-## 8 Injury & Conditioning  
-Player availability 92%. Hamstring cluster kept below league avg via GPS micro-load.
+**STRONGLY RECOMMENDED** - Clear #1 choice combining best final score with optimal risk/reward profile.
 
 ---
 
-## 9 Summary & Recommendation  
-Sky-high ceiling with perfect Spurs alignment—hire if club will tolerate initial learning curve; surround with veteran PL assistants.
-
----
-
-## Appendix  
-**Data Sources:** FBref, Transfermarkt, Premier Injuries, Opta/StatsBomb  
-**Cut-off Date:** 7 June 2025  
-**Methodology:** Spurs-Fit 2-Layer Model (60% Fit Index + 40% Potential Index)  
-**Generated:** 2025-06-07 13:41
+*Analysis based on 2025-06-07*
+*Methodology: 40% Peer-Normalized Analysis + 60% Spurs-Specific Fit Model*

@@ -1,73 +1,75 @@
-# Thomas Frank — Brentford  
-**Spurs-Fit 80.8 / 100** (Fit 90.4 • Potential 66.5)
+# Thomas Frank - Manager Analysis Report
 
-![radar](../assets/radar_thomas_frank.png)
+## Executive Summary
+
+**Final Score: 70.9/100** (Peer 5.6/10 • Spurs-Fit 80.8/100)
+**Rank: #3 of 8**
+
+Thomas Frank represents the value engineering specialist with financial efficiency
+
+## Unified Final Scoring Breakdown
+
+### Peer Analysis (40% of Final Score): 5.6/10
+- **Peer Ranking:** #3 of 8
+- **Tactical Style:** 4.9/10
+- **Attacking Potency:** 6.0/10  
+- **Defensive Solidity:** 7.0/10
+- **Big Game Performance:** 3.2/10
+- **Youth Development:** 3.7/10
+- **Squad Management:** 7.0/10
+
+### Spurs-Fit Analysis (60% of Final Score): 80.8/100
+
+#### Fit Index (60% of Spurs-Fit): 90.4/100
+- **Front-Foot Play Alignment:** ✅ Strong
+- **Youth Development Focus:** ⚠️ Concern  
+- **Talent Inflation Capability:** ✅ Strong
+- **Big Game Mentality:** ❌ Weak
+
+#### Potential Index (40% of Spurs-Fit): 66.5/100
+- **Age Factor:** ⚠️ Concern (Age 47)
+- **3-Year Performance Trend:** ✅ Strong
+- **Resource Leverage:** ✅ Strong
+- **Temperament:** ✅ Strong
+
+## Key Performance Indicators
+
+### Tactical Metrics
+- **PPDA:** 10.5 (lower = more aggressive)
+- **OPPDA:** 14.9 (higher = forces opponent pressure)
+- **High Press Regains/90:** 8.4
+
+### Financial Profile  
+- **Net Spend:** £-50M
+- **Squad Value Change:** £120M
+- **Transfer Efficiency:** Elite
+
+### Squad Development
+- **U23 Minutes %:** 11%
+- **Academy Debuts:** 4
+- **Player Availability:** 89%
+
+## Strategic Assessment
+
+### Strengths
+• Only manager with negative net spend (-£50M)
+• Squad value increase of £120M
+• Strong youth development track record
+• Consistent overperformance
+
+### Concerns  
+• Tactical ceiling questions
+• Big game performance gaps
+• Limited Champions League experience
+
+### Spurs Fit Analysis
+Represents maximum financial efficiency with solid developmental foundation.
+
+## Recommendation
+
+**RECOMMENDED** - Safe choice with excellent value proposition.
 
 ---
 
-## 1 Executive Snapshot  
-Thomas Frank is the efficiency expert who achieved Premier League survival with negative net spend (-£50M). Strong media relations (8.7/10) and board harmony (9.3/10) provide stability. Limited youth focus but exceptional value delivery.
-
----
-
-## 2 KPI Table  
-| Metric | Value | Benchmark | Status |
-|--------|--------|-----------|---------|
-| **PPDA** | 10.5 | ≤11 | ✅ Below |
-| **npxG Diff/90** | 0.18 | ≥0.10 | ✅ Above |
-| **xG per Shot** | 0.1 | ≥0.11 | ❌ Below |
-| **U23 Minutes %** | 11% | ≥10% | ✅ Above |
-| **Academy Debuts** | 4 | ≥3 | ✅ Above |
-| **Squad Value Δ** | £120M | ≥£20M | ✅ Above |
-| **Net Spend** | £-50M | Efficient | ✅ Profit |
-| **KO Win Rate** | 50% | ≥50% | ✅ Above |
-| **Big-8 Record** | 2W-5L-3D | Competitive | ✅ Competitive |
-
----
-
-## 3 Traditional Categories (Legacy Peer Model)  
-*(Legacy peer-normalized scores maintained for historical comparison)*
-
----
-
-## 4 Spurs-Fit Breakdown  
-**Front-Foot Tactics (16.666666666666668/25)** — PPDA 10.5, npxGD 0.18, xG/shot 0.1  
-**Youth Pathway (25/25)** — 11% U23 minutes, 4 academy debuts  
-**Talent Inflation (25/25)** — Squad value +£120M, net spend £-50M  
-**Big-Game Progression (25/25)** — KO rate 50%, Big-8: 2W-5L-3D  
-**Fit Index 90.4 / 100**
-
-**Potential Drivers (66.5)** — Age 51 (1.0), Trend 0.65, Resource Leverage 0.85, Temperament 0.9.
-
----
-
-## 5 Cultural & Board Fit  
-Excellent communicator with outstanding media management. Zero board conflicts, stable personality.
-
----
-
-## 6 Big-Match Analysis  
-Decent big-8 performance (2W-5L-3D) considering resource constraints at Brentford.
-
----
-
-## 7 Financial Impact  
-Only manager with profitable transfer activity. Maximum ROI specialist with proven overachievement.
-
----
-
-## 8 Injury & Conditioning  
-Player availability 89%. Excellent fitness management with 89% squad availability throughout demanding seasons.
-
----
-
-## 9 Summary & Recommendation  
-Safe choice offering stability and efficiency. Lower ceiling but guaranteed competence and value.
-
----
-
-## Appendix  
-**Data Sources:** FBref, Transfermarkt, Premier Injuries, Opta/StatsBomb  
-**Cut-off Date:** 7 June 2025  
-**Methodology:** Spurs-Fit 2-Layer Model (60% Fit Index + 40% Potential Index)  
-**Generated:** 2025-06-07 13:41
+*Analysis based on 2025-06-07*
+*Methodology: 40% Peer-Normalized Analysis + 60% Spurs-Specific Fit Model*

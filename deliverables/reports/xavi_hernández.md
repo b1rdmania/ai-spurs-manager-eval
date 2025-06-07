@@ -1,73 +1,76 @@
-# Xavi Hernández — Barcelona  
-**Spurs-Fit 74.8 / 100** (Fit 95.2 • Potential 44.2)
+# Xavi Hernández - Manager Analysis Report
 
-![radar](../assets/radar_xavi_hernández.png)
+## Executive Summary
+
+**Final Score: 63.7/100** (Peer 4.7/10 • Spurs-Fit 74.8/100)
+**Rank: #5 of 8**
+
+Xavi Hernández represents the flawed visionary with temperament concerns
+
+## Unified Final Scoring Breakdown
+
+### Peer Analysis (40% of Final Score): 4.7/10
+- **Peer Ranking:** #6 of 8
+- **Tactical Style:** 4.6/10
+- **Attacking Potency:** 7.4/10  
+- **Defensive Solidity:** 5.0/10
+- **Big Game Performance:** 4.0/10
+- **Youth Development:** 6.9/10
+- **Squad Management:** 5.0/10
+
+### Spurs-Fit Analysis (60% of Final Score): 74.8/100
+
+#### Fit Index (60% of Spurs-Fit): 95.2/100
+- **Front-Foot Play Alignment:** ✅ Strong
+- **Youth Development Focus:** ✅ Strong  
+- **Talent Inflation Capability:** ✅ Strong
+- **Big Game Mentality:** ❌ Weak
+
+#### Potential Index (40% of Spurs-Fit): 44.2/100
+- **Age Factor:** ✅ Strong (Age 44)
+- **3-Year Performance Trend:** ⚠️ Concern
+- **Resource Leverage:** ❌ Weak
+- **Temperament:** ⚠️ Concern
+
+## Key Performance Indicators
+
+### Tactical Metrics
+- **PPDA:** 8.2 (lower = more aggressive)
+- **OPPDA:** 12.4 (higher = forces opponent pressure)
+- **High Press Regains/90:** 6.5
+
+### Financial Profile  
+- **Net Spend:** £70M
+- **Squad Value Change:** £70M
+- **Transfer Efficiency:** Poor
+
+### Squad Development
+- **U23 Minutes %:** 22%
+- **Academy Debuts:** 6
+- **Player Availability:** 85%
+
+## Strategic Assessment
+
+### Strengths
+• Elite attacking philosophy
+• Strong youth development metrics
+• High technical standards
+• Barcelona pedigree
+
+### Concerns  
+• Worst potential trajectory
+• Temperament instability
+• Media volatility
+• Squad management failures
+
+### Spurs Fit Analysis
+High fit scores undermined by catastrophic potential metrics and temperament red flags.
+
+## Recommendation
+
+**NOT RECOMMENDED** - Talent offset by significant character concerns.
 
 ---
 
-## 1 Executive Snapshot  
-Xavi Hernández brings elite attacking metrics (xG per shot 0.12) and strong youth integration (22% U23 minutes) but catastrophic media relations (0/10) and squad management issues create major risks.
-
----
-
-## 2 KPI Table  
-| Metric | Value | Benchmark | Status |
-|--------|--------|-----------|---------|
-| **PPDA** | 8.2 | ≤11 | ✅ Below |
-| **npxG Diff/90** | 0.23 | ≥0.10 | ✅ Above |
-| **xG per Shot** | 0.12 | ≥0.11 | ✅ Above |
-| **U23 Minutes %** | 22% | ≥10% | ✅ Above |
-| **Academy Debuts** | 6 | ≥3 | ✅ Above |
-| **Squad Value Δ** | £70M | ≥£20M | ✅ Above |
-| **Net Spend** | £70M | Efficient | ⚠️ Spend |
-| **KO Win Rate** | 45% | ≥50% | ❌ Below |
-| **Big-8 Record** | 7W-6L-6D | Competitive | ✅ Competitive |
-
----
-
-## 3 Traditional Categories (Legacy Peer Model)  
-*(Legacy peer-normalized scores maintained for historical comparison)*
-
----
-
-## 4 Spurs-Fit Breakdown  
-**Front-Foot Tactics (25/25)** — PPDA 8.2, npxGD 0.23, xG/shot 0.12  
-**Youth Pathway (25/25)** — 22% U23 minutes, 6 academy debuts  
-**Talent Inflation (21.5/25)** — Squad value +£70M, net spend £70M  
-**Big-Game Progression (23.75/25)** — KO rate 45%, Big-8: 7W-6L-6D  
-**Fit Index 95.2 / 100**
-
-**Potential Drivers (44.2)** — Age 44 (0.9), Trend 0.4, Resource Leverage 0.45, Temperament 0.2.
-
----
-
-## 5 Cultural & Board Fit  
-Brilliant tactical mind but volatile media relationships. Potential board conflicts based on Barcelona experience.
-
----
-
-## 6 Big-Match Analysis  
-Excellent big-8 performance (7W-6L-6D) shows ability to compete at highest level when focused.
-
----
-
-## 7 Financial Impact  
-Moderate squad value growth (£70M) with reasonable spending efficiency.
-
----
-
-## 8 Injury & Conditioning  
-Player availability 85%. Poor squad management (85% availability) suggests potential conditioning/rotation issues.
-
----
-
-## 9 Summary & Recommendation  
-Talented but temperamental. High risk due to media volatility and management instability.
-
----
-
-## Appendix  
-**Data Sources:** FBref, Transfermarkt, Premier Injuries, Opta/StatsBomb  
-**Cut-off Date:** 7 June 2025  
-**Methodology:** Spurs-Fit 2-Layer Model (60% Fit Index + 40% Potential Index)  
-**Generated:** 2025-06-07 13:41
+*Analysis based on 2025-06-07*
+*Methodology: 40% Peer-Normalized Analysis + 60% Spurs-Specific Fit Model*
