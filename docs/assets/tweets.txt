@@ -1,137 +1,115 @@
-=== INTRO_PIN ===
-🧵 AI-DRIVEN MANAGER EVALUATION 2025
+# Spurs Manager Evaluation - Tweet Content
 
-8 candidates. 18 advanced KPIs. 12 categories. 1 algorithm.
+## Launch Tweet (Pin)
+🔥 SPURS MANAGER EVALUATION: UNIFIED FINAL RANKINGS
 
-Who should be Spurs' next manager? 
+Using our revolutionary hybrid system (40% Peer Analysis + 60% Spurs-Fit Model):
 
-Data beats opinions. Numbers don't lie. 
+🥇 Kieran McKenna: 79.5/100
+
+Full dataset + methodology: [REPO_LINK]
+
+#THFC #SpursAnalytics #DataDriven
+
+Which manager would YOU choose? 🤔
+
+## Poll Tweet (Day 1 - 2 hours after launch)
+🏟️ SPURS NEXT MANAGER POLL
+
+Based on our comprehensive analysis (18 KPIs + Spurs-specific factors):
+
+🔵 Kieran McKenna (Young Virtuoso)
+🔴 Roberto De Zerbi (Technical Master) 
+🟡 Thomas Frank (Value Engineer)
+🟢 Mauricio Pochettino (Homecoming Hero)
 
 Full analysis: [REPO_LINK]
 
-🔁 RT to see the breakdown ⬇️
+#THFC #SpursNext #DataDriven
 
-=== POLL ===
-📊 POLL: Based on pure data analysis, who gets the Spurs job?
+## Manager Profile Tweets (Days 2-3, every 12 minutes during peak hours)
 
-⚽ Pochettino (6.7/10)
-🇩🇰 Frank (5.9/10) 
-🇮🇹 De Zerbi (5.9/10)
-🏴󠁧󠁢󠁥󠁮󠁧󠁿 McKenna (5.8/10)
+### Kieran McKenna
+🏴󠁧󠁢󠁥󠁮󠁧󠁿 The Young Virtuoso
+• Final Score: 79.5/100 (Peer: 5.8/10 • Spurs-Fit: 93.9/100)
+• Age 38 advantage maximizes potential
+• Perfect fit for Spurs DNA
 
-Vote below! Full analysis: [REPO_LINK]
+Full report: [PDF_LINK]
+#THFC #McKenna #SpursNext
 
-#COYS #SpursManager #DataDriven
-
-=== MAURICIO_POCHETTINO ===
-🇦🇷 The Homecoming Champion
-• Big-8 record: 4W-6L-4D
-• Squad value boost: +£210M
-• Fan connection: Perfect 10/10
-• Fit Score: 6.7/10
-
-Poch is back. The data justifies it. 💙
-
-📊 Full breakdown: [REPORT_LINK_MAURICIO_POCHETTINO]
-📈 All data: [REPO_LINK]
-
-#COYS #SpursManager #Mauriciopochettino
-
-=== THOMAS_FRANK ===
-🇩🇰 The Efficiency Expert
-• Big-8 record: 2W-5L-3D
-• Transfer efficiency: -£50M net spend
-• Media management: Excellent
-• Fit Score: 5.9/10
-
-Brentford's miracle worker. Proven value. 📈
-
-📊 Full breakdown: [REPORT_LINK_THOMAS_FRANK]
-📈 All data: [REPO_LINK]
-
-#COYS #SpursManager #Thomasfrank
-
-=== ROBERTO_DE_ZERBI ===
+### Roberto De Zerbi  
 🇮🇹 The Technical Virtuoso
-• Attacking potency: Elite (8.7/10)
-• Sequence xG: 0.14 (highest)
-• Transfer acumen: Strong
-• Fit Score: 5.9/10
+• Final Score: 75.6/100 (Peer: 5.6/10 • Spurs-Fit: 88.6/100)
+• Highest Fit Index: Perfect tactical alignment
+• Risk: Age 44 limits potential
 
-Marseille's architect. Tactical brilliance. 🎨
+Full report: [PDF_LINK]
+#THFC #DeZerbi #SpursNext
 
-📊 Full breakdown: [REPORT_LINK_ROBERTO_DE_ZERBI]
-📈 All data: [REPO_LINK]
+### Thomas Frank
+🇩🇰 The Value Engineer
+• Final Score: 70.9/100 (Peer: 5.6/10 • Spurs-Fit: 80.8/100)
+• Net spend -£50M with squad value +£120M
+• Youth integration specialist
 
-#COYS #SpursManager #Robertodezerbi
+Full report: [PDF_LINK]
+#THFC #ThomasFrank #SpursNext
 
-=== KIERAN_MCKENNA ===
-🏴󠁧󠁢󠁥󠁮󠁧󠁿 The Phenomenon
-• npxG differential: +0.25/90 (highest)
-• Squad management: Outstanding
-• Championship domination: Complete
-• Fit Score: 5.8/10
+### Mauricio Pochettino
+🇦🇷 The Homecoming Hero
+• Final Score: 70.6/100 (Peer: 5.6/10 • Spurs-Fit: 80.4/100)
+• High Spurs-Fit but declining trajectory
+• Emotional appeal vs analytical reality
 
-Ipswich's miracle. Premier League ready? 🚀
+Full report: [PDF_LINK]
+#THFC #Pochettino #SpursNext
 
-📊 Full breakdown: [REPORT_LINK_KIERAN_MCKENNA]
-📈 All data: [REPO_LINK]
+### Xavi Hernández
+🇪🇸 The Flawed Visionary
+• Final Score: 63.7/100 (Peer: 4.7/10 • Spurs-Fit: 74.8/100)
+• Highest Fit Index but terrible potential trends
+• Squad management concerns
 
-#COYS #SpursManager #Kieranmckenna
+Full report: [PDF_LINK]
+#THFC #Xavi #SpursNext
 
-=== MARCO_SILVA ===
-🇵🇹 The Stabilizer
-• Squad availability: 93% (best)
-• Media relations: Perfect control
-• Fan connection: Strong
-• Fit Score: 5.8/10
+### Marco Silva
+🇵🇹 The Steady Hand
+• Final Score: 60.7/100 (Peer: 5.1/10 • Spurs-Fit: 67.1/100)
+• Squad management excellence (100% availability)
+• Conservative fit with Spurs DNA
 
-Fulham's steady hand. Reliable choice. 🛡️
+Full report: [PDF_LINK]
+#THFC #MarcoSilva #SpursNext
 
-📊 Full breakdown: [REPORT_LINK_MARCO_SILVA]
-📈 All data: [REPO_LINK]
+### Oliver Glasner
+🇦🇹 The Quick-Fix Specialist
+• Final Score: 55.6/100 (Peer: 4.5/10 • Spurs-Fit: 62.6/100)
+• Limited youth development track record
+• Mid-table performance ceiling
 
-#COYS #SpursManager #Marcosilva
+Full report: [PDF_LINK]
+#THFC #Glasner #SpursNext
 
-=== XAVI_HERNÁNDEZ ===
-🇪🇸 The Visionary (Underperforming)
-• Attacking potency: Elite (9.1/10)
-• Youth development: Strong
-• Media volatility: Concerning
-• Fit Score: 4.8/10
+### Andoni Iraola
+🇪🇸 The Wrong Fit
+• Final Score: 51.8/100 (Peer: 3.9/10 • Spurs-Fit: 60.4/100)
+• Big game struggles (1-8-5 vs Big 8)
+• Poor youth development alignment
 
-Barça DNA vs reality check. Surprising low score. 🧬
+Full report: [PDF_LINK]
+#THFC #Iraola #SpursNext
 
-📊 Full breakdown: [REPORT_LINK_XAVI_HERNÁNDEZ]
-📈 All data: [REPO_LINK]
+---
 
-#COYS #SpursManager #Xavihernández
+**Posting Strategy:**
+- Launch: Pin intro tweet
+- +2 hours: Poll tweet  
+- Days 2-3: Manager profiles every 12 minutes during 9am-6pm GMT
+- Each tweet includes relevant hashtags and links
+- Engage with replies to drive discussion
 
-=== OLIVER_GLASNER ===
-🇦🇹 The Transformer
-• Big game performance: Strong (8.2/10)
-• Palace turnaround: Impressive
-• Youth development: Minimal
-• Fit Score: 4.6/10
-
-Mid-season magic. Can he sustain it? ✨
-
-📊 Full breakdown: [REPORT_LINK_OLIVER_GLASNER]
-📈 All data: [REPO_LINK]
-
-#COYS #SpursManager #Oliverglasner
-
-=== ANDONI_IRAOLA ===
-🇪🇸 The Tactician (Struggling)
-• Big game record: Poor (1W-8L-5D)
-• Tactical style: Decent pressing
-• Overall performance: Disappointing
-• Fit Score: 2.6/10
-
-Bournemouth struggles. Data doesn't lie. 🍒
-
-📊 Full breakdown: [REPORT_LINK_ANDONI_IRAOLA]
-📈 All data: [REPO_LINK]
-
-#COYS #SpursManager #Andoniiraola
-
+**Links to replace:**
+- [REPO_LINK] → Shortened GitHub repo URL
+- [PDF_LINK] → Individual manager PDF shortened URLs
