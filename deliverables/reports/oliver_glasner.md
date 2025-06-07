@@ -1,7 +1,7 @@
 # Oliver Glasner
 ## Tottenham Hotspur Manager Evaluation
 
-**Fit Score: 4.6/10**
+**Fit Score: 4.5/10**
 
 ### Key Performance Indicators
 
@@ -36,13 +36,13 @@
 ### 12-Category Breakdown
 
 - **Tactical Style:** 4.3/10
-- **Attacking Potency:** 4.3/10
+- **Attacking Potency:** 3.7/10
 - **Defensive Solidity:** 6.7/10
 - **Big Game Performance:** 8.2/10
 - **Youth Development:** 0.0/10
 - **Squad Management:** 2.7/10
 - **Transfer Acumen:** 3.3/10
-- **Adaptability:** 7.8/10
+- **Adaptability:** 7.3/10
 - **Media Relations:** 6.5/10
 - **Fan Connection:** 1.3/10
 - **Board Harmony:** 8.3/10
@@ -51,9 +51,9 @@
 
 ### Summary
 
-Oliver Glasner scores **4.6/10** overall, ranking **#3** among all candidates.
+Oliver Glasner scores **4.5/10** overall, ranking **#3** among all candidates.
 
-**Strengths:** Big Game Performance, Adaptability, Board Harmony
+**Strengths:** Big Game Performance, Board Harmony
 
 **Considerations:** Tactical Style, Attacking Potency, Youth Development, Squad Management, Transfer Acumen, Fan Connection, Long Term Vision
 

@@ -1,7 +1,7 @@
 # Kieran McKenna
 ## Tottenham Hotspur Manager Evaluation
 
-**Fit Score: 5.8/10**
+**Fit Score: 5.7/10**
 
 ### Key Performance Indicators
 
@@ -36,13 +36,13 @@
 ### 12-Category Breakdown
 
 - **Tactical Style:** 5.1/10
-- **Attacking Potency:** 9.2/10
+- **Attacking Potency:** 8.9/10
 - **Defensive Solidity:** 4.2/10
 - **Big Game Performance:** 3.3/10
 - **Youth Development:** 5.4/10
 - **Squad Management:** 9.4/10
 - **Transfer Acumen:** 3.6/10
-- **Adaptability:** 5.8/10
+- **Adaptability:** 5.6/10
 - **Media Relations:** 6.5/10
 - **Fan Connection:** 4.2/10
 - **Board Harmony:** 8.3/10
@@ -51,7 +51,7 @@
 
 ### Summary
 
-Kieran McKenna scores **5.8/10** overall, ranking **#6** among all candidates.
+Kieran McKenna scores **5.7/10** overall, ranking **#6** among all candidates.
 
 **Strengths:** Attacking Potency, Squad Management, Board Harmony
 

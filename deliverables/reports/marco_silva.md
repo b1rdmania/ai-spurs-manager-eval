@@ -1,7 +1,7 @@
 # Marco Silva
 ## Tottenham Hotspur Manager Evaluation
 
-**Fit Score: 5.8/10**
+**Fit Score: 5.6/10**
 
 ### Key Performance Indicators
 
@@ -36,13 +36,13 @@
 ### 12-Category Breakdown
 
 - **Tactical Style:** 5.6/10
-- **Attacking Potency:** 3.5/10
+- **Attacking Potency:** 2.7/10
 - **Defensive Solidity:** 6.7/10
 - **Big Game Performance:** 4.6/10
 - **Youth Development:** 3.8/10
 - **Squad Management:** 9.0/10
 - **Transfer Acumen:** 3.0/10
-- **Adaptability:** 3.8/10
+- **Adaptability:** 2.9/10
 - **Media Relations:** 10.0/10
 - **Fan Connection:** 7.0/10
 - **Board Harmony:** 10.0/10
@@ -51,7 +51,7 @@
 
 ### Summary
 
-Marco Silva scores **5.8/10** overall, ranking **#2** among all candidates.
+Marco Silva scores **5.6/10** overall, ranking **#2** among all candidates.
 
 **Strengths:** Squad Management, Media Relations, Board Harmony
 

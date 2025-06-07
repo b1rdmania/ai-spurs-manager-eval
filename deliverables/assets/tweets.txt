@@ -14,124 +14,124 @@ Full analysis: [REPO_LINK]
 === POLL ===
 📊 POLL: Based on pure data analysis, who gets the Spurs job?
 
-⚽ Pochettino (6.7/10)
-🇩🇰 Frank (5.9/10) 
-🇮🇹 De Zerbi (5.9/10)
-🏴󠁧󠁢󠁥󠁮󠁧󠁿 McKenna (5.8/10)
+🔥 De Zerbi (7.5/10)
+⚽ Pochettino (7.4/10) 
+📈 Frank (7.2/10)
+🎯 Xavi (6.9/10)
 
 Vote below! Full analysis: [REPO_LINK]
 
 #COYS #SpursManager #DataDriven
 
-=== MAURICIO_POCHETTINO ===
-🇦🇷 The Homecoming Champion
-• Big-8 record: 4W-6L-4D
-• Squad value boost: +£210M
-• Fan connection: Perfect 10/10
-• Fit Score: 6.7/10
-
-Poch is back. The data justifies it. 💙
-
-📊 Full breakdown: [REPORT_LINK_MAURICIO_POCHETTINO]
-📈 All data: [REPO_LINK]
-
-#COYS #SpursManager #Mauriciopochettino
-
 === THOMAS_FRANK ===
-🇩🇰 The Efficiency Expert
-• Big-8 record: 2W-5L-3D
-• Transfer efficiency: -£50M net spend
-• Media management: Excellent
-• Fit Score: 5.9/10
+🇩🇰 The Overachiever
+• Big-8 record: 3W-5L-2D
+• Youth integration: 22.1%
+• xG differential: +0.18/90
+• Fit Score: 7.2/10
 
-Brentford's miracle worker. Proven value. 📈
+Brentford's miracle worker. Can he scale up? 📈
 
-📊 Full breakdown: [REPORT_LINK_THOMAS_FRANK]
+📊 Full breakdown: [PDF_LINK_THOMAS_FRANK]
 📈 All data: [REPO_LINK]
 
 #COYS #SpursManager #Thomasfrank
 
-=== ROBERTO_DE_ZERBI ===
-🇮🇹 The Technical Virtuoso
-• Attacking potency: Elite (8.7/10)
-• Sequence xG: 0.14 (highest)
-• Transfer acumen: Strong
-• Fit Score: 5.9/10
-
-Marseille's architect. Tactical brilliance. 🎨
-
-📊 Full breakdown: [REPORT_LINK_ROBERTO_DE_ZERBI]
-📈 All data: [REPO_LINK]
-
-#COYS #SpursManager #Robertodezerbi
-
-=== KIERAN_MCKENNA ===
-🏴󠁧󠁢󠁥󠁮󠁧󠁿 The Phenomenon
-• npxG differential: +0.25/90 (highest)
-• Squad management: Outstanding
-• Championship domination: Complete
-• Fit Score: 5.8/10
-
-Ipswich's miracle. Premier League ready? 🚀
-
-📊 Full breakdown: [REPORT_LINK_KIERAN_MCKENNA]
-📈 All data: [REPO_LINK]
-
-#COYS #SpursManager #Kieranmckenna
-
 === MARCO_SILVA ===
 🇵🇹 The Stabilizer
-• Squad availability: 93% (best)
-• Media relations: Perfect control
-• Fan connection: Strong
-• Fit Score: 5.8/10
+• Knockout record: 72.1%
+• Squad availability: 87.1%
+• Defensive solidity: Elite
+• Fit Score: 6.6/10
 
-Fulham's steady hand. Reliable choice. 🛡️
+Consistent, reliable, proven. Safe choice? 🛡️
 
-📊 Full breakdown: [REPORT_LINK_MARCO_SILVA]
+📊 Full breakdown: [PDF_LINK_MARCO_SILVA]
 📈 All data: [REPO_LINK]
 
 #COYS #SpursManager #Marcosilva
 
-=== XAVI_HERNÁNDEZ ===
-🇪🇸 The Visionary (Underperforming)
-• Attacking potency: Elite (9.1/10)
-• Youth development: Strong
-• Media volatility: Concerning
-• Fit Score: 4.8/10
-
-Barça DNA vs reality check. Surprising low score. 🧬
-
-📊 Full breakdown: [REPORT_LINK_XAVI_HERNÁNDEZ]
-📈 All data: [REPO_LINK]
-
-#COYS #SpursManager #Xavihernández
-
 === OLIVER_GLASNER ===
 🇦🇹 The Transformer
-• Big game performance: Strong (8.2/10)
-• Palace turnaround: Impressive
-• Youth development: Minimal
-• Fit Score: 4.6/10
+• Palace turnaround: Spectacular
+• xThreat delta: +0.72/90
+• Fan sentiment: 69.8%
+• Fit Score: 6.8/10
 
-Mid-season magic. Can he sustain it? ✨
+Mid-season magic at Palace. Repeatable? ✨
 
-📊 Full breakdown: [REPORT_LINK_OLIVER_GLASNER]
+📊 Full breakdown: [PDF_LINK_OLIVER_GLASNER]
 📈 All data: [REPO_LINK]
 
 #COYS #SpursManager #Oliverglasner
 
+=== MAURICIO_POCHETTINO ===
+🇦🇷 The Homecoming
+• Big-8 record: 6W-2L-2D
+• Squad value boost: +€210M
+• Press regains: 8.1/90
+• Fit Score: 7.4/10
+
+Poch is back. The numbers support it. 💙
+
+📊 Full breakdown: [PDF_LINK_MAURICIO_POCHETTINO]
+📈 All data: [REPO_LINK]
+
+#COYS #SpursManager #Mauriciopochettino
+
+=== XAVI_HERNÁNDEZ ===
+🇪🇸 The Visionary
+• Youth minutes: 28.5%
+• Academy debuts: 8
+• npxG diff: +0.23/90
+• Fit Score: 6.9/10
+
+Barça DNA meets Spurs ambition. Perfect fit? 🧬
+
+📊 Full breakdown: [PDF_LINK_XAVI_HERNÁNDEZ]
+📈 All data: [REPO_LINK]
+
+#COYS #SpursManager #Xavihernández
+
+=== KIERAN_MCKENNA ===
+🏴󠁧󠁢󠁥󠁮󠁧󠁿 The Phenomenon
+• npxG differential: +0.25/90
+• Youth integration: 31.2%
+• Academy debuts: 6
+• Fit Score: 6.8/10
+
+Ipswich's miracle. Premier League ready? 🚀
+
+📊 Full breakdown: [PDF_LINK_KIERAN_MCKENNA]
+📈 All data: [REPO_LINK]
+
+#COYS #SpursManager #Kieranmckenna
+
 === ANDONI_IRAOLA ===
-🇪🇸 The Tactician (Struggling)
-• Big game record: Poor (1W-8L-5D)
-• Tactical style: Decent pressing
-• Overall performance: Disappointing
-• Fit Score: 2.6/10
+🇪🇸 The Tactician
+• Press regains: 8.1/90
+• Bournemouth transformation
+• Adaptability: High
+• Fit Score: 6.4/10
 
-Bournemouth struggles. Data doesn't lie. 🍒
+Cherries flying high. Underrated gem? 🍒
 
-📊 Full breakdown: [REPORT_LINK_ANDONI_IRAOLA]
+📊 Full breakdown: [PDF_LINK_ANDONI_IRAOLA]
 📈 All data: [REPO_LINK]
 
 #COYS #SpursManager #Andoniiraola
+
+=== ROBERTO_DE_ZERBI ===
+🇮🇹 The Architect
+• Sequence xG: 0.13 (highest)
+• xThreat delta: +0.92/90
+• Tactical innovation: Elite
+• Fit Score: 7.5/10
+
+Brighton's beautiful game. Our future? 🎨
+
+📊 Full breakdown: [PDF_LINK_ROBERTO_DE_ZERBI]
+📈 All data: [REPO_LINK]
+
+#COYS #SpursManager #Robertodezerbi
 

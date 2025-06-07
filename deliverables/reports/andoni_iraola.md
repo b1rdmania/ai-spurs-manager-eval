@@ -1,7 +1,7 @@
 # Andoni Iraola
 ## Tottenham Hotspur Manager Evaluation
 
-**Fit Score: 2.6/10**
+**Fit Score: 3.0/10**
 
 ### Key Performance Indicators
 
@@ -12,7 +12,7 @@
 
 #### Attacking Output  
 - **Non-Penalty xG Diff/90:** 0.05
-- **xThreat Delta/90:** 0.56
+- **xThreat Delta/90:** 0.756
 - **Sequence xG:** 0.08
 
 #### Big Game Performance
@@ -36,13 +36,13 @@
 ### 12-Category Breakdown
 
 - **Tactical Style:** 5.5/10
-- **Attacking Potency:** 0.0/10
+- **Attacking Potency:** 2.0/10
 - **Defensive Solidity:** 4.0/10
 - **Big Game Performance:** 1.8/10
 - **Youth Development:** 1.4/10
 - **Squad Management:** 4.0/10
 - **Transfer Acumen:** 3.3/10
-- **Adaptability:** 1.3/10
+- **Adaptability:** 3.3/10
 - **Media Relations:** 2.2/10
 - **Fan Connection:** 0.0/10
 - **Board Harmony:** 6.1/10
@@ -51,7 +51,7 @@
 
 ### Summary
 
-Andoni Iraola scores **2.6/10** overall, ranking **#7** among all candidates.
+Andoni Iraola scores **3.0/10** overall, ranking **#7** among all candidates.
 
 **Strengths:** Balanced across all areas
 

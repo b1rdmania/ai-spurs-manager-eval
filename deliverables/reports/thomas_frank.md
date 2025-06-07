@@ -1,7 +1,7 @@
 # Thomas Frank
 ## Tottenham Hotspur Manager Evaluation
 
-**Fit Score: 5.9/10**
+**Fit Score: 5.8/10**
 
 ### Key Performance Indicators
 
@@ -36,13 +36,13 @@
 ### 12-Category Breakdown
 
 - **Tactical Style:** 6.5/10
-- **Attacking Potency:** 5.5/10
+- **Attacking Potency:** 4.9/10
 - **Defensive Solidity:** 6.2/10
 - **Big Game Performance:** 5.2/10
 - **Youth Development:** 2.9/10
 - **Squad Management:** 4.8/10
 - **Transfer Acumen:** 7.5/10
-- **Adaptability:** 6.0/10
+- **Adaptability:** 5.4/10
 - **Media Relations:** 8.7/10
 - **Fan Connection:** 4.0/10
 - **Board Harmony:** 9.3/10
@@ -51,7 +51,7 @@
 
 ### Summary
 
-Thomas Frank scores **5.9/10** overall, ranking **#1** among all candidates.
+Thomas Frank scores **5.8/10** overall, ranking **#1** among all candidates.
 
 **Strengths:** Transfer Acumen, Media Relations, Board Harmony
 

@@ -36,13 +36,13 @@
 ### 12-Category Breakdown
 
 - **Tactical Style:** 5.2/10
-- **Attacking Potency:** 7.2/10
+- **Attacking Potency:** 6.9/10
 - **Defensive Solidity:** 5.7/10
 - **Big Game Performance:** 7.1/10
 - **Youth Development:** 8.1/10
 - **Squad Management:** 6.0/10
 - **Transfer Acumen:** 5.0/10
-- **Adaptability:** 8.0/10
+- **Adaptability:** 7.7/10
 - **Media Relations:** 4.3/10
 - **Fan Connection:** 10.0/10
 - **Board Harmony:** 7.2/10

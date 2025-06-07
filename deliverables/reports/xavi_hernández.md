@@ -29,7 +29,7 @@
 - **Net Spend:** €70M
 
 #### Public Relations
-- **Fan Sentiment:** 21%
+- **Fan Sentiment:** 22%
 - **Media Volatility:** 1.6
 - **Touchline Bans/Season:** 0.5
 
@@ -44,7 +44,7 @@
 - **Transfer Acumen:** 3.5/10
 - **Adaptability:** 8.3/10
 - **Media Relations:** 0.0/10
-- **Fan Connection:** 2.3/10
+- **Fan Connection:** 2.7/10
 - **Board Harmony:** 5.0/10
 - **Long Term Vision:** 5.4/10
 
