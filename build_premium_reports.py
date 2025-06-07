@@ -54,139 +54,125 @@ class PremiumReportBuilder:
         return processed
     
     def generate_simple_css(self):
-        """Generate simple, clean CSS"""
+        """Generate ultra-simple CSS"""
         css = """
-        /* Simple Premium Report Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        /* Ultra Simple Report Styles */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
             color: #333;
             max-width: 800px;
             margin: 0 auto;
-            padding: 2rem;
+            padding: 20px;
             background: #fff;
         }
         
         h1 {
-            font-size: 2rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+            font-size: 24px;
             color: #132257;
-            border-bottom: 2px solid #50e3c2;
-            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
         }
         
         h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 2rem 0 1rem 0;
+            font-size: 20px;
             color: #132257;
+            margin-top: 30px;
         }
         
         h3 {
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin: 1.5rem 0 0.5rem 0;
+            font-size: 16px;
             color: #132257;
         }
         
         p {
-            margin-bottom: 1rem;
-        }
-        
-        .cover-header {
-            text-align: center;
-            margin-bottom: 3rem;
-            padding: 2rem;
-            background: linear-gradient(135deg, #132257, #50e3c2);
-            color: white;
-            border-radius: 8px;
-        }
-        
-        .final-score {
-            font-size: 3rem;
-            font-weight: 700;
-            margin: 1rem 0;
-        }
-        
-        .rank-badge {
-            background: #50e3c2;
-            color: #132257;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            font-weight: 600;
-            display: inline-block;
-            margin: 0.5rem 0;
-        }
-        
-        .score-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin: 1rem 0;
-        }
-        
-        .score-card {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 8px;
-            text-align: center;
-            border-left: 4px solid #50e3c2;
-        }
-        
-        .score-value {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #132257;
+            margin-bottom: 15px;
         }
         
         ul {
-            margin: 1rem 0;
-            padding-left: 2rem;
+            margin: 15px 0;
+            padding-left: 30px;
         }
         
         li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 5px;
         }
         
         .nav-header {
             background: #132257;
             color: white;
-            padding: 1rem;
-            margin: -2rem -2rem 2rem -2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            padding: 15px;
+            margin: -20px -20px 30px -20px;
+            text-align: center;
         }
         
         .nav-header a {
             color: #50e3c2;
             text-decoration: none;
-            font-weight: 500;
         }
         
-        .nav-header a:hover {
-            text-decoration: underline;
+        .header-info {
+            text-align: center;
+            background: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        
+        .final-score {
+            font-size: 48px;
+            font-weight: bold;
+            color: #132257;
+            margin: 10px 0;
+        }
+        
+        .rank-info {
+            font-size: 18px;
+            color: #666;
+            margin: 10px 0;
+        }
+        
+        .score-breakdown {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        
+        .score-item {
+            text-align: center;
+            padding: 15px;
+            background: #f0f8ff;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            min-width: 120px;
+        }
+        
+        .score-value {
+            font-size: 24px;
+            font-weight: bold;
+            color: #132257;
+        }
+        
+        .score-label {
+            font-size: 14px;
+            color: #666;
         }
         
         img {
-            max-width: 100%;
+            max-width: 400px;
             height: auto;
-            border-radius: 8px;
-            margin: 1rem 0;
+            display: block;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 5px;
         }
         """
         
         css_file = self.output_dir / 'premium_report.css'
         with open(css_file, 'w') as f:
             f.write(css)
-        print(f"✅ Generated simple CSS: {css_file}")
+        print(f"✅ Generated ultra-simple CSS: {css_file}")
     
     def get_manager_data(self, manager_name):
         """Get data for a specific manager"""
@@ -246,37 +232,34 @@ class PremiumReportBuilder:
         return output_file
     
     def create_simple_html(self, manager_name, content, manager_data):
-        """Create simplified HTML template"""
+        """Create ultra-simplified HTML template"""
         html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{manager_name} - Manager Analysis Report</title>
+    <title>{manager_name} - Manager Report</title>
     <link rel="stylesheet" href="premium_report.css">
 </head>
 <body>
-    <nav class="nav-header">
+    <div class="nav-header">
         <h1>Spurs Manager Evaluation 2025</h1>
-        <div>
-            <a href="../index.html">← Back to Dashboard</a>
-        </div>
-    </nav>
+        <a href="../index.html">← Back to Dashboard</a>
+    </div>
     
-    <div class="cover-header">
+    <div class="header-info">
         <h1>{manager_name}</h1>
-        <div class="rank-badge">Rank #{manager_data['rank']} of 8</div>
+        <div class="rank-info">Rank #{manager_data['rank']} of 8 • {manager_data['profile']}</div>
         <div class="final-score">{manager_data['final_score']}/100</div>
-        <p><strong>{manager_data['profile']}</strong></p>
         
-        <div class="score-grid">
-            <div class="score-card">
-                <div>Peer Analysis</div>
+        <div class="score-breakdown">
+            <div class="score-item">
                 <div class="score-value">{manager_data['peer_score']}/10</div>
+                <div class="score-label">Peer Analysis</div>
             </div>
-            <div class="score-card">
-                <div>Spurs-Fit</div>
+            <div class="score-item">
                 <div class="score-value">{manager_data['spursfit_total']}/100</div>
+                <div class="score-label">Spurs-Fit</div>
             </div>
         </div>
     </div>
