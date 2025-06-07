@@ -3,9 +3,15 @@
 
 A reproducible, publicly auditable system for evaluating potential football managers using advanced performance KPIs and machine learning.
 
+🌐 **Live Platform**: https://b1rdmania.github.io/ai-spurs-manager-eval/  
+📊 **GitHub Repository**: https://github.com/b1rdmania/ai-spurs-manager-eval
+
 ## 🚀 Quick Start (Frozen Dataset Package)
 
 ```bash
+# Install dependencies  
+python -m pip install -r requirements.txt
+
 # Generate complete deliverables package
 python3 generate_frozen_package.py
 
@@ -20,25 +26,27 @@ cd deliverables/
 This system delivers a **frozen, curated dataset** that eliminates all operational complexity while maintaining full transparency and "AI-powered" credibility.
 
 ✅ **Curated 18-KPI dataset** for 8 manager candidates  
-✅ **12-category scoring** using weighted PCA-derived metrics  
+✅ **12-category scoring** using weighted methodology  
 ✅ **Individual radar charts** for each manager  
 ✅ **Ready-to-tweet social content** with engagement hooks  
-✅ **Professional PDF reports** (Markdown + Pandoc conversion)  
+✅ **Professional Markdown reports** (PDF conversion via Pandoc)  
 ✅ **Complete GitHub Pages website** with interactive tables  
 ✅ **Zero-maintenance deployment** in < 30 minutes  
 
-## 📊 Results Summary
+## 📊 Results Summary (Real Research Data)
 
-| Rank | Manager | Fit Score | Key Strengths |
-|------|---------|-----------|---------------|
-| 🥇 **#1** | **Roberto De Zerbi** | **6.9/10** | Tactical innovation, attacking potency |
-| 🥈 **#2** | **Mauricio Pochettino** | **6.4/10** | Big game performance, squad management |
-| 🥉 **#3** | **Xavi Hernández** | **6.1/10** | Youth development, attacking metrics |
-| #4 | Kieran McKenna | 5.8/10 | Youth integration, media relations |
-| #5 | Thomas Frank | 5.0/10 | Balanced profile, overachievement |
-| #6 | Marco Silva | 5.2/10 | Squad management, defensive stability |
-| #7 | Oliver Glasner | 2.9/10 | Tactical adaptability |
-| #8 | Andoni Iraola | 3.2/10 | Pressing intensity |
+| Rank | Manager | Current Club | Fit Score | Key Strengths |
+|------|---------|--------------|-----------|---------------|
+| 🥇 **#1** | **Mauricio Pochettino** | **USMNT** | **6.7/10** | Youth Development, Fan Connection, Long-term Vision |
+| 🥈 **#2** | **Thomas Frank** | **Brentford** | **5.9/10** | Transfer Acumen, Media Relations, Tactical Style |
+| 🥉 **#3** | **Roberto De Zerbi** | **Marseille** | **5.9/10** | Attacking Potency, Transfer Acumen, Big Game Performance |
+| #4 | Kieran McKenna | Ipswich Town | 5.8/10 | Attacking Potency, Squad Management |
+| #5 | Marco Silva | Fulham | 5.8/10 | Squad Management, Media Relations, Fan Connection |
+| #6 | Xavi Hernández | Barcelona | 4.8/10 | Attacking Potency, Big Game Performance, Youth Development |
+| #7 | Oliver Glasner | Crystal Palace | 4.6/10 | Big Game Performance, Adaptability |
+| #8 | Andoni Iraola | Bournemouth | 2.6/10 | Tactical Style |
+
+*Data collected up to 7 June 2025 from FBref, Transfermarkt, Premier Injuries, Opta/StatsBomb public dashboards*
 
 ## 📁 Deliverables Package
 
@@ -48,10 +56,10 @@ This system delivers a **frozen, curated dataset** that eliminates all operation
 │   ├── kpi_merged.csv      # Raw 18-KPI data for all 8 managers
 │   └── scores_12cat.csv    # Category scores + fit scores
 ├── 📄 reports/
-│   ├── roberto_de_zerbi.md # Individual manager reports
-│   ├── mauricio_pochettino.md
+│   ├── mauricio_pochettino.md # Individual manager reports (Markdown)
+│   ├── thomas_frank.md
 │   ├── [... 6 more managers]
-│   └── README_how_to_regen.md
+│   └── README_how_to_regen.md  # PDF conversion instructions
 ├── 🎨 assets/
 │   ├── *_radar.png        # Individual radar charts (8 files)
 │   ├── score_matrix.png   # Summary heatmap
@@ -64,30 +72,47 @@ This system delivers a **frozen, curated dataset** that eliminates all operation
 
 ## 🏗 Data Model
 
-### 18 Core KPIs
-| Category | KPIs | Source |
-|----------|------|---------|
-| **Tactical** | PPDA, Opposition passes, Press regains | Opta |
-| **Attacking** | npxG differential, xThreat, Sequence xG | StatsBomb |
-| **Performance** | Big-8 record, Knockout win rate | FBref/Manual |
-| **Development** | U23 minutes, Academy debuts | Opta/Club data |
-| **Management** | Injury days, Squad availability | Multiple |
-| **Financial** | Squad value delta, Net spend | Transfermarkt |
-| **Relations** | Fan sentiment, Media volatility, Touchline bans | GDELT/Manual |
+### 18 Core KPIs (Data Dictionary)
 
-### 12-Category Scoring
+| KPI | Description | Units | Source | Example |
+|-----|-------------|-------|---------|---------|
+| `ppda` | Passes per defensive action (pressing intensity) | Decimal | FBref | 9.9 |
+| `oppda` | Opposition passes allowed per defensive action | Decimal | FBref | 13.4 |
+| `high_press_regains_90` | High press regains per 90 minutes | Decimal | FBref | 8.1 |
+| `npxgd_90` | Non-penalty expected goals differential per 90 | Decimal | FBref | +0.20 |
+| `xg_per_shot` | Expected goals per shot average | Decimal | FBref | 0.11 |
+| `xg_sequence` | Average xG per open-play sequence | Decimal | FBref | 0.12 |
+| `big8_w` | Wins vs current "Big 8" teams | Integer | Manual | 4 |
+| `big8_l` | Losses vs current "Big 8" teams | Integer | Manual | 6 |
+| `big8_d` | Draws vs current "Big 8" teams | Integer | Manual | 4 |
+| `ko_win_rate` | Cup knockout win percentage | Decimal | Manual | 55.0 |
+| `u23_minutes_pct` | Percentage of league minutes given to U23 players | Decimal | Club data | 15.0 |
+| `academy_debuts` | Number of academy players given debuts | Integer | Club data | 12 |
+| `injury_days_season` | Total player days lost to injury | Integer | Premier Injuries | 780 |
+| `player_availability` | Squad availability percentage* | Decimal | Calculated | 90.0 |
+| `squad_value_delta_m` | Squad market value change since appointment | Integer | Transfermarkt | +210 |
+| `net_spend_m` | Transfer net spend since appointment | Integer | Transfermarkt | +180 |
+| `fan_sentiment_pct` | Positive fan sentiment percentage | Decimal | Social media | 35.0 |
+| `media_vol_sigma` | Standard deviation of weekly headline count | Decimal | Manual | 1.40 |
+
+**Currency**: All financial values in **£ millions**  
+**Availability Formula**: `player_availability = (1 - (injury_days_season / (squad_size × days_in_season))) × 100`  
+**Data Cut-off**: 7 June 2025  
+**Weights Frozen**: 07 June 2025 to prevent confusion if numbers shift later
+
+### 12-Category Scoring (Weighted)
 1. **Tactical Style** (12% weight) - Pressing intensity, defensive actions
 2. **Attacking Potency** (11% weight) - Goal threat, creative output  
-3. **Defensive Solidity** (10% weight) - Clean sheets, defensive metrics
+3. **Defensive Solidity** (10% weight) - Opposition control, injury management
 4. **Big Game Performance** (9% weight) - Results vs top opposition
 5. **Youth Development** (8% weight) - Academy integration, U23 usage
 6. **Squad Management** (8% weight) - Player availability, injury record
-7. **Transfer Acumen** (8% weight) - Market value improvement
-8. **Adaptability** (7% weight) - Tactical flexibility
-9. **Media Relations** (7% weight) - Press management, volatility
-10. **Fan Connection** (7% weight) - Supporter sentiment
-11. **Board Harmony** (7% weight) - Relationship management
-12. **Long-term Vision** (6% weight) - Development trajectory
+7. **Transfer Acumen** (8% weight) - Market value improvement, efficiency
+8. **Adaptability** (7% weight) - Tactical flexibility, knockout performance
+9. **Media Relations** (7% weight) - Press management, volatility control
+10. **Fan Connection** (7% weight) - Supporter sentiment, academy focus
+11. **Board Harmony** (7% weight) - Relationship management, stability
+12. **Long-term Vision** (6% weight) - Development trajectory, youth integration
 
 ## 🔄 Why Frozen Dataset Works
 
@@ -130,7 +155,7 @@ See `deliverables/DEPLOYMENT_GUIDE.md` for detailed instructions.
 
 ```bash
 # Install dependencies
-pip3 install pandas numpy matplotlib seaborn scikit-learn
+python -m pip install -r requirements.txt
 
 # Generate fresh package
 python3 generate_frozen_package.py
@@ -146,7 +171,7 @@ vim weighting.json
 ## 📊 Sample Output
 
 **Manager Radar Example**:
-![Roberto De Zerbi Radar](deliverables/assets/roberto_de_zerbi_radar.png)
+![Mauricio Pochettino Radar](deliverables/assets/mauricio_pochettino_radar.png)
 
 **Score Matrix**:
 ![Score Matrix](deliverables/assets/score_matrix.png)
@@ -155,13 +180,14 @@ vim weighting.json
 
 - GitHub stars/forks tracking
 - Tweet engagement rates  
-- PDF download counts
 - Website traffic (Google Analytics)
 - Social media mentions & sentiment
 
-## 📄 License
+## 📄 License & Attribution
 
 MIT License - see [LICENSE](LICENSE)
+
+**Third-party data sources**: FBref (Sports Reference), Transfermarkt, Premier Injuries, Opta/StatsBomb public dashboards. This analysis is independent and not affiliated with these providers.
 
 ---
 
