@@ -1,10 +1,11 @@
-# 🎯 AI-Driven Spurs Manager Evaluation 2025
+# 🎯 AI Spurs Manager Evaluation 2025 | Unified Scoring System
 
-**Revolutionary Unified Final Scoring System: 40% Peer Analysis + 60% Spurs-Fit Model**
+**Revolutionary Data-Driven Manager Analysis: Kieran McKenna #1 (79.5/100)**  
+*40% Peer Analysis + 60% Spurs-Fit Model = Clear Strategic Recommendation*
 
-[![GitHub Pages](https://img.shields.io/badge/Live%20Site-GitHub%20Pages-blue?style=for-the-badge&logo=github)](https://b1rdmania.github.io/ai-spurs-manager-eval/)
-[![Data Analysis](https://img.shields.io/badge/Analysis-Complete-success?style=for-the-badge)](#)
-[![Methodology](https://img.shields.io/badge/Scoring-Unified%20Final-red?style=for-the-badge)](#)
+[![🔴 Live Dashboard](https://img.shields.io/badge/🔴%20LIVE-Manager%20Dashboard-success?style=for-the-badge&logo=github)](https://b1rdmania.github.io/ai-spurs-manager-eval/)
+[![📊 Data Analysis](https://img.shields.io/badge/📊%20Analysis-8%20Managers%20Evaluated-blue?style=for-the-badge)](#)
+[![🧠 Methodology](https://img.shields.io/badge/🧠%20AI%20Scoring-Unified%20Final%20System-red?style=for-the-badge)](#)
 
 ## 🏆 Final Manager Rankings (Unified Scoring)
 
@@ -148,6 +149,14 @@ python3 preview_site.py
 
 ## 📋 Change Log
 
+### v2.1 - Data Accuracy & UX Improvements  
+- ✅ Fixed all reports to use correct unified final scores from authoritative CSV source
+- ✅ Eliminated data conflicts by removing outdated scores.json file
+- ✅ Preserved Bitly URL compatibility for all manager reports
+- ✅ Simplified dashboard navigation: "PDF" → "Report", streamlined terminology
+- ✅ Enhanced report accessibility with normal-sized charts and text focus
+- ✅ Verified Kieran McKenna #1 ranking (79.5/100) accuracy across all systems
+
 ### v2.0 - Unified Final Scoring System
 - ✅ Integrated peer analysis (40%) with Spurs-Fit model (60%)
 - ✅ Eliminated dual-scoring confusion with single final metric
@@ -158,6 +167,16 @@ python3 preview_site.py
 - ✅ Revolutionary Spurs-specific scoring methodology
 - ✅ Age-weighted potential assessment
 - ✅ Comprehensive KPI framework
+
+---
+
+## 🔍 About This Repository
+
+This AI-powered analysis platform evaluates 8 potential Tottenham Hotspur managers using advanced data science and machine learning techniques. Built with Python, deployed on GitHub Pages, and featuring a revolutionary unified scoring system that combines peer analysis with Spurs-specific fit metrics.
+
+**Perfect for:** Football analytics enthusiasts, data scientists, Spurs fans, and anyone interested in applied sports analytics and predictive modeling.
+
+**Technologies:** Python 3.12, Pandas, NumPy, Matplotlib, Bootstrap 5, GitHub Actions, Statistical Analysis, Machine Learning
 
 ---
 
