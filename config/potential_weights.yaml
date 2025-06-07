@@ -1,0 +1,4 @@
+age_factor: 0.25   # reverse-scaled (younger = higher)
+trend_factor: 0.35   # 3-yr CAGR of composite KPI
+resource_leverage: 0.25   # KPI delta per £ net spend
+temperament_factor: 0.15   # 0-1 manual flag (board clashes, bans) 

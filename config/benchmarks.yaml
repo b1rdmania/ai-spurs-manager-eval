@@ -1,0 +1,16 @@
+front_foot:
+  ppda_max: 11
+  npxgd90_min: 0.10
+  xg_per_shot_min: 0.11
+
+youth:
+  u23_min_pct: 10
+  academy_debuts_min: 3
+
+talent_inflation:
+  squad_delta_min: 20   # £m per season
+  net_spend_eff_pct: 70 # percentile efficiency
+
+big_games:
+  ko_win_rate_min: 50
+  big8_npxgd_min: 0 

@@ -1,78 +1,67 @@
-=== INTRO_PIN ===
-🧵 AI-DRIVEN MANAGER EVALUATION 2025
+=== ANNOUNCEMENT ===
+🚨 SPURS-FIT MANAGER RANKINGS 2025
 
-8 candidates. 18 advanced KPIs. 12 categories. 1 algorithm.
+NEW 2-Layer Model:
+• Fit Index (60%): How well they meet our benchmarks
+• Potential Index (40%): Ceiling they can reach
 
-Who should be Spurs' next manager? 
+🥇 Kieran McKenna: 93.9/100
+(Fit: 98.0 • Potential: 87.8)
 
-Data beats opinions. Numbers don't lie. 
+Full rankings 👇
 
-Full analysis: [REPO_LINK]
+#COYS #SpursManager #Data
 
-🔁 RT to see the breakdown ⬇️
+=== KIERAN_MCKENNA ===
+🏴󠁧󠁢󠁥󠁮󠁧󠁿 The Young Virtuoso
+• Overall: 93.9/100 (Fit: 98.0 • Potential: 87.8)
+• Age: 38 - Peak years ahead
+• Championship dominance
+• Youth integration champion
 
-=== POLL ===
-📊 POLL: Based on pure data analysis, who gets the Spurs job?
+Ipswich's miracle worker ready for N17? 🚀
 
-🔥 De Zerbi (7.5/10)
-⚽ Pochettino (7.4/10) 
-📈 Frank (7.2/10)
-🎯 Xavi (6.9/10)
+📊 Full breakdown: [PDF_LINK_KIERAN_MCKENNA]
+📈 All data: [REPO_LINK]
 
-Vote below! Full analysis: [REPO_LINK]
+#COYS #SpursManager #Kieranmckenna
 
-#COYS #SpursManager #DataDriven
+=== ROBERTO_DE_ZERBI ===
+🇮🇹 The Technical Virtuoso
+• Overall: 88.6/100 (Fit: 100.0 • Potential: 71.5)
+• Perfect Spurs fit score
+• xG sequence: 0.14 (elite)
+• Big-8 record: 8W-9L-5D
+
+Brighton's architect ready for glory? 🎨
+
+📊 Full breakdown: [PDF_LINK_ROBERTO_DE_ZERBI]
+📈 All data: [REPO_LINK]
+
+#COYS #SpursManager #Robertodezerbi
 
 === THOMAS_FRANK ===
-🇩🇰 The Overachiever
-• Big-8 record: 3W-5L-2D
-• Youth integration: 22.1%
-• xG differential: +0.18/90
-• Fit Score: 7.2/10
+🇩🇰 The Value Engineer
+• Overall: 80.8/100 (Fit: 90.4 • Potential: 66.5)
+• Net spend: -£50M (only profit)
+• Brentford overachievement
+• Media mastery: 8.7/10
 
-Brentford's miracle worker. Can he scale up? 📈
+Maximum ROI guaranteed? 💰
 
 📊 Full breakdown: [PDF_LINK_THOMAS_FRANK]
 📈 All data: [REPO_LINK]
 
 #COYS #SpursManager #Thomasfrank
 
-=== MARCO_SILVA ===
-🇵🇹 The Stabilizer
-• Knockout record: 72.1%
-• Squad availability: 87.1%
-• Defensive solidity: Elite
-• Fit Score: 6.6/10
-
-Consistent, reliable, proven. Safe choice? 🛡️
-
-📊 Full breakdown: [PDF_LINK_MARCO_SILVA]
-📈 All data: [REPO_LINK]
-
-#COYS #SpursManager #Marcosilva
-
-=== OLIVER_GLASNER ===
-🇦🇹 The Transformer
-• Palace turnaround: Spectacular
-• xThreat delta: +0.72/90
-• Fan sentiment: 69.8%
-• Fit Score: 6.8/10
-
-Mid-season magic at Palace. Repeatable? ✨
-
-📊 Full breakdown: [PDF_LINK_OLIVER_GLASNER]
-📈 All data: [REPO_LINK]
-
-#COYS #SpursManager #Oliverglasner
-
 === MAURICIO_POCHETTINO ===
-🇦🇷 The Homecoming
-• Big-8 record: 6W-2L-2D
-• Squad value boost: +€210M
-• Press regains: 8.1/90
-• Fit Score: 7.4/10
+🇦🇷 The Homecoming Hero
+• Overall: 80.4/100 (Fit: 91.0 • Potential: 64.5)
+• Academy debuts: 12 (highest)
+• Fan connection: Perfect 10/10
+• Squad value: +£210M boost
 
-Poch is back. The numbers support it. 💙
+Data justifies the emotion 💙
 
 📊 Full breakdown: [PDF_LINK_MAURICIO_POCHETTINO]
 📈 All data: [REPO_LINK]
@@ -80,58 +69,79 @@ Poch is back. The numbers support it. 💙
 #COYS #SpursManager #Mauriciopochettino
 
 === XAVI_HERNÁNDEZ ===
-🇪🇸 The Visionary
-• Youth minutes: 28.5%
-• Academy debuts: 8
-• npxG diff: +0.23/90
-• Fit Score: 6.9/10
+🇪🇸 The Flawed Visionary
+• Overall: 74.8/100 (Fit: 95.2 • Potential: 44.2)
+• xG per shot: 0.12 (elite)
+• Youth minutes: 22%
+• Media volatility: Crisis level
 
-Barça DNA meets Spurs ambition. Perfect fit? 🧬
+Talent vs temperament dilemma 🧬
 
 📊 Full breakdown: [PDF_LINK_XAVI_HERNÁNDEZ]
 📈 All data: [REPO_LINK]
 
 #COYS #SpursManager #Xavihernández
 
-=== KIERAN_MCKENNA ===
-🏴󠁧󠁢󠁥󠁮󠁧󠁿 The Phenomenon
-• npxG differential: +0.25/90
-• Youth integration: 31.2%
-• Academy debuts: 6
-• Fit Score: 6.8/10
+=== MARCO_SILVA ===
+🇵🇹 The Steady Hand
+• Overall: 67.1/100 (Fit: 75.0 • Potential: 55.2)
+• Squad availability: 93%
+• Media relations: Perfect 10/10
+• Fulham stability specialist
 
-Ipswich's miracle. Premier League ready? 🚀
+Safe choice, limited ceiling? 🛡️
 
-📊 Full breakdown: [PDF_LINK_KIERAN_MCKENNA]
+📊 Full breakdown: [PDF_LINK_MARCO_SILVA]
 📈 All data: [REPO_LINK]
 
-#COYS #SpursManager #Kieranmckenna
+#COYS #SpursManager #Marcosilva
+
+=== OLIVER_GLASNER ===
+🇦🇹 The Quick-Fix Specialist
+• Overall: 62.6/100 (Fit: 63.9 • Potential: 60.7)
+• Palace mid-season rescue
+• Big games: 8.2/10
+• Youth development: Minimal
+
+Short-term impact, long-term concerns? ⚡
+
+📊 Full breakdown: [PDF_LINK_OLIVER_GLASNER]
+📈 All data: [REPO_LINK]
+
+#COYS #SpursManager #Oliverglasner
 
 === ANDONI_IRAOLA ===
-🇪🇸 The Tactician
-• Press regains: 8.1/90
-• Bournemouth transformation
-• Adaptability: High
-• Fit Score: 6.4/10
+🇪🇸 The Wrong Fit
+• Overall: 60.4/100 (Fit: 60.5 • Potential: 60.2)
+• Big-8 record: 1W-8L-5D
+• Fan sentiment: 20%
+• Tactical style interesting
 
-Cherries flying high. Underrated gem? 🍒
+Purist approach, wrong venue? 🍒
 
 📊 Full breakdown: [PDF_LINK_ANDONI_IRAOLA]
 📈 All data: [REPO_LINK]
 
 #COYS #SpursManager #Andoniiraola
 
-=== ROBERTO_DE_ZERBI ===
-🇮🇹 The Architect
-• Sequence xG: 0.13 (highest)
-• xThreat delta: +0.92/90
-• Tactical innovation: Elite
-• Fit Score: 7.5/10
+=== SYSTEM_EXPLANATION ===
+🔬 NEW SPURS-FIT MODEL EXPLAINED
 
-Brighton's beautiful game. Our future? 🎨
+Instead of generic peer comparison, we now measure:
 
-📊 Full breakdown: [PDF_LINK_ROBERTO_DE_ZERBI]
-📈 All data: [REPO_LINK]
+🎯 FIT INDEX (60%):
+• Front-foot play ✓
+• Youth development ✓  
+• Transfer efficiency ✓
+• Big game performance ✓
 
-#COYS #SpursManager #Robertodezerbi
+📈 POTENTIAL INDEX (40%):
+• Age factor (younger=higher)
+• 3-year trajectory 
+• Resource leverage
+• Temperament stability
+
+= Total 0-100 score showing floor vs ceiling
+
+#DataDriven #COYS
 

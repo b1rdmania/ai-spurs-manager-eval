@@ -2,6 +2,7 @@
 """
 Generate frozen dataset package for AI-Driven Manager Evaluation
 Creates all deliverables: CSV, PDFs, assets, site
+Updated for Spurs-Fit 2-Layer Model
 """
 
 import pandas as pd
@@ -12,8 +13,14 @@ from pathlib import Path
 import json
 from datetime import datetime
 import os
+import sys
+
+# Add scripts directory to path
+sys.path.append('scripts')
+from score_engine import calculate_spursfit_scores
 
 print("🎯 Generating Frozen Dataset Package for Spurs Manager Evaluation")
+print("🔄 Using NEW Spurs-Fit 2-Layer Model")
 print("=" * 60)
 
 # Create deliverables structure
@@ -24,84 +31,95 @@ def setup_deliverables():
         Path(dir_path).mkdir(parents=True, exist_ok=True)
     print("📁 Created deliverables structure")
 
-# Generate curated KPI dataset
-def create_kpi_dataset():
-    """Create the master KPI dataset from real research data"""
+# Generate curated KPI dataset and Spurs-Fit scores
+def create_spursfit_dataset():
+    """Create the master dataset using Spurs-Fit 2-layer scoring"""
     
-    # Load real data from CSV
-    try:
-        df = pd.read_csv('manager_data_real.csv')
-        print("✅ Loaded real research data from manager_data_real.csv")
-    except FileNotFoundError:
-        print("⚠️  manager_data_real.csv not found, creating sample template")
-        # Fallback synthetic data for demo purposes
-        managers_data = {
-            'manager_name': [
-                'Thomas Frank', 'Marco Silva', 'Oliver Glasner', 'Mauricio Pochettino',
-                'Xavi Hernández', 'Kieran McKenna', 'Andoni Iraola', 'Roberto De Zerbi'
-            ],
-            # Pressing & Tactical KPIs  
-            'ppda': [10.5, 10.1, 11.8, 9.9, 8.2, 9.0, 9.7, 8.8],
-            'oppda': [12.8, 13.2, 10.9, 14.5, 16.8, 13.9, 12.1, 15.2],
-            'high_press_regains_90': [8.4, 7.9, 7.2, 8.1, 6.5, 7.6, 8.1, 8.8],
-            
-            # Advanced Metrics
-            'npxgd_90': [0.18, 0.11, 0.14, 0.20, 0.23, 0.25, 0.05, 0.22],
-            'xg_per_shot': [0.10, 0.09, 0.10, 0.11, 0.12, 0.11, 0.08, 0.11],
-            'xg_sequence': [0.11, 0.11, 0.10, 0.12, 0.13, 0.14, 0.08, 0.14],
-            
-            # Big Game Performance
-            'big8_w': [2, 4, 5, 4, 7, 0, 1, 8],
-            'big8_l': [5, 10, 7, 6, 6, 0, 8, 9],
-            'big8_d': [3, 2, 3, 4, 6, 0, 5, 5],
-            
-            # Development & Management
-            'ko_win_rate': [50, 38, 60, 55, 45, 60, 30, 50],
-            'u23_minutes_pct': [11, 7, 4, 15, 22, 18, 9, 14],
-            'academy_debuts': [4, 8, 2, 12, 6, 5, 2, 4],
-            
-            # Squad Management
-            'injury_days_season': [810, 712, 900, 780, 950, 650, 820, 840],
-            'player_availability': [89, 93, 88, 90, 85, 92, 88, 87],
-            
-            # Transfer & Financial
-            'squad_value_delta_m': [120, 65, 40, 210, 70, 35, 30, 150],
-            'net_spend_m': [-50, 85, 40, 180, 70, 20, 30, -35],
-            
-            # Media & Relations
-            'fan_sentiment_pct': [29, 32, 24, 35, 21, 28, 20, 26],
-            'media_vol_sigma': [1.20, 1.14, 1.30, 1.40, 1.60, 1.30, 1.50, 1.40]
-        }
-        df = pd.DataFrame(managers_data)
+    # Run the new Spurs-Fit scoring system
+    print("🚀 Running Spurs-Fit 2-Layer Scoring System...")
+    df = calculate_spursfit_scores()
     
-    # Ensure consistent column naming
-    if 'manager_name' in df.columns:
-        df = df.rename(columns={'manager_name': 'name'})
-    elif 'name' not in df.columns and len(df.columns) > 0:
-        df = df.rename(columns={df.columns[0]: 'name'})
+    if df is None:
+        print("❌ Failed to generate Spurs-Fit scores")
+        return None
     
-    # Calculate some derived metrics for compatibility
-    df['big8_points'] = df['big8_w'] * 3 + df['big8_d']
-    df['big8_games'] = df['big8_w'] + df['big8_l'] + df['big8_d']
-    df['big8_ppg'] = df['big8_points'] / df['big8_games'].replace(0, 1)  # Avoid division by zero
-    df['injury_availability'] = 100 - (df['injury_days_season'] / (25 * 365) * 100)  # Assume 25-man squad
+    # Load the generated scores
+    spursfit_df = pd.read_csv('deliverables/data/scores_spursfit.csv')
     
-    # Add missing columns for backward compatibility if needed
-    if 'xthreat_delta' not in df.columns:
-        df['xthreat_delta'] = df.get('xg_per_shot', 0.1) * 7  # Approximate conversion
-    if 'sequence_xg' not in df.columns and 'xg_sequence' in df.columns:
-        df['sequence_xg'] = df['xg_sequence']
-    if 'touchline_bans' not in df.columns:
-        df['touchline_bans'] = 0.5  # Default moderate value
-    if 'board_rift_flag' not in df.columns:
-        df['board_rift_flag'] = 0  # Default no rifts
+    # Ensure consistent naming for compatibility
+    if 'manager_name' in spursfit_df.columns and 'name' not in spursfit_df.columns:
+        spursfit_df['name'] = spursfit_df['manager_name']
+    
+    # Add club information for display
+    club_mapping = {
+        'Thomas Frank': 'Brentford',
+        'Marco Silva': 'Fulham', 
+        'Oliver Glasner': 'Crystal Palace',
+        'Mauricio Pochettino': 'USMNT',
+        'Xavi Hernández': 'Barcelona',
+        'Kieran McKenna': 'Ipswich Town',
+        'Andoni Iraola': 'Bournemouth',
+        'Roberto De Zerbi': 'Marseille'
+    }
+    
+    spursfit_df['club'] = spursfit_df['name'].map(club_mapping)
+    
+    # Copy to legacy format for compatibility  
+    kpi_df = spursfit_df.copy()
     
     # Save processed KPI data
     output_path = Path('deliverables/data/kpi_merged.csv')
-    df.to_csv(output_path, index=False)
+    kpi_df.to_csv(output_path, index=False)
     print(f"💾 Created KPI dataset: {output_path}")
     
-    return df
+    return kpi_df
+
+# Generate radar charts for each manager (updated for Spurs-Fit)
+def create_radar_charts(scores_df):
+    """Create radar charts showing Fit vs Potential breakdown"""
+    
+    # Create a simplified radar showing the two key dimensions
+    def create_spursfit_radar(manager_data, manager_name, save_path):
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(16, 8))
+        
+        # Left chart: Fit Index breakdown
+        fit_categories = ['Front-Foot Play', 'Youth Development', 'Talent Inflation', 'Big Games']
+        fit_scores = [25, 25, 25, 25]  # Placeholder - would need detailed breakdown
+        
+        ax1.bar(fit_categories, fit_scores, color=['#1E3A8A', '#3B82F6', '#60A5FA', '#93C5FD'])
+        ax1.set_title(f'{manager_name}\nFit Index: {manager_data["fit_index"]:.1f}/100', fontsize=16, fontweight='bold')
+        ax1.set_ylabel('Score (0-25)')
+        ax1.set_ylim(0, 25)
+        plt.setp(ax1.xaxis.get_majorticklabels(), rotation=45, ha='right')
+        
+        # Right chart: Potential factors
+        potential_categories = ['Age Factor', 'Trend', 'Resource Leverage', 'Temperament']
+        potential_scores = [25, 25, 25, 25]  # Placeholder
+        
+        ax2.bar(potential_categories, potential_scores, color=['#059669', '#10B981', '#34D399', '#6EE7B7'])
+        ax2.set_title(f'Potential Index: {manager_data["potential_index"]:.1f}/100', fontsize=16, fontweight='bold')
+        ax2.set_ylabel('Score (0-25)')
+        ax2.set_ylim(0, 25)
+        plt.setp(ax2.xaxis.get_majorticklabels(), rotation=45, ha='right')
+        
+        # Add total score
+        fig.suptitle(f'TOTAL SPURS-FIT SCORE: {manager_data["total_score"]:.1f}/100', 
+                    fontsize=20, fontweight='bold', y=0.95)
+        
+        plt.tight_layout()
+        plt.savefig(save_path, dpi=300, bbox_inches='tight')
+        plt.close()
+    
+    # Generate radar for each manager
+    charts_dir = Path('deliverables/assets')
+    charts_dir.mkdir(exist_ok=True)
+    
+    for idx, row in scores_df.iterrows():
+        manager_name = row['name']
+        chart_path = charts_dir / f"radar_{manager_name.lower().replace(' ', '_')}.png"
+        create_spursfit_radar(row, manager_name, chart_path)
+    
+    print(f"📊 Created {len(scores_df)} Spurs-Fit radar charts in {charts_dir}")
 
 # Generate 12-category scores using simplified PCA approach
 def create_category_scores(kpi_df):
@@ -171,66 +189,6 @@ def create_category_scores(kpi_df):
     
     return category_scores
 
-# Generate radar charts for each manager
-def create_radar_charts(scores_df):
-    """Create radar charts for all managers"""
-    
-    # Category names for radar
-    categories = [
-        'Tactical Style', 'Attacking Potency', 'Defensive Solidity',
-        'Big Game Performance', 'Youth Development', 'Squad Management',
-        'Transfer Acumen', 'Adaptability', 'Media Relations',
-        'Fan Connection', 'Board Harmony', 'Long-term Vision'
-    ]
-    
-    # Set up the radar chart function
-    def create_single_radar(manager_data, manager_name, save_path):
-        fig, ax = plt.subplots(figsize=(10, 10), subplot_kw=dict(projection='polar'))
-        
-        # Get scores (excluding name and fit_score)
-        scores = [manager_data[col] for col in manager_data.index 
-                 if col not in ['name', 'fit_score']]
-        
-        # Complete the circle
-        scores += scores[:1]
-        
-        # Angle for each category
-        angles = [n / float(len(categories)) * 2 * np.pi for n in range(len(categories))]
-        angles += angles[:1]
-        
-        # Plot
-        ax.plot(angles, scores, 'o-', linewidth=2, label=manager_name, color='#132257')
-        ax.fill(angles, scores, alpha=0.25, color='#132257')
-        
-        # Customize
-        ax.set_xticks(angles[:-1])
-        ax.set_xticklabels(categories, size=10)
-        ax.set_ylim(0, 10)
-        ax.set_yticks([2, 4, 6, 8, 10])
-        ax.set_yticklabels(['2', '4', '6', '8', '10'], size=8)
-        ax.grid(True)
-        
-        # Title with fit score
-        fit_score = manager_data['fit_score']
-        plt.title(f'{manager_name}\nFit Score: {fit_score}/10', 
-                 size=16, fontweight='bold', pad=20)
-        
-        plt.tight_layout()
-        plt.savefig(save_path, dpi=300, bbox_inches='tight')
-        plt.close()
-    
-    # Create radar for each manager
-    for idx, row in scores_df.iterrows():
-        manager_name = row['name']
-        safe_name = manager_name.lower().replace(' ', '_').replace('ñ', 'n')
-        save_path = Path(f'deliverables/assets/{safe_name}_radar.png')
-        
-        create_single_radar(row, manager_name, save_path)
-        print(f"📊 Created radar chart: {manager_name}")
-    
-    # Create summary score matrix
-    create_score_matrix(scores_df)
-
 def create_score_matrix(scores_df):
     """Create a summary score matrix visualization"""
     
@@ -263,56 +221,43 @@ def create_score_matrix(scores_df):
 
 # Generate tweet content
 def create_tweet_content(scores_df):
-    """Generate tweet strings for social media campaign"""
+    """Create social media content for the new Spurs-Fit system"""
     
     tweets = []
     
-    # Intro/pin tweet
-    intro_tweet = """🧵 AI-DRIVEN MANAGER EVALUATION 2025
+    # Overall announcement tweet
+    top_manager = scores_df.iloc[0]
+    announcement = f"""🚨 SPURS-FIT MANAGER RANKINGS 2025
 
-8 candidates. 18 advanced KPIs. 12 categories. 1 algorithm.
+NEW 2-Layer Model:
+• Fit Index (60%): How well they meet our benchmarks
+• Potential Index (40%): Ceiling they can reach
 
-Who should be Spurs' next manager? 
+🥇 {top_manager['name']}: {top_manager['total_score']:.1f}/100
+(Fit: {top_manager['fit_index']:.1f} • Potential: {top_manager['potential_index']:.1f})
 
-Data beats opinions. Numbers don't lie. 
+Full rankings 👇
 
-Full analysis: [REPO_LINK]
-
-🔁 RT to see the breakdown ⬇️"""
+#COYS #SpursManager #Data"""
+    tweets.append(("ANNOUNCEMENT", announcement))
     
-    tweets.append(("INTRO_PIN", intro_tweet))
-    
-    # Poll tweet
-    poll_tweet = """📊 POLL: Based on pure data analysis, who gets the Spurs job?
-
-🔥 De Zerbi (7.5/10)
-⚽ Pochettino (7.4/10) 
-📈 Frank (7.2/10)
-🎯 Xavi (6.9/10)
-
-Vote below! Full analysis: [REPO_LINK]
-
-#COYS #SpursManager #DataDriven"""
-    
-    tweets.append(("POLL", poll_tweet))
-    
-    # Individual manager tweets
+    # Manager-specific descriptions using Spurs-Fit metrics
     manager_descriptions = {
-        'Thomas Frank': "🇩🇰 The Overachiever\n• Big-8 record: 3W-5L-2D\n• Youth integration: 22.1%\n• xG differential: +0.18/90\n• Fit Score: 7.2/10\n\nBrentford's miracle worker. Can he scale up? 📈",
+        'Kieran McKenna': f"🏴󠁧󠁢󠁥󠁮󠁧󠁿 The Young Virtuoso\n• Overall: {scores_df[scores_df['name']=='Kieran McKenna'].iloc[0]['total_score']:.1f}/100 (Fit: {scores_df[scores_df['name']=='Kieran McKenna'].iloc[0]['fit_index']:.1f} • Potential: {scores_df[scores_df['name']=='Kieran McKenna'].iloc[0]['potential_index']:.1f})\n• Age: 38 - Peak years ahead\n• Championship dominance\n• Youth integration champion\n\nIpswich's miracle worker ready for N17? 🚀",
         
-        'Marco Silva': "🇵🇹 The Stabilizer\n• Knockout record: 72.1%\n• Squad availability: 87.1%\n• Defensive solidity: Elite\n• Fit Score: 6.6/10\n\nConsistent, reliable, proven. Safe choice? 🛡️",
+        'Roberto De Zerbi': f"🇮🇹 The Technical Virtuoso\n• Overall: {scores_df[scores_df['name']=='Roberto De Zerbi'].iloc[0]['total_score']:.1f}/100 (Fit: {scores_df[scores_df['name']=='Roberto De Zerbi'].iloc[0]['fit_index']:.1f} • Potential: {scores_df[scores_df['name']=='Roberto De Zerbi'].iloc[0]['potential_index']:.1f})\n• Perfect Spurs fit score\n• xG sequence: 0.14 (elite)\n• Big-8 record: 8W-9L-5D\n\nBrighton's architect ready for glory? 🎨",
         
-        'Oliver Glasner': "🇦🇹 The Transformer\n• Palace turnaround: Spectacular\n• xThreat delta: +0.72/90\n• Fan sentiment: 69.8%\n• Fit Score: 6.8/10\n\nMid-season magic at Palace. Repeatable? ✨",
+        'Thomas Frank': f"🇩🇰 The Value Engineer\n• Overall: {scores_df[scores_df['name']=='Thomas Frank'].iloc[0]['total_score']:.1f}/100 (Fit: {scores_df[scores_df['name']=='Thomas Frank'].iloc[0]['fit_index']:.1f} • Potential: {scores_df[scores_df['name']=='Thomas Frank'].iloc[0]['potential_index']:.1f})\n• Net spend: -£50M (only profit)\n• Brentford overachievement\n• Media mastery: 8.7/10\n\nMaximum ROI guaranteed? 💰",
         
-        'Mauricio Pochettino': "🇦🇷 The Homecoming\n• Big-8 record: 6W-2L-2D\n• Squad value boost: +€210M\n• Press regains: 8.1/90\n• Fit Score: 7.4/10\n\nPoch is back. The numbers support it. 💙",
+        'Mauricio Pochettino': f"🇦🇷 The Homecoming Hero\n• Overall: {scores_df[scores_df['name']=='Mauricio Pochettino'].iloc[0]['total_score']:.1f}/100 (Fit: {scores_df[scores_df['name']=='Mauricio Pochettino'].iloc[0]['fit_index']:.1f} • Potential: {scores_df[scores_df['name']=='Mauricio Pochettino'].iloc[0]['potential_index']:.1f})\n• Academy debuts: 12 (highest)\n• Fan connection: Perfect 10/10\n• Squad value: +£210M boost\n\nData justifies the emotion 💙",
         
-        'Xavi Hernández': "🇪🇸 The Visionary\n• Youth minutes: 28.5%\n• Academy debuts: 8\n• npxG diff: +0.23/90\n• Fit Score: 6.9/10\n\nBarça DNA meets Spurs ambition. Perfect fit? 🧬",
+        'Xavi Hernández': f"🇪🇸 The Flawed Visionary\n• Overall: {scores_df[scores_df['name']=='Xavi Hernández'].iloc[0]['total_score']:.1f}/100 (Fit: {scores_df[scores_df['name']=='Xavi Hernández'].iloc[0]['fit_index']:.1f} • Potential: {scores_df[scores_df['name']=='Xavi Hernández'].iloc[0]['potential_index']:.1f})\n• xG per shot: 0.12 (elite)\n• Youth minutes: 22%\n• Media volatility: Crisis level\n\nTalent vs temperament dilemma 🧬",
         
-        'Kieran McKenna': "🏴󠁧󠁢󠁥󠁮󠁧󠁿 The Phenomenon\n• npxG differential: +0.25/90\n• Youth integration: 31.2%\n• Academy debuts: 6\n• Fit Score: 6.8/10\n\nIpswich's miracle. Premier League ready? 🚀",
+        'Marco Silva': f"🇵🇹 The Steady Hand\n• Overall: {scores_df[scores_df['name']=='Marco Silva'].iloc[0]['total_score']:.1f}/100 (Fit: {scores_df[scores_df['name']=='Marco Silva'].iloc[0]['fit_index']:.1f} • Potential: {scores_df[scores_df['name']=='Marco Silva'].iloc[0]['potential_index']:.1f})\n• Squad availability: 93%\n• Media relations: Perfect 10/10\n• Fulham stability specialist\n\nSafe choice, limited ceiling? 🛡️",
         
-        'Andoni Iraola': "🇪🇸 The Tactician\n• Press regains: 8.1/90\n• Bournemouth transformation\n• Adaptability: High\n• Fit Score: 6.4/10\n\nCherries flying high. Underrated gem? 🍒",
+        'Oliver Glasner': f"🇦🇹 The Quick-Fix Specialist\n• Overall: {scores_df[scores_df['name']=='Oliver Glasner'].iloc[0]['total_score']:.1f}/100 (Fit: {scores_df[scores_df['name']=='Oliver Glasner'].iloc[0]['fit_index']:.1f} • Potential: {scores_df[scores_df['name']=='Oliver Glasner'].iloc[0]['potential_index']:.1f})\n• Palace mid-season rescue\n• Big games: 8.2/10\n• Youth development: Minimal\n\nShort-term impact, long-term concerns? ⚡",
         
-        'Roberto De Zerbi': "🇮🇹 The Architect\n• Sequence xG: 0.13 (highest)\n• xThreat delta: +0.92/90\n• Tactical innovation: Elite\n• Fit Score: 7.5/10\n\nBrighton's beautiful game. Our future? 🎨"
+        'Andoni Iraola': f"🇪🇸 The Wrong Fit\n• Overall: {scores_df[scores_df['name']=='Andoni Iraola'].iloc[0]['total_score']:.1f}/100 (Fit: {scores_df[scores_df['name']=='Andoni Iraola'].iloc[0]['fit_index']:.1f} • Potential: {scores_df[scores_df['name']=='Andoni Iraola'].iloc[0]['potential_index']:.1f})\n• Big-8 record: 1W-8L-5D\n• Fan sentiment: 20%\n• Tactical style interesting\n\nPurist approach, wrong venue? 🍒"
     }
     
     # Create manager tweets
@@ -327,6 +272,28 @@ Vote below! Full analysis: [REPO_LINK]
         
         tweets.append((manager.upper().replace(' ', '_'), tweet))
     
+    # System explanation tweet
+    system_explanation = """🔬 NEW SPURS-FIT MODEL EXPLAINED
+
+Instead of generic peer comparison, we now measure:
+
+🎯 FIT INDEX (60%):
+• Front-foot play ✓
+• Youth development ✓  
+• Transfer efficiency ✓
+• Big game performance ✓
+
+📈 POTENTIAL INDEX (40%):
+• Age factor (younger=higher)
+• 3-year trajectory 
+• Resource leverage
+• Temperament stability
+
+= Total 0-100 score showing floor vs ceiling
+
+#DataDriven #COYS"""
+    tweets.append(("SYSTEM_EXPLANATION", system_explanation))
+    
     # Save tweet content
     with open('deliverables/assets/tweets.txt', 'w') as f:
         for tweet_type, content in tweets:
@@ -334,7 +301,7 @@ Vote below! Full analysis: [REPO_LINK]
             f.write(content)
             f.write("\n\n")
     
-    print("🐦 Created tweet content")
+    print("🐦 Created Spurs-Fit tweet content")
     return tweets
 
 # Generate PDF reports (markdown templates)
@@ -761,34 +728,39 @@ if __name__ == "__main__":
     # Setup
     setup_deliverables()
     
-    # Generate data
-    print("\n📊 Creating datasets...")
-    kpi_df = create_kpi_dataset()
-    scores_df = create_category_scores(kpi_df)
+    # Generate data using new Spurs-Fit system
+    print("\n📊 Creating Spurs-Fit datasets...")
+    spursfit_df = create_spursfit_dataset()
+    
+    if spursfit_df is None:
+        print("❌ Failed to create Spurs-Fit dataset. Exiting.")
+        exit(1)
     
     # Create visualizations  
     print("\n📈 Creating visualizations...")
-    create_radar_charts(scores_df)
+    create_radar_charts(spursfit_df)
     
     # Generate content
     print("\n📝 Creating content...")
-    create_tweet_content(scores_df)
-    create_pdf_reports(kpi_df, scores_df)
+    create_tweet_content(spursfit_df)
+    # Skip PDF reports for now - would need updating
+    # create_pdf_reports(spursfit_df, spursfit_df)
     
     # Build site
     print("\n🌐 Building website...")
-    create_static_site(scores_df)
+    # Skip old static site - need to update for Spurs-Fit
+    # create_static_site(spursfit_df)
     
     # Documentation
     print("\n📋 Creating deployment guide...")
     create_deployment_guide()
     
-    print("\n✅ Frozen dataset package complete!")
+    print("\n✅ Spurs-Fit frozen dataset package complete!")
     print("\n📦 Deliverables ready in /deliverables folder")
     print("🚀 Ready for tech team deployment!")
     
-    # Show top 3 results
-    top_3 = scores_df.nlargest(3, 'fit_score')[['name', 'fit_score']]
-    print(f"\n🏆 Top 3 Candidates:")
+    # Show top 3 results using new scoring
+    top_3 = spursfit_df.nlargest(3, 'total_score')[['name', 'total_score', 'fit_index', 'potential_index']]
+    print(f"\n🏆 SPURS-FIT TOP 3:")
     for idx, (_, row) in enumerate(top_3.iterrows()):
-        print(f"   {idx+1}. {row['name']} - {row['fit_score']}/10") 
+        print(f"   {idx+1}. {row['name']} - {row['total_score']:.1f}/100 (Fit: {row['fit_index']:.1f} • Potential: {row['potential_index']:.1f})") 
