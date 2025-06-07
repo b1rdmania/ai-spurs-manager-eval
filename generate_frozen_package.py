@@ -392,15 +392,47 @@ Player availability {player_availability}%. {injury_analysis}
             'big_match_analysis': '*No PL top-8 record yet.* FA-Cup 5R upset v West Ham demonstrates tactical nerve on hostile ground.',
             'financial_impact': 'Highest value-add per pound net spend in dataset (ROI 1:1.75).',
             'injury_analysis': 'Hamstring cluster kept below league avg via GPS micro-load.',
-            'summary_recommendation': 'Sky-high ceiling with perfect Spurs alignment—hire if club will tolerate initial learning curve; surround with veteran PL assistants.'
+            'summary_recommendation': 'Sky-high ceiling with perfect Spurs alignment—hire if club will tolerate initial learning curve; surround with veteran PL assistants.',
+            'traditional_breakdown': '''**Style 8** — Box midfield 4-2-3-1, PPDA 9.0, proactive even against promotion rivals.  
+**Achievements 10** — Back-to-back promotions, 194 points in 2 years.  
+**Youth 9** — 18% U23 minutes, 5 academy debuts in Championship.  
+**Tactics 8** — Fluid pressing triggers, overload half-spaces.  
+**Leadership 9** — Players run through walls; zero mutinies.  
+**Recruitment 8** — Data-driven signings, every transfer worked.  
+**Reputation 7** — EFL Manager of Year, Guardiola praise.  
+**Media 8** — Thoughtful, analytical, never inflammatory.  
+**Pressure 9** — Cool under promotion pressure, two cup runs.  
+**Greatness 9** — Ceiling unknown but trajectory explosive.  
+**Vision 9** — Clear possession-based identity implemented.  
+**Long-term 10** — Could define Spurs for next decade.''',
+            'front_foot_analysis': 'PPDA 9.0, npxGD +0.25, xG/shot 0.11 — Championship dominance metrics',
+            'youth_analysis': '18% U23 minutes, 5 academy debuts — Outstanding pathway commitment',
+            'talent_analysis': '+£35M squad value, £20M net spend — Exceptional ROI (1:1.75)',
+            'big_game_analysis': 'KO rate 60%, Big-8: 0W-0L-0D — Untested at elite level'
         },
         'Roberto De Zerbi': {
-            'executive_summary': 'represents the perfect tactical fit for Spurs with 100/100 on Fit Index benchmarks. His Brighton work showcased elite sequence xG (0.14) and excellent big-8 record (8W-9L-5D). Age 45 limits potential upside, but immediate impact guaranteed.',
-            'cultural_fit': 'Passionate, expressive communicator; occasional touchline intensity but strong media relationships overall.',
-            'big_match_analysis': 'Excellent big-8 record demonstrates ability to compete with elite opposition. Tactical flexibility key strength.',
-            'financial_impact': 'Strong squad value improvement (£150M) despite modest net spend, proving development capabilities.',
-            'injury_analysis': 'Good squad management with 87% availability despite high-intensity pressing system.',
-            'summary_recommendation': 'Immediate upgrade with proven Premier League pedigree. Perfect tactical fit for Spurs style and objectives.'
+            'executive_summary': 'Tactical savant who delivered Europe with Brighton and now has Marseille back in the Champions League places. Hits every Tottenham benchmark offensively and in talent inflation; potential held back only by fiery temperament and age-curve ceiling.',
+            'cultural_fit': 'Needs firm governance; Brighton exit disputes show he\'ll push boundaries. Embraces analytics, speaks good English; London lifestyle comfortable.',
+            'big_match_analysis': '8-9-5 vs PL top-8; Europa QF elimination to Juventus on penalties. Tactical tweaks stood up under pressure.',
+            'financial_impact': 'Net spend −£35M, squad value +£150M. Best inflation ratio in dataset.',
+            'injury_analysis': 'Intense tempo yet no chronic overload patterns.',
+            'summary_recommendation': 'Elite tactical fit with proven value creation; board must manage temperament via clear DoF line and performance clauses. Serious contender.',
+            'traditional_breakdown': '''**Style 9** — Juego de Posición 3-2-5, PPDA 8.8, elite ball progress.  
+**Achievements 7** — PL to Europe; OM CL qualification on first try.  
+**Youth 7** — Mitoma, Ferguson, Enciso breakthroughs.  
+**Tactics 9** — Press-lure patterns, overload box midfield.  
+**Leadership 7** — Demands total buy-in; clashes noted.  
+**Recruitment 6** — Works with DoF, flips unknowns for profit.  
+**Reputation 8** — Globally praised by Guardiola.  
+**Media 6** — Passionate, occasional digs at refs.  
+**Pressure 6** — Two touch-line bans/season.  
+**Greatness 8** — Ceiling sky-high if controlled.  
+**Vision 8** — Clear positional-play doctrine.  
+**Long-term 8** — Could evolve Spurs identity for a decade.''',
+            'front_foot_analysis': 'PPDA 8.8, npxGD +0.22, xG/shot 0.11 — Perfect attacking blueprint',
+            'youth_analysis': '14% U23 minutes, 4 academy graduates — Solid youth integration',
+            'talent_analysis': '+£150M squad delta, net-spend profit — Elite value creation',
+            'big_game_analysis': 'KO 50%, Big-8 npxGD +0.05 — Proven under pressure'
         },
         'Thomas Frank': {
             'executive_summary': 'is the efficiency expert who achieved Premier League survival with negative net spend (-£50M). Strong media relations (8.7/10) and board harmony (9.3/10) provide stability. Limited youth focus but exceptional value delivery.',
@@ -501,7 +533,13 @@ Player availability {player_availability}%. {injury_analysis}
         ))
         
         # Create traditional categories breakdown
-        traditional_breakdown = "*(Legacy peer-normalized scores maintained for historical comparison)*"
+        traditional_breakdown = profile.get('traditional_breakdown', "*(Legacy peer-normalized scores maintained for historical comparison)*")
+        
+        # Enhanced analysis from profile
+        front_foot_analysis = profile.get('front_foot_analysis', f"PPDA {row['ppda']}, npxGD {row['npxgd_90']}, xG/shot {row['xg_per_shot']}")
+        youth_analysis = profile.get('youth_analysis', f"{row['u23_minutes_pct']}% U23 minutes, {row['academy_debuts']} academy debuts")
+        talent_analysis = profile.get('talent_analysis', f"Squad value +£{row['squad_value_delta_m']}M, net spend £{row['net_spend_m']}M")
+        big_game_analysis = profile.get('big_game_analysis', f"KO rate {row['ko_win_rate']}%, Big-8: {row['big8_w']}W-{row['big8_l']}L-{row['big8_d']}D")
         
         # Fill template
         report_content = template.format(
@@ -540,13 +578,13 @@ Player availability {player_availability}%. {injury_analysis}
             
             # Spurs-Fit breakdown
             front_foot_score=front_foot_score,
-            front_foot_analysis=f"PPDA {row['ppda']}, npxGD {row['npxgd_90']}, xG/shot {row['xg_per_shot']}",
+            front_foot_analysis=front_foot_analysis,
             youth_score=youth_score,
-            youth_analysis=f"{row['u23_minutes_pct']}% U23 minutes, {row['academy_debuts']} academy debuts",
+            youth_analysis=youth_analysis,
             talent_score=talent_score,
-            talent_analysis=f"Squad value +£{row['squad_value_delta_m']}M, net spend £{row['net_spend_m']}M",
+            talent_analysis=talent_analysis,
             big_game_score=big_game_score,
-            big_game_analysis=f"KO rate {row['ko_win_rate']}%, Big-8: {row['big8_w']}W-{row['big8_l']}L-{row['big8_d']}D",
+            big_game_analysis=big_game_analysis,
             
             # Potential factors
             age=trend_data.get('age', 'N/A'),

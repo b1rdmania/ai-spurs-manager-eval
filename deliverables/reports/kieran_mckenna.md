@@ -26,15 +26,26 @@ Kieran McKenna is the meteoric 38-year-old who took Ipswich from League One to t
 ---
 
 ## 3 Traditional Categories (Legacy Peer Model)  
-*(Legacy peer-normalized scores maintained for historical comparison)*
+**Style 8** — Box midfield 4-2-3-1, PPDA 9.0, proactive even against promotion rivals.  
+**Achievements 10** — Back-to-back promotions, 194 points in 2 years.  
+**Youth 9** — 18% U23 minutes, 5 academy debuts in Championship.  
+**Tactics 8** — Fluid pressing triggers, overload half-spaces.  
+**Leadership 9** — Players run through walls; zero mutinies.  
+**Recruitment 8** — Data-driven signings, every transfer worked.  
+**Reputation 7** — EFL Manager of Year, Guardiola praise.  
+**Media 8** — Thoughtful, analytical, never inflammatory.  
+**Pressure 9** — Cool under promotion pressure, two cup runs.  
+**Greatness 9** — Ceiling unknown but trajectory explosive.  
+**Vision 9** — Clear possession-based identity implemented.  
+**Long-term 10** — Could define Spurs for next decade.
 
 ---
 
 ## 4 Spurs-Fit Breakdown  
-**Front-Foot Tactics (25/25)** — PPDA 9.0, npxGD 0.25, xG/shot 0.11  
-**Youth Pathway (25/25)** — 18% U23 minutes, 5 academy debuts  
-**Talent Inflation (25/25)** — Squad value +£35M, net spend £20M  
-**Big-Game Progression (25/25)** — KO rate 60%, Big-8: 0W-0L-0D  
+**Front-Foot Tactics (25/25)** — PPDA 9.0, npxGD +0.25, xG/shot 0.11 — Championship dominance metrics  
+**Youth Pathway (25/25)** — 18% U23 minutes, 5 academy debuts — Outstanding pathway commitment  
+**Talent Inflation (25/25)** — +£35M squad value, £20M net spend — Exceptional ROI (1:1.75)  
+**Big-Game Progression (25/25)** — KO rate 60%, Big-8: 0W-0L-0D — Untested at elite level  
 **Fit Index 98.0 / 100**
 
 **Potential Drivers (87.8)** — Age 38 (0.8), Trend 0.9, Resource Leverage 0.8, Temperament 0.95.
@@ -70,4 +81,4 @@ Sky-high ceiling with perfect Spurs alignment—hire if club will tolerate initi
 **Data Sources:** FBref, Transfermarkt, Premier Injuries, Opta/StatsBomb  
 **Cut-off Date:** 7 June 2025  
 **Methodology:** Spurs-Fit 2-Layer Model (60% Fit Index + 40% Potential Index)  
-**Generated:** 2025-06-07 13:39
+**Generated:** 2025-06-07 13:41

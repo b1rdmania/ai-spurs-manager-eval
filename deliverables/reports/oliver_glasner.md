@@ -70,4 +70,4 @@ Quick-fix specialist with limited long-term vision. Not aligned with Spurs youth
 **Data Sources:** FBref, Transfermarkt, Premier Injuries, Opta/StatsBomb  
 **Cut-off Date:** 7 June 2025  
 **Methodology:** Spurs-Fit 2-Layer Model (60% Fit Index + 40% Potential Index)  
-**Generated:** 2025-06-07 13:39
+**Generated:** 2025-06-07 13:41

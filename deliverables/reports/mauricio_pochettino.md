@@ -70,4 +70,4 @@ Emotional choice justified by data. Proven Spurs fit with strong youth developme
 **Data Sources:** FBref, Transfermarkt, Premier Injuries, Opta/StatsBomb  
 **Cut-off Date:** 7 June 2025  
 **Methodology:** Spurs-Fit 2-Layer Model (60% Fit Index + 40% Potential Index)  
-**Generated:** 2025-06-07 13:39
+**Generated:** 2025-06-07 13:41
