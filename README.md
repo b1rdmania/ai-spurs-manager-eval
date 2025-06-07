@@ -1,7 +1,7 @@
 # AI-Driven Evaluation Platform
 ## Tottenham Hotspur Manager Shortlist 2025
 
-A reproducible, publicly auditable system for evaluating potential football managers using advanced performance KPIs and machine learning.
+A reproducible, publicly auditable system for evaluating potential football managers using advanced performance KPIs and the **Spurs-Fit 2-Layer Model**.
 
 🌐 **Live Platform**: https://b1rdmania.github.io/ai-spurs-manager-eval/  
 📊 **GitHub Repository**: https://github.com/b1rdmania/ai-spurs-manager-eval
@@ -23,51 +23,70 @@ cd deliverables/
 
 ## 🎯 Project Overview
 
-This system delivers a **frozen, curated dataset** that eliminates all operational complexity while maintaining full transparency and "AI-powered" credibility.
+This system delivers a **frozen, curated dataset** using the revolutionary **Spurs-Fit 2-Layer Model** that eliminates all operational complexity while maintaining full transparency and "AI-powered" credibility.
 
 ✅ **Curated 18-KPI dataset** for 8 manager candidates  
-✅ **12-category scoring** using weighted methodology  
+✅ **Spurs-Fit scoring** using 60% Fit Index + 40% Potential Index  
 ✅ **Individual radar charts** for each manager  
 ✅ **Ready-to-tweet social content** with engagement hooks  
 ✅ **Professional Markdown reports** (PDF conversion via Pandoc)  
 ✅ **Complete GitHub Pages website** with interactive tables  
 ✅ **Zero-maintenance deployment** in < 30 minutes  
 
-## 📊 Results Summary (Real Research Data)
+## 📊 Results Summary (Spurs-Fit 2-Layer Model)
 
-| Rank | Manager | Current Club | Fit Score | Key Strengths |
-|------|---------|--------------|-----------|---------------|
-| 🥇 **#1** | **Mauricio Pochettino** | **USMNT** | **6.7/10** | Youth Development, Fan Connection, Long-term Vision |
-| 🥈 **#2** | **Thomas Frank** | **Brentford** | **5.9/10** | Transfer Acumen, Media Relations, Tactical Style |
-| 🥉 **#3** | **Roberto De Zerbi** | **Marseille** | **5.9/10** | Attacking Potency, Transfer Acumen, Big Game Performance |
-| #4 | Kieran McKenna | Ipswich Town | 5.8/10 | Attacking Potency, Squad Management |
-| #5 | Marco Silva | Fulham | 5.8/10 | Squad Management, Media Relations, Fan Connection |
-| #6 | Xavi Hernández | Barcelona | 4.8/10 | Attacking Potency, Big Game Performance, Youth Development |
-| #7 | Oliver Glasner | Crystal Palace | 4.6/10 | Big Game Performance, Adaptability |
-| #8 | Andoni Iraola | Bournemouth | 2.6/10 | Tactical Style |
+| Rank | Manager | Current Club | Spurs-Fit Score | Fit Index | Potential Index | Key Profile |
+|------|---------|--------------|-----------------|-----------|-----------------|-------------|
+| 🥇 **#1** | **Kieran McKenna** | **Ipswich Town** | **93.9/100** | **98.0** | **87.8** | The Young Virtuoso - Age 38 with perfect Spurs alignment |
+| 🥈 **#2** | **Roberto De Zerbi** | **Marseille** | **88.6/100** | **100.0** | **71.5** | The Technical Virtuoso - Perfect fit, age concerns |
+| 🥉 **#3** | **Thomas Frank** | **Brentford** | **80.8/100** | **90.4** | **66.5** | The Value Engineer - Maximum ROI, sustainable |
+| #4 | Mauricio Pochettino | USMNT | 80.4/100 | 91.0 | 64.5 | The Homecoming Hero - Emotion backed by data |
+| #5 | Xavi Hernández | Barcelona | 74.8/100 | 95.2 | 44.2 | The Flawed Visionary - Elite tactics, temperament risk |
+| #6 | Marco Silva | Fulham | 67.1/100 | 75.0 | 55.2 | The Steady Hand - Safe choice, limited ceiling |
+| #7 | Oliver Glasner | Crystal Palace | 62.6/100 | 63.9 | 60.7 | The Quick-Fix Specialist - Cup winner, poor youth fit |
+| #8 | Andoni Iraola | Bournemouth | 60.4/100 | 60.5 | 60.2 | The Wrong Fit - Poor big-game record |
 
 *Data collected up to 7 June 2025 from FBref, Transfermarkt, Premier Injuries, Opta/StatsBomb public dashboards*
+
+## 🎯 Spurs-Fit 2-Layer Model
+
+### Fit Index (60% weight) - How well they meet Spurs benchmarks:
+- **Front-Foot Play** (25 points): PPDA ≤11, npxGD ≥0.10, xG/shot ≥0.11
+- **Youth Development** (25 points): U23 minutes ≥10%, academy debuts ≥3
+- **Talent Inflation** (25 points): Squad value ≥£20M, transfer efficiency
+- **Big Games** (25 points): KO win rate ≥50%, Big-8 performance
+
+### Potential Index (40% weight) - Ceiling they can reach:
+- **Age Factor**: Younger managers score higher (peak years ahead)
+- **3-Year Trend**: Career trajectory and recent improvements
+- **Resource Leverage**: Ability to maximize limited budgets
+- **Temperament**: Media stability and board relationship management
 
 ## 📁 Deliverables Package
 
 ```
 /deliverables/
 ├── 📊 data/
-│   ├── kpi_merged.csv      # Raw 18-KPI data for all 8 managers
-│   └── scores_12cat.csv    # Category scores + fit scores
+│   ├── scores_spursfit.csv    # Complete Spurs-Fit 2-Layer scores
+│   └── kpi_merged.csv         # Raw 18-KPI data for all 8 managers
 ├── 📄 reports/
-│   ├── mauricio_pochettino.md # Individual manager reports (Markdown)
-│   ├── thomas_frank.md
-│   ├── [... 6 more managers]
+│   ├── kieran_mckenna_complete.md     # Comprehensive manager profiles
+│   ├── roberto_de_zerbi_complete.md   # with KPI tables & analysis
+│   ├── thomas_frank_complete.md
+│   ├── mauricio_pochettino_complete.md
+│   ├── xavi_hernandez_complete.md
+│   ├── marco_silva_complete.md
+│   ├── oliver_glasner_complete.md
+│   ├── andoni_iraola_complete.md
 │   └── README_how_to_regen.md  # PDF conversion instructions
 ├── 🎨 assets/
-│   ├── *_radar.png        # Individual radar charts (8 files)
-│   ├── score_matrix.png   # Summary heatmap
-│   └── tweets.txt         # Complete social media campaign
-├── 🌐 docs/               # GitHub Pages website
-│   ├── index.html         # Interactive dashboard
-│   └── scores.json        # API endpoint
-└── 📋 DEPLOYMENT_GUIDE.md # Step-by-step deployment
+│   ├── radar_*.png           # Individual Spurs-Fit radar charts (8 files)
+│   ├── score_matrix.png      # Summary heatmap
+│   └── tweets.txt            # Complete social media campaign
+├── 🌐 docs/                  # GitHub Pages website
+│   ├── index.html            # Interactive dashboard
+│   └── scores.json           # API endpoint
+└── 📋 DEPLOYMENT_GUIDE.md    # Step-by-step deployment
 ```
 
 ## 🏗 Data Model
@@ -100,40 +119,35 @@ This system delivers a **frozen, curated dataset** that eliminates all operation
 **Data Cut-off**: 7 June 2025  
 **Weights Frozen**: 07 June 2025 to prevent confusion if numbers shift later
 
-### 12-Category Scoring (Weighted)
-1. **Tactical Style** (12% weight) - Pressing intensity, defensive actions
-2. **Attacking Potency** (11% weight) - Goal threat, creative output  
-3. **Defensive Solidity** (10% weight) - Opposition control, injury management
-4. **Big Game Performance** (9% weight) - Results vs top opposition
-5. **Youth Development** (8% weight) - Academy integration, U23 usage
-6. **Squad Management** (8% weight) - Player availability, injury record
-7. **Transfer Acumen** (8% weight) - Market value improvement, efficiency
-8. **Adaptability** (7% weight) - Tactical flexibility, knockout performance
-9. **Media Relations** (7% weight) - Press management, volatility control
-10. **Fan Connection** (7% weight) - Supporter sentiment, academy focus
-11. **Board Harmony** (7% weight) - Relationship management, stability
-12. **Long-term Vision** (6% weight) - Development trajectory, youth integration
+### Spurs-Fit Benchmarks
+- **PPDA**: ≤11 (pressing intensity)
+- **npxGD**: ≥0.10 (attacking effectiveness)  
+- **xG/shot**: ≥0.11 (chance quality)
+- **U23 minutes**: ≥10% (youth development)
+- **Academy debuts**: ≥3 (pathway integration)
+- **Squad value growth**: ≥£20M (talent inflation)
+- **KO win rate**: ≥50% (big-game mentality)
 
-## 🔄 Why Frozen Dataset Works
+## 🔄 Why Spurs-Fit Model Works
 
-| Factor | Live Pipeline | Frozen Dataset ✅ |
-|--------|---------------|-------------------|
-| **Build time** | 2+ weeks | 4 hours |
-| **Failure risk** | High (APIs, CI/CD) | Zero |
-| **Maintenance** | Weekly updates | None needed |
-| **Transparency** | Same | Same |
-| **Social impact** | Same | Same |
-| **Timeline** | Miss deadline | Ships today |
+| Factor | Generic Peer Model | Spurs-Fit 2-Layer ✅ |
+|--------|-------------------|----------------------|
+| **Relevance** | One-size-fits-all | Spurs-specific benchmarks |
+| **Youth Focus** | Averaged out | 25% dedicated weight |
+| **Potential** | Ignored | 40% of total score |
+| **Philosophy** | Style agnostic | Front-foot requirement |
+| **Predictive** | Past performance | Future ceiling assessment |
 
-The manager search concludes in < 1 week, so real-time updates add zero value but massive operational risk.
+The Spurs-Fit model directly measures alignment with club DNA and upside potential.
 
 ## 🐦 Social Media Campaign
 
 **Ready-to-use tweet content** generated in `assets/tweets.txt`:
 
-- **Pin tweet** - Thread announcement with engagement hooks
+- **Pin tweet** - Spurs-Fit 2-Layer announcement with McKenna #1
 - **Poll tweet** - Top 4 candidates with vote engagement  
-- **8 manager profiles** - Individual breakdowns with stats & PDFs
+- **8 manager profiles** - Individual breakdowns with Spurs-Fit scores
+- **System explanation** - How the 2-Layer Model works
 - **Hashtag strategy** - #COYS #SpursManager #DataDriven
 
 **Scheduling**: Post every 12 minutes during peak hours (9am-6pm GMT)
@@ -160,18 +174,21 @@ python -m pip install -r requirements.txt
 # Generate fresh package
 python3 generate_frozen_package.py
 
-# Modify category weights
-vim weighting.json
+# Modify Spurs-Fit benchmarks
+vim config/benchmarks.yaml
+
+# Adjust potential weights  
+vim config/potential_weights.yaml
 
 # Emergency data updates
-# Edit deliverables/data/kpi_merged.csv
+# Edit manager_data_real.csv
 # Re-run generator
 ```
 
 ## 📊 Sample Output
 
 **Manager Radar Example**:
-![Mauricio Pochettino Radar](deliverables/assets/mauricio_pochettino_radar.png)
+![Kieran McKenna Radar](deliverables/assets/radar_kieran_mckenna.png)
 
 **Score Matrix**:
 ![Score Matrix](deliverables/assets/score_matrix.png)
@@ -191,6 +208,6 @@ MIT License - see [LICENSE](LICENSE)
 
 ---
 
-**🎯 Bottom Line**: A frozen, curated dataset is the fastest path that still looks "AI-powered", keeps all numbers verifiable, and eliminates every operational risk between now and decision day.
+**🎯 Bottom Line**: The Spurs-Fit 2-Layer Model provides Tottenham-specific evaluation that balances current readiness (Fit Index) with future potential (Potential Index), delivering data-driven insights aligned with club philosophy.
 
-*Built for transparency, driven by data, optimized for virality.* 🚀
+*Built for transparency, driven by data, optimized for Spurs.* 🚀
