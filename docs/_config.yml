@@ -1,0 +1,31 @@
+plugins:
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-default-layout
+  - jekyll-titles-from-headings
+
+markdown: kramdown
+highlighter: rouge
+
+defaults:
+  - scope:
+      path: "reports"
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+include:
+  - "_*_.html"
+  - "_*_.*.html"
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+title: "AI Spurs Manager Evaluation 2025"
+description: "Data-driven manager analysis with unified scoring system" 
