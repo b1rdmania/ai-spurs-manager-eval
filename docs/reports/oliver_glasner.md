@@ -9,7 +9,9 @@ Oliver Glasner represents the quick-fix specialist with fundamental misalignment
 
 ## Visual Profile
 
-![Oliver Glasner Unified Scoring Analysis](../assets/radar_oliver_glasner.png)
+<div style="text-align: center; margin: 2rem 0;">
+<img src="../assets/oliver_glasner_radar.png" alt="Oliver Glasner Unified Scoring Analysis" style="width: 75%; max-width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+</div>
 
 *Comprehensive radar chart showing Glasner's unified final scoring breakdown. His #7 ranking (55.6/100) reflects short-term thinking that conflicts with Spurs long-term development requirements.*
 

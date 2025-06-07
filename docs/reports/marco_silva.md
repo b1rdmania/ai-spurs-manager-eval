@@ -9,7 +9,9 @@ Marco Silva represents the steady hand with limited ceiling
 
 ## Visual Profile
 
-![Marco Silva Unified Scoring Analysis](../assets/radar_marco_silva.png)
+<div style="text-align: center; margin: 2rem 0;">
+<img src="../assets/marco_silva_radar.png" alt="Marco Silva Unified Scoring Analysis" style="width: 75%; max-width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+</div>
 
 *Comprehensive radar chart showing Silva's unified final scoring breakdown. His #6 ranking (60.7/100) reflects excellent squad management (100% availability) but conservative tactical approach insufficient for Spurs ambitions.*
 

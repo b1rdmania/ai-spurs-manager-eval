@@ -9,7 +9,9 @@ Roberto De Zerbi represents the technical perfectionist with immediate impact ca
 
 ## Visual Profile
 
-![Roberto De Zerbi Unified Scoring Analysis](../assets/radar_roberto_de_zerbi.png)
+<div style="text-align: center; margin: 2rem 0;">
+<img src="../assets/roberto_de_zerbi_radar.png" alt="Roberto De Zerbi Unified Scoring Analysis" style="width: 75%; max-width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+</div>
 
 *Comprehensive radar chart showing De Zerbi's unified final scoring breakdown. His #2 ranking (75.6/100) reflects perfect tactical fit (100.0 Fit Index) but age-limited potential ceiling.*
 

@@ -9,7 +9,9 @@ Xavi Hernández represents the flawed visionary with temperament concerns
 
 ## Visual Profile
 
-![Xavi Hernández Unified Scoring Analysis](../assets/radar_xavi_hernandez.png)
+<div style="text-align: center; margin: 2rem 0;">
+<img src="../assets/xavi_hernandez_radar.png" alt="Xavi Hernández Unified Scoring Analysis" style="width: 75%; max-width: 800px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+</div>
 
 *Comprehensive radar chart showing Xavi's unified final scoring breakdown. His #5 ranking (63.7/100) reflects high tactical fit but catastrophic potential metrics and temperament red flags.*
 
