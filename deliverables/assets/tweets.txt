@@ -7,7 +7,7 @@ Using our revolutionary hybrid system (40% Peer Analysis + 60% Spurs-Fit Model):
 
 🥇 Kieran McKenna: 79.5/100
 
-Full dataset + methodology: [REPO_LINK]
+Full dataset + methodology: bit.ly/spurs-eval-2025
 
 #THFC #SpursAnalytics #DataDriven
 
@@ -23,7 +23,7 @@ Based on our comprehensive analysis (18 KPIs + Spurs-specific factors):
 🟡 Thomas Frank (Value Engineer)
 🟢 Mauricio Pochettino (Homecoming Hero)
 
-Full analysis: [REPO_LINK]
+Full analysis: bit.ly/spurs-eval-2025
 
 #THFC #SpursNext #DataDriven
 
@@ -35,7 +35,7 @@ Full analysis: [REPO_LINK]
 • Age 38 advantage maximizes potential
 • Perfect fit for Spurs DNA
 
-Full report: [PDF_LINK]
+Full report: bit.ly/spurs-mckenna-report
 #THFC #McKenna #SpursNext
 
 ### Roberto De Zerbi  
@@ -44,7 +44,7 @@ Full report: [PDF_LINK]
 • Highest Fit Index: Perfect tactical alignment
 • Risk: Age 44 limits potential
 
-Full report: [PDF_LINK]
+Full report: bit.ly/spurs-dezerbi-report
 #THFC #DeZerbi #SpursNext
 
 ### Thomas Frank
@@ -53,7 +53,7 @@ Full report: [PDF_LINK]
 • Net spend -£50M with squad value +£120M
 • Youth integration specialist
 
-Full report: [PDF_LINK]
+Full report: bit.ly/spurs-frank-report
 #THFC #ThomasFrank #SpursNext
 
 ### Mauricio Pochettino
@@ -62,7 +62,7 @@ Full report: [PDF_LINK]
 • High Spurs-Fit but declining trajectory
 • Emotional appeal vs analytical reality
 
-Full report: [PDF_LINK]
+Full report: bit.ly/spurs-poch-report
 #THFC #Pochettino #SpursNext
 
 ### Xavi Hernández
@@ -71,7 +71,7 @@ Full report: [PDF_LINK]
 • Highest Fit Index but terrible potential trends
 • Squad management concerns
 
-Full report: [PDF_LINK]
+Full report: bit.ly/spurs-xavi-report
 #THFC #Xavi #SpursNext
 
 ### Marco Silva
@@ -80,7 +80,7 @@ Full report: [PDF_LINK]
 • Squad management excellence (100% availability)
 • Conservative fit with Spurs DNA
 
-Full report: [PDF_LINK]
+Full report: bit.ly/spurs-silva-report
 #THFC #MarcoSilva #SpursNext
 
 ### Oliver Glasner
@@ -89,7 +89,7 @@ Full report: [PDF_LINK]
 • Limited youth development track record
 • Mid-table performance ceiling
 
-Full report: [PDF_LINK]
+Full report: bit.ly/spurs-glasner-report
 #THFC #Glasner #SpursNext
 
 ### Andoni Iraola
@@ -98,18 +98,31 @@ Full report: [PDF_LINK]
 • Big game struggles (1-8-5 vs Big 8)
 • Poor youth development alignment
 
-Full report: [PDF_LINK]
+Full report: bit.ly/spurs-iraola-report
 #THFC #Iraola #SpursNext
 
 ---
 
+## Bitly Links to Create:
+
+**Main Repository & Website:**
+- bit.ly/spurs-eval-2025 → https://b1rdmania.github.io/ai-spurs-manager-eval/
+
+**Individual Manager Reports:**
+- bit.ly/spurs-mckenna-report → https://b1rdmania.github.io/ai-spurs-manager-eval/reports/kieran_mckenna.md
+- bit.ly/spurs-dezerbi-report → https://b1rdmania.github.io/ai-spurs-manager-eval/reports/roberto_de_zerbi.md
+- bit.ly/spurs-frank-report → https://b1rdmania.github.io/ai-spurs-manager-eval/reports/thomas_frank.md
+- bit.ly/spurs-poch-report → https://b1rdmania.github.io/ai-spurs-manager-eval/reports/mauricio_pochettino.md
+- bit.ly/spurs-xavi-report → https://b1rdmania.github.io/ai-spurs-manager-eval/reports/xavi_hernandez.md
+- bit.ly/spurs-silva-report → https://b1rdmania.github.io/ai-spurs-manager-eval/reports/marco_silva.md
+- bit.ly/spurs-glasner-report → https://b1rdmania.github.io/ai-spurs-manager-eval/reports/oliver_glasner.md
+- bit.ly/spurs-iraola-report → https://b1rdmania.github.io/ai-spurs-manager-eval/reports/andoni_iraola.md
+
 **Posting Strategy:**
-- Launch: Pin intro tweet
-- +2 hours: Poll tweet  
-- Days 2-3: Manager profiles every 12 minutes during 9am-6pm GMT
-- Each tweet includes relevant hashtags and links
+- Launch: Pin intro tweet with main site link
+- +2 hours: Poll tweet with main site link
+- Days 2-3: Manager profiles every 3 hours during 9am-6pm GMT
+- Each manager tweet includes individual report bitly link
 - Engage with replies to drive discussion
 
-**Links to replace:**
-- [REPO_LINK] → Shortened GitHub repo URL
-- [PDF_LINK] → Individual manager PDF shortened URLs
+**Note**: Create all bitly links before posting. Test each link to ensure reports render properly.
