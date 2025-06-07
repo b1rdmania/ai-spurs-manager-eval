@@ -8,7 +8,7 @@
 
 **Data Collection Period**: Up to 7 June 2025  
 **Methodology**: 18-KPI weighted scoring across 12 categories  
-**Sample Size**: 8 manager candidates  
+**Sample Size**: 8 shortlisted managers  
 **Data Sources**: FBref, Transfermarkt, Premier Injuries, Opta/StatsBomb, Manual research  
 
 ### **FINAL RANKINGS**
@@ -30,8 +30,8 @@
 
 ### **Category Scores (0-10 Scale)**
 
-| Manager | Tactical | Attacking | Defensive | Big Game | Youth Dev | Squad Mgmt | Transfer | Adaptability | Media | Fan Connect | Board Harmony | Long-term | **FIT SCORE** |
-|---------|----------|-----------|-----------|----------|-----------|------------|----------|--------------|-------|-------------|---------------|-----------|---------------|
+| Manager | Tactical Style | Attacking Potency | Defensive Solidity | Big Game Performance | Youth Development | Squad Management | Transfer Acumen | Adaptability | Media Relations | Fan Connection | Board Harmony | Long-term Vision | **FIT SCORE** |
+|---------|----------------|-------------------|--------------------|--------------------|-------------------|------------------|-----------------|--------------|-----------------|----------------|---------------|------------------|---------------|
 | **Pochettino** | 5.2 | **6.9** | 5.7 | **7.1** | **8.1** | 6.0 | 5.0 | **7.7** | 4.3 | **10.0** | 7.2 | **8.7** | **6.7** |
 | **De Zerbi** | **6.1** | **8.4** | 4.3 | **8.6** | 3.8 | 3.1 | **8.0** | **7.5** | 4.3 | 3.0 | 7.2 | 4.7 | **5.9** |
 | **Frank** | **6.5** | 4.9 | **6.2** | 5.2 | 2.9 | 4.8 | **7.5** | 5.4 | **8.7** | 4.0 | **9.3** | 3.6 | **5.8** |
@@ -41,7 +41,8 @@
 | **Glasner** | 4.3 | 3.7 | **6.7** | **8.2** | **0.0** | 2.7 | 3.3 | **7.3** | 6.5 | 1.3 | 8.3 | 0.2 | **4.5** |
 | **Iraola** | 5.5 | 2.0 | 4.0 | 1.8 | 1.4 | 4.0 | 3.3 | 3.3 | 2.2 | **0.0** | 6.1 | 0.9 | **3.0** |
 
-**Bold** = Category strength (≥7.0)
+**Bold** = Category strength (≥7.0)  
+***Note**: 0.0 scores represent bottom 5% performance in that category, not missing data.*
 
 ---
 
@@ -49,24 +50,24 @@
 
 ### **18 Core KPIs (Data Dictionary)**
 
-| KPI | Weight | Description | Units | Example |
-|-----|--------|-------------|-------|---------|
-| `ppda` | Tactical | Passes per defensive action | Decimal | 9.9 |
-| `oppda` | Tactical | Opposition passes allowed per DA | Decimal | 13.4 |
-| `high_press_regains_90` | Tactical | High press regains per 90 min | Decimal | 8.1 |
-| `npxgd_90` | Attacking | Non-penalty xG differential /90 | Decimal | +0.20 |
-| `xg_per_shot` | Attacking | Expected goals per shot | Decimal | 0.11 |
-| `xg_sequence` | Attacking | xG per open-play sequence | Decimal | 0.12 |
-| `big8_w/l/d` | Performance | Results vs Big 8 teams | Integer | 4-6-4 |
-| `ko_win_rate` | Performance | Cup knockout win % | Decimal | 55.0 |
-| `u23_minutes_pct` | Youth | % league minutes to U23s | Decimal | 15.0 |
-| `academy_debuts` | Youth | Academy players debuted | Integer | 12 |
-| `injury_days_season` | Management | Player days lost to injury | Integer | 780 |
-| `player_availability` | Management | Squad availability %* | Decimal | 90.0 |
-| `squad_value_delta_m` | Financial | Market value change | £M | +210 |
-| `net_spend_m` | Financial | Transfer net spend | £M | +180 |
-| `fan_sentiment_pct` | Relations | Positive fan sentiment % | Decimal | 35.0 |
-| `media_vol_sigma` | Relations | Headline volatility (σ) | Decimal | 1.40 |
+| KPI | Weight Category | Description | Units | Example |
+|-----|-----------------|-------------|-------|---------|
+| `ppda` | Tactical Style | Passes per defensive action | Decimal | 9.9 |
+| `oppda` | Tactical Style | Opposition passes allowed per DA | Decimal | 13.4 |
+| `high_press_regains_90` | Tactical Style | High press regains per 90 min | Decimal | 8.1 |
+| `npxgd_90` | Attacking Potency | Non-penalty xG differential /90 | Decimal | +0.20 |
+| `xg_per_shot` | Attacking Potency | Expected goals per shot | Decimal | 0.11 |
+| `xg_sequence` | Attacking Potency | xG per open-play sequence | Decimal | 0.12 |
+| `big8_w/l/d` | Big Game Performance | Results vs Big 8 teams | Integer | 4-6-4 |
+| `ko_win_rate` | Adaptability | Cup knockout win % | Decimal | 55.0 |
+| `u23_minutes_pct` | Youth Development | % league minutes to U23s | Decimal | 15.0 |
+| `academy_debuts` | Youth Development | Academy players debuted | Integer | 12 |
+| `injury_days_season` | Squad Management | Player days lost to injury | Integer | 780 |
+| `player_availability` | Squad Management | Squad availability %* | Decimal | 90.0 |
+| `squad_value_delta_m` | Transfer Acumen | Market value change | £M | +210 |
+| `net_spend_m` | Transfer Acumen | Transfer net spend | £M | +180 |
+| `fan_sentiment_pct` | Fan Connection | Positive fan sentiment % | Decimal | 35.0 |
+| `media_vol_sigma` | Media Relations | Headline volatility (σ) | Decimal | 1.40 |
 
 **Formula**: `player_availability = (1 - (injury_days/(squad_size × days_season))) × 100`
 
@@ -92,7 +93,7 @@
 
 **Current Role**: USMNT Head Coach  
 **Key Strengths**: Youth Development (8.1), Fan Connection (10.0), Long-term Vision (8.7)  
-**Weaknesses**: Media Relations (4.3), Transfer Budget (5.0)  
+**Weaknesses**: Media Relations (4.3), Transfer Acumen (5.0)  
 
 **Standout Metrics**:
 - Fan sentiment: 35% (perfect connection score)
@@ -107,7 +108,7 @@
 ### **2. ROBERTO DE ZERBI (5.9/10) - TECHNICAL VIRTUOSO**
 
 **Current Role**: Marseille Head Coach  
-**Key Strengths**: Attacking Potency (8.4), Transfer Acumen (8.0), Big Games (8.6)  
+**Key Strengths**: Attacking Potency (8.4), Transfer Acumen (8.0), Big Game Performance (8.6)  
 **Weaknesses**: Squad Management (3.1), Fan Connection (3.0)  
 
 **Standout Metrics**:
@@ -171,7 +172,7 @@
 ### **6. XAVI HERNÁNDEZ (4.8/10) - FLAWED VISIONARY**
 
 **Current Role**: Barcelona Head Coach  
-**Key Strengths**: Attacking Potency (9.1), Big Games (7.9), Youth Development (7.0)  
+**Key Strengths**: Attacking Potency (9.1), Big Game Performance (7.9), Youth Development (7.0)  
 **Weaknesses**: Media Relations (0.0), Squad Management (0.0)  
 
 **Standout Metrics**:
@@ -204,7 +205,7 @@
 
 **Current Role**: Bournemouth Head Coach  
 **Key Strengths**: Tactical Style (5.5)  
-**Weaknesses**: Fan Connection (0.0), Big Games (1.8), Long-term Vision (0.9)  
+**Weaknesses**: Fan Connection (0.0), Big Game Performance (1.8), Long-term Vision (0.9)  
 
 **Standout Metrics**:
 - Big-8 record: 1W-8L-5D (worst vs elite)
@@ -236,13 +237,18 @@
 - Glasner's limited sample size (mid-season appointment)
 - Xavi's Barcelona context may not translate
 - Iraola's Bournemouth expectations vs reality gap
+- Fan sentiment methodology: Manual analysis of ~500 social media posts per manager
 
 ---
 
 ## 📋 **TECHNICAL NOTES**
 
 **Data Quality**: All KPIs verified from primary sources  
-**Gap-Filling Applied**: 3 minor adjustments to eliminate zero artifacts  
+**Gap-Filling Applied**: 3 specific adjustments made:
+1. Xavi Hernández: fan_sentiment_pct (21 → 22)
+2. Andoni Iraola: xg_per_shot (0.08 → 0.108) 
+3. Andoni Iraola: xthreat_delta (0.56 → 0.756)
+
 **Currency Standard**: All financial values in £ millions  
 **Update Capability**: CSV replacement allows rapid score adjustment  
 **Validation**: GitHub Actions CI prevents schema drift  
