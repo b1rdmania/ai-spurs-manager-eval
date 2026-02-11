@@ -4,7 +4,7 @@
 
 Thomas Frank was sacked on Feb 11, 2026 after the worst PL win rate of any Spurs manager ever. Spurs sit 16th, 5 points above relegation. This tool uses a **Unified Final Scoring System** combining peer analysis with Spurs-specific fit modeling to identify the best candidate.
 
-🔗 **[Live Dashboard](https://yourusername.github.io/ai-spurs-manager-eval/)** (GitHub Pages)
+🔗 **[Live Dashboard](https://b1rdmania.github.io/ai-spurs-manager-eval/)** (GitHub Pages)
 
 ---
 
