@@ -1,0 +1,11 @@
+manager_name,club,ppda,oppda,high_press_regains_90,npxgd_90,xg_per_shot,xg_open_play_90,xga_90,big6_w,big6_l,big6_d,ko_win_rate,u23_minutes_pct,academy_debuts,youth_progression_count,injury_days_season,player_availability,squad_rotation_index,squad_value_delta_m,net_spend_m,sell_on_profit_m,fan_sentiment_pct,media_vol_sigma
+Roberto De Zerbi,Marseille,8.6,12.3,8.9,0.28,0.11,1.52,1.08,5,5,4,48,16,5,4,780,88,0.38,95,-20,65,55,1.55
+Mauricio Pochettino,Chelsea,10.2,13.6,7.8,0.12,0.11,1.31,1.07,2,4,4,52,18,10,6,780,90,0.33,180,200,153,40,1.45
+Xavi Hernandez,Barcelona,8.4,12.0,6.8,0.30,0.12,1.62,1.08,5,5,4,42,24,8,5,920,85,0.35,60,3,45,32,1.70
+Andoni Iraola,Bournemouth,9.2,14.1,9.2,0.08,0.10,1.18,1.21,5,5,4,35,12,4,3,690,91,0.40,80,-30,55,72,1.15
+Oliver Glasner,Crystal Palace,11.4,15.2,7.5,0.05,0.10,1.10,1.18,4,5,5,58,6,3,2,850,88,0.38,45,8,85,60,1.25
+Marco Silva,Fulham,12.3,14.8,6.9,0.14,0.09,1.25,0.96,3,6,5,40,8,6,4,620,93,0.36,55,20,42,58,1.10
+Kieran McKenna,Ipswich Town,13.2,11.8,5.8,-0.28,0.09,0.90,1.91,1,9,2,30,20,7,3,1050,84,0.42,25,125,5,62,1.35
+Xabi Alonso,Bayer Leverkusen,9.8,13.8,8.5,0.40,0.13,1.65,0.88,8,1,5,65,15,6,4,680,92,0.34,250,-10,48,78,1.20
+Robbie Keane,Ferencvaros,11.5,10.2,6.2,0.18,0.10,1.30,1.10,3,3,2,50,10,3,2,520,91,0.42,15,-5,8,65,0.90
+John Heitinga,Ajax,10.8,12.5,7.0,0.02,0.10,1.22,1.25,2,4,2,38,22,5,3,700,89,0.37,20,35,30,35,1.60

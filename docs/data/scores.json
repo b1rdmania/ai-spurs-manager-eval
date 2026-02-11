@@ -1,0 +1,549 @@
+{
+  "version": "2.0",
+  "generated_at": "2026-02-11T19:18:31.948266",
+  "methodology": {
+    "peer_weight": 0.4,
+    "spursfit_weight": 0.6,
+    "fit_within_spursfit": 0.6,
+    "potential_within_spursfit": 0.4,
+    "peer_categories": [
+      "pressing_intensity",
+      "attacking_quality",
+      "defensive_solidity",
+      "big_game_performance",
+      "youth_development",
+      "squad_health",
+      "transfer_acumen",
+      "media_stability",
+      "stakeholder_alignment"
+    ],
+    "fit_categories": [
+      "front_foot_play",
+      "youth_pathway",
+      "talent_inflation",
+      "big_game_mentality"
+    ]
+  },
+  "managers": [
+    {
+      "slug": "xabi-alonso",
+      "name": "Xabi Alonso",
+      "nationality": "Spanish",
+      "age": 44,
+      "current_club": "Real Madrid",
+      "available": false,
+      "rank": 1,
+      "final_score": 85.3,
+      "peer_score": 9.35,
+      "fit_index": 84.4,
+      "potential_index": 73.0,
+      "spursfit_total": 79.8,
+      "peer_categories": {
+        "pressing_intensity": 10.0,
+        "attacking_quality": 10.0,
+        "defensive_solidity": 10.0,
+        "big_game_performance": 10.0,
+        "youth_development": 4.02,
+        "squad_health": 9.39,
+        "transfer_acumen": 10.0,
+        "media_stability": 10.0,
+        "stakeholder_alignment": 10.0
+      },
+      "fit_categories": {
+        "front_foot_play": 22.62,
+        "youth_pathway": 14.58,
+        "talent_inflation": 24.95,
+        "big_game_mentality": 22.24
+      },
+      "potential_components": {
+        "age": 0.992,
+        "trend": 0.504,
+        "leverage": 0.6,
+        "temperament": 1.0
+      },
+      "narrative": {
+        "tagline": "The Unbeaten Champion",
+        "summary": "Led Bayer Leverkusen to an unbeaten Bundesliga title \u2014 one of football's greatest managerial achievements. Now at Real Madrid. The dream candidate but almost certainly unavailable.",
+        "strengths": [
+          "Proven at the absolute highest level",
+          "Blend of tactical brilliance and calmness",
+          "Background at Liverpool gives PL cultural awareness"
+        ],
+        "concerns": [
+          "Currently at Real Madrid \u2014 not leaving",
+          "Would be an enormous fee/compensation package",
+          "Widely expected to manage Liverpool eventually"
+        ],
+        "verdict": "DREAM OPTION (UNAVAILABLE)"
+      }
+    },
+    {
+      "slug": "andoni-iraola",
+      "name": "Andoni Iraola",
+      "nationality": "Spanish",
+      "age": 42,
+      "current_club": "AFC Bournemouth",
+      "available": true,
+      "rank": 2,
+      "final_score": 71.2,
+      "peer_score": 6.82,
+      "fit_index": 62.9,
+      "potential_index": 88.6,
+      "spursfit_total": 73.2,
+      "peer_categories": {
+        "pressing_intensity": 7.65,
+        "attacking_quality": 5.46,
+        "defensive_solidity": 7.65,
+        "big_game_performance": 4.98,
+        "youth_development": 3.42,
+        "squad_health": 8.55,
+        "transfer_acumen": 6.58,
+        "media_stability": 8.87,
+        "stakeholder_alignment": 9.0
+      },
+      "fit_categories": {
+        "front_foot_play": 19.99,
+        "youth_pathway": 11.98,
+        "talent_inflation": 20.57,
+        "big_game_mentality": 10.33
+      },
+      "potential_components": {
+        "age": 0.992,
+        "trend": 0.627,
+        "leverage": 1.0,
+        "temperament": 1.0
+      },
+      "narrative": {
+        "tagline": "The Bournemouth Builder",
+        "summary": "Guided Bournemouth to their best-ever PL finishes with a fraction of the top-6 budget. Pressing-based system with exceptional tactical flexibility. Draws comparisons to a young Pochettino.",
+        "strengths": [
+          "Outstanding resource leverage \u2014 elite overperformance",
+          "Modern pressing system highly adaptable",
+          "Excellent man-management and player development"
+        ],
+        "concerns": [
+          "Unproven at a top-6 club",
+          "Would require compensation from Bournemouth",
+          "Step up in expectations and scrutiny"
+        ],
+        "verdict": "STRONGLY RECOMMENDED"
+      }
+    },
+    {
+      "slug": "roberto-de-zerbi",
+      "name": "Roberto De Zerbi",
+      "nationality": "Italian",
+      "age": 46,
+      "current_club": "Free Agent",
+      "available": true,
+      "rank": 3,
+      "final_score": 65.7,
+      "peer_score": 6.09,
+      "fit_index": 79.9,
+      "potential_index": 52.4,
+      "spursfit_total": 68.9,
+      "peer_categories": {
+        "pressing_intensity": 9.08,
+        "attacking_quality": 8.31,
+        "defensive_solidity": 4.05,
+        "big_game_performance": 5.74,
+        "youth_development": 6.0,
+        "squad_health": 4.14,
+        "transfer_acumen": 7.69,
+        "media_stability": 1.6,
+        "stakeholder_alignment": 5.98
+      },
+      "fit_categories": {
+        "front_foot_play": 21.93,
+        "youth_pathway": 20.41,
+        "talent_inflation": 23.95,
+        "big_game_mentality": 13.56
+      },
+      "potential_components": {
+        "age": 0.932,
+        "trend": 0.36,
+        "leverage": 0.6,
+        "temperament": 0.25
+      },
+      "narrative": {
+        "tagline": "The Technical Perfectionist",
+        "summary": "Elite possession-based philosophy honed at Sassuolo and Brighton, praised by Guardiola as one of the most influential coaches around. Left Marseille by mutual consent. His Brighton side played some of the most progressive football in PL history.",
+        "strengths": [
+          "Exceptional tactical detail and game model clarity",
+          "Proven ability to overperform with limited budgets",
+          "Developed multiple players into international-calibre talent"
+        ],
+        "concerns": [
+          "Temperamental \u2014 clashed with Marseille hierarchy",
+          "Defensive fragility in big games",
+          "Short tenure at multiple clubs"
+        ],
+        "verdict": "STRONGLY RECOMMENDED"
+      }
+    },
+    {
+      "slug": "kieran-mckenna",
+      "name": "Kieran McKenna",
+      "nationality": "Irish",
+      "age": 39,
+      "current_club": "Ipswich Town",
+      "available": true,
+      "rank": 4,
+      "final_score": 62.6,
+      "peer_score": 5.92,
+      "fit_index": 58.2,
+      "potential_index": 74.9,
+      "spursfit_total": 64.9,
+      "peer_categories": {
+        "pressing_intensity": 5.18,
+        "attacking_quality": 4.69,
+        "defensive_solidity": 6.64,
+        "big_game_performance": 0.28,
+        "youth_development": 7.81,
+        "squad_health": 9.77,
+        "transfer_acumen": 4.92,
+        "media_stability": 9.6,
+        "stakeholder_alignment": 6.88
+      },
+      "fit_categories": {
+        "front_foot_play": 14.88,
+        "youth_pathway": 23.68,
+        "talent_inflation": 15.82,
+        "big_game_mentality": 3.85
+      },
+      "potential_components": {
+        "age": 0.882,
+        "trend": 0.302,
+        "leverage": 0.94,
+        "temperament": 1.0
+      },
+      "narrative": {
+        "tagline": "The Young Architect",
+        "summary": "Youngest manager on the shortlist. Achieved back-to-back promotions at Ipswich Town and has shown tactical sophistication beyond his years. Former Manchester United coach with deep tactical education.",
+        "strengths": [
+          "Exceptional trajectory \u2014 fastest rise in English football",
+          "Deeply analytical, modern coaching approach",
+          "Strong youth development ethos"
+        ],
+        "concerns": [
+          "Zero top-flight management experience",
+          "Ipswich struggling in the PL \u2014 mixed first season",
+          "Massive step up in pressure and expectations"
+        ],
+        "verdict": "RECOMMENDED (HIGH POTENTIAL)"
+      }
+    },
+    {
+      "slug": "xavi-hernandez",
+      "name": "Xavi Hernandez",
+      "nationality": "Spanish",
+      "age": 46,
+      "current_club": "Free Agent",
+      "available": true,
+      "rank": 5,
+      "final_score": 61.4,
+      "peer_score": 5.49,
+      "fit_index": 80.4,
+      "potential_index": 43.8,
+      "spursfit_total": 65.8,
+      "peer_categories": {
+        "pressing_intensity": 6.35,
+        "attacking_quality": 6.24,
+        "defensive_solidity": 6.38,
+        "big_game_performance": 7.01,
+        "youth_development": 10.0,
+        "squad_health": 6.48,
+        "transfer_acumen": 4.55,
+        "media_stability": 0.0,
+        "stakeholder_alignment": 0.83
+      },
+      "fit_categories": {
+        "front_foot_play": 19.83,
+        "youth_pathway": 24.83,
+        "talent_inflation": 18.49,
+        "big_game_mentality": 17.26
+      },
+      "potential_components": {
+        "age": 0.932,
+        "trend": 0.372,
+        "leverage": 0.3,
+        "temperament": 0.25
+      },
+      "narrative": {
+        "tagline": "The Barcelona Blueprint",
+        "summary": "One of football's greatest midfielders turned manager. Revitalised Barcelona's style and won La Liga, but struggled with inconsistency and reported dressing room issues. Publicly open to PL management.",
+        "strengths": [
+          "Absolute commitment to possession and positional play",
+          "Excellent youth integration at Barcelona",
+          "Name recognition and global profile"
+        ],
+        "concerns": [
+          "Volatile temperament \u2014 multiple touchline incidents",
+          "Only managed in one system (Barcelona)",
+          "Questions about adaptation to PL pace and physicality"
+        ],
+        "verdict": "RECOMMENDED WITH RESERVATIONS"
+      }
+    },
+    {
+      "slug": "marco-silva",
+      "name": "Marco Silva",
+      "nationality": "Portuguese",
+      "age": 47,
+      "current_club": "Fulham",
+      "available": true,
+      "rank": 6,
+      "final_score": 54.5,
+      "peer_score": 4.41,
+      "fit_index": 50.3,
+      "potential_index": 78.1,
+      "spursfit_total": 61.4,
+      "peer_categories": {
+        "pressing_intensity": 3.2,
+        "attacking_quality": 4.07,
+        "defensive_solidity": 5.1,
+        "big_game_performance": 0.81,
+        "youth_development": 4.96,
+        "squad_health": 5.8,
+        "transfer_acumen": 5.85,
+        "media_stability": 6.69,
+        "stakeholder_alignment": 4.77
+      },
+      "fit_categories": {
+        "front_foot_play": 10.17,
+        "youth_pathway": 13.93,
+        "talent_inflation": 21.8,
+        "big_game_mentality": 4.39
+      },
+      "potential_components": {
+        "age": 0.882,
+        "trend": 0.549,
+        "leverage": 0.8,
+        "temperament": 1.0
+      },
+      "narrative": {
+        "tagline": "The Fulham Architect",
+        "summary": "Rebuilt Fulham into a consistent top-half PL side with attractive football. Previously had troubled spells at Everton and Watford but has matured significantly. Strong candidate last time around.",
+        "strengths": [
+          "Consistent PL mid-table overperformance",
+          "Builds cohesive attacking sides",
+          "Experienced in PL management across multiple clubs"
+        ],
+        "concerns": [
+          "Previous failures at bigger clubs (Everton)",
+          "Under contract at Fulham \u2014 compensation needed",
+          "Questions about ceiling at a top-6 club"
+        ],
+        "verdict": "RECOMMENDED"
+      }
+    },
+    {
+      "slug": "robbie-keane",
+      "name": "Robbie Keane",
+      "nationality": "Irish",
+      "age": 45,
+      "current_club": "Ferencvaros",
+      "available": true,
+      "rank": 7,
+      "final_score": 45.0,
+      "peer_score": 2.88,
+      "fit_index": 34.9,
+      "potential_index": 87.1,
+      "spursfit_total": 55.8,
+      "peer_categories": {
+        "pressing_intensity": 0.5,
+        "attacking_quality": 0.93,
+        "defensive_solidity": 1.41,
+        "big_game_performance": 3.45,
+        "youth_development": 3.54,
+        "squad_health": 2.84,
+        "transfer_acumen": 2.86,
+        "media_stability": 7.42,
+        "stakeholder_alignment": 5.37
+      },
+      "fit_categories": {
+        "front_foot_play": 4.75,
+        "youth_pathway": 13.94,
+        "talent_inflation": 8.06,
+        "big_game_mentality": 8.15
+      },
+      "potential_components": {
+        "age": 0.969,
+        "trend": 0.592,
+        "leverage": 1.0,
+        "temperament": 1.0
+      },
+      "narrative": {
+        "tagline": "The Spurs Legend",
+        "summary": "Beloved Spurs striker turned manager. Won titles in Israel (Maccabi Tel Aviv) and Hungary (Ferencvaros). The sentimental choice with genuine managerial credentials, though in smaller leagues.",
+        "strengths": [
+          "Deep Spurs connection \u2014 fan favourite",
+          "Winner's mentality \u2014 titles in multiple countries",
+          "Hungry, ambitious, and available"
+        ],
+        "concerns": [
+          "No top-5 league management experience",
+          "Step up from Hungarian league is enormous",
+          "Emotional appointment risk \u2014 sentiment over substance?"
+        ],
+        "verdict": "OUTSIDER \u2014 EMOTIONAL CHOICE"
+      }
+    },
+    {
+      "slug": "mauricio-pochettino",
+      "name": "Mauricio Pochettino",
+      "nationality": "Argentine",
+      "age": 53,
+      "current_club": "USA (National Team)",
+      "available": false,
+      "rank": 8,
+      "final_score": 38.3,
+      "peer_score": 2.74,
+      "fit_index": 33.1,
+      "potential_index": 64.4,
+      "spursfit_total": 45.6,
+      "peer_categories": {
+        "pressing_intensity": 3.75,
+        "attacking_quality": 2.62,
+        "defensive_solidity": 1.84,
+        "big_game_performance": 2.93,
+        "youth_development": 2.95,
+        "squad_health": 1.08,
+        "transfer_acumen": 1.62,
+        "media_stability": 3.78,
+        "stakeholder_alignment": 3.86
+      },
+      "fit_categories": {
+        "front_foot_play": 7.88,
+        "youth_pathway": 11.12,
+        "talent_inflation": 6.65,
+        "big_game_mentality": 7.43
+      },
+      "potential_components": {
+        "age": 0.458,
+        "trend": 0.525,
+        "leverage": 0.7,
+        "temperament": 0.925
+      },
+      "narrative": {
+        "tagline": "The Prodigal Son",
+        "summary": "Spurs legend who built the club's greatest modern era (2014-2019), reaching the Champions League final. Currently committed to USA for the 2026 World Cup. The emotional favourite but unavailable until July.",
+        "strengths": [
+          "Deep understanding of Spurs culture and DNA",
+          "Proven PL track record building elite teams from scratch",
+          "Elite player development \u2014 Kane, Son, Alli all peaked under him"
+        ],
+        "concerns": [
+          "Unavailable until after World Cup (July 2026)",
+          "Question marks about whether the magic can be recaptured",
+          "Struggled at PSG and had mixed results at Chelsea"
+        ],
+        "verdict": "RECOMMENDED (SUMMER OPTION)"
+      }
+    },
+    {
+      "slug": "john-heitinga",
+      "name": "John Heitinga",
+      "nationality": "Dutch",
+      "age": 41,
+      "current_club": "Tottenham (Assistant)",
+      "available": true,
+      "rank": 9,
+      "final_score": 32.8,
+      "peer_score": 1.26,
+      "fit_index": 24.7,
+      "potential_index": 78.7,
+      "spursfit_total": 46.3,
+      "peer_categories": {
+        "pressing_intensity": 0.38,
+        "attacking_quality": 0.0,
+        "defensive_solidity": 0.39,
+        "big_game_performance": 0.51,
+        "youth_development": 2.17,
+        "squad_health": 1.26,
+        "transfer_acumen": 2.36,
+        "media_stability": 5.96,
+        "stakeholder_alignment": 0.0
+      },
+      "fit_categories": {
+        "front_foot_play": 3.91,
+        "youth_pathway": 9.67,
+        "talent_inflation": 7.54,
+        "big_game_mentality": 3.56
+      },
+      "potential_components": {
+        "age": 0.969,
+        "trend": 0.512,
+        "leverage": 0.8,
+        "temperament": 1.0
+      },
+      "narrative": {
+        "tagline": "The Inside Man",
+        "summary": "Already at the club as Frank's assistant. Previously served as interim manager at Ajax twice. Low-risk caretaker option who knows the squad, but limited permanent managerial experience.",
+        "strengths": [
+          "Already knows the squad and facilities",
+          "Can stabilise immediately with no transition",
+          "Low-cost, low-risk appointment"
+        ],
+        "concerns": [
+          "Very limited managerial CV",
+          "Caretaker energy may not inspire long-term",
+          "Two Ajax interim stints were mixed"
+        ],
+        "verdict": "CARETAKER OPTION"
+      }
+    },
+    {
+      "slug": "oliver-glasner",
+      "name": "Oliver Glasner",
+      "nationality": "Austrian",
+      "age": 50,
+      "current_club": "Crystal Palace",
+      "available": false,
+      "rank": 10,
+      "final_score": 32.7,
+      "peer_score": 1.86,
+      "fit_index": 23.8,
+      "potential_index": 69.6,
+      "spursfit_total": 42.1,
+      "peer_categories": {
+        "pressing_intensity": 1.64,
+        "attacking_quality": 1.55,
+        "defensive_solidity": 0.89,
+        "big_game_performance": 3.72,
+        "youth_development": 0.0,
+        "squad_health": 0.0,
+        "transfer_acumen": 2.1,
+        "media_stability": 5.24,
+        "stakeholder_alignment": 1.74
+      },
+      "fit_categories": {
+        "front_foot_play": 6.23,
+        "youth_pathway": 2.42,
+        "talent_inflation": 7.17,
+        "big_game_mentality": 7.97
+      },
+      "potential_components": {
+        "age": 0.682,
+        "trend": 0.615,
+        "leverage": 0.6,
+        "temperament": 0.975
+      },
+      "narrative": {
+        "tagline": "The Cup Specialist",
+        "summary": "Won the FA Cup with Crystal Palace in 2025 and previously the Europa League with Eintracht Frankfurt. Known for his high-energy 3-4-3 system and ability to galvanise squads quickly.",
+        "strengths": [
+          "Proven cup competition pedigree",
+          "Energetic, high-pressing tactical system",
+          "Quick turnaround specialist \u2014 transforms results fast"
+        ],
+        "concerns": [
+          "PL league form has been inconsistent",
+          "Rigid tactical approach may limit squad options",
+          "Has confirmed commitment to Palace for this season"
+        ],
+        "verdict": "CAUTIOUSLY RECOMMENDED"
+      }
+    }
+  ]
+}

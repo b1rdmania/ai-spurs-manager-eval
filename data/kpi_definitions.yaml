@@ -1,0 +1,164 @@
+# KPI Definitions — Spurs Manager Evaluation v2
+# Each KPI includes: description, source, direction (higher/lower = better), suggested clip range
+
+tactical:
+  ppda:
+    description: "Passes allowed per defensive action (pressing intensity)"
+    source: "FBref / Opta"
+    direction: lower_is_better
+    clip: [6, 16]
+    unit: "passes"
+
+  oppda:
+    description: "Opponent passes per defensive action (forcing opponents to press)"
+    source: "FBref / Opta"
+    direction: higher_is_better
+    clip: [8, 18]
+    unit: "passes"
+
+  high_press_regains_90:
+    description: "Ball recoveries in attacking third per 90 minutes"
+    source: "FBref"
+    direction: higher_is_better
+    clip: [3, 12]
+    unit: "per 90"
+
+attacking:
+  npxgd_90:
+    description: "Non-penalty expected goals difference per 90"
+    source: "FBref / StatsBomb"
+    direction: higher_is_better
+    clip: [-0.3, 0.5]
+    unit: "xG per 90"
+
+  xg_per_shot:
+    description: "Expected goals per shot (shot quality)"
+    source: "FBref"
+    direction: higher_is_better
+    clip: [0.06, 0.16]
+    unit: "xG"
+
+  xg_open_play_90:
+    description: "Expected goals from open play per 90"
+    source: "FBref"
+    direction: higher_is_better
+    clip: [0.5, 2.0]
+    unit: "xG per 90"
+
+defensive:
+  xga_90:
+    description: "Expected goals against per 90 (defensive quality)"
+    source: "FBref / StatsBomb"
+    direction: lower_is_better
+    clip: [0.5, 2.0]
+    unit: "xGA per 90"
+
+big_game:
+  big6_w:
+    description: "Wins against Big 6 opponents (last 2 seasons)"
+    source: "FBref / Transfermarkt"
+    direction: higher_is_better
+    clip: [0, 12]
+    unit: "wins"
+
+  big6_l:
+    description: "Losses against Big 6 opponents (last 2 seasons)"
+    source: "FBref / Transfermarkt"
+    direction: lower_is_better
+    clip: [0, 12]
+    unit: "losses"
+
+  big6_d:
+    description: "Draws against Big 6 opponents (last 2 seasons)"
+    source: "FBref / Transfermarkt"
+    direction: neutral
+    clip: [0, 8]
+    unit: "draws"
+
+  ko_win_rate:
+    description: "Win rate in knockout/cup competitions (%)"
+    source: "Transfermarkt"
+    direction: higher_is_better
+    clip: [10, 80]
+    unit: "%"
+
+youth:
+  u23_minutes_pct:
+    description: "Percentage of total minutes played by U23 players"
+    source: "FBref squad stats"
+    direction: higher_is_better
+    clip: [0, 30]
+    unit: "%"
+
+  academy_debuts:
+    description: "Number of academy players given first-team debut (last 2 seasons)"
+    source: "Transfermarkt / club records"
+    direction: higher_is_better
+    clip: [0, 15]
+    unit: "players"
+
+  youth_progression_count:
+    description: "Academy players promoted to regular squad or sold for profit"
+    source: "Transfermarkt"
+    direction: higher_is_better
+    clip: [0, 10]
+    unit: "players"
+
+squad:
+  injury_days_season:
+    description: "Total injury days across squad in a season"
+    source: "Transfermarkt / Premier Injuries"
+    direction: lower_is_better
+    clip: [300, 1200]
+    unit: "days"
+
+  player_availability:
+    description: "Average percentage of squad available for selection"
+    source: "Transfermarkt / Premier Injuries"
+    direction: higher_is_better
+    clip: [70, 98]
+    unit: "%"
+
+  squad_rotation_index:
+    description: "Gini coefficient of minutes distribution (0=equal, 1=concentrated)"
+    source: "FBref squad stats"
+    direction: lower_is_better
+    clip: [0.2, 0.7]
+    unit: "index"
+
+transfer:
+  squad_value_delta_m:
+    description: "Change in squad market value over tenure (millions)"
+    source: "Transfermarkt"
+    direction: higher_is_better
+    clip: [-50, 300]
+    unit: "£m"
+
+  net_spend_m:
+    description: "Net transfer spend over tenure (millions, negative = profit)"
+    source: "Transfermarkt"
+    direction: lower_is_better
+    clip: [-100, 250]
+    unit: "£m"
+
+  sell_on_profit_m:
+    description: "Profit from player sales over tenure (millions)"
+    source: "Transfermarkt"
+    direction: higher_is_better
+    clip: [0, 150]
+    unit: "£m"
+
+soft:
+  fan_sentiment_pct:
+    description: "Positive fan sentiment percentage (from polls/social media)"
+    source: "Fan polls / social media analysis"
+    direction: higher_is_better
+    clip: [10, 90]
+    unit: "%"
+
+  media_vol_sigma:
+    description: "Media narrative volatility (standard deviations from calm)"
+    source: "Media analysis"
+    direction: lower_is_better
+    clip: [0.5, 2.5]
+    unit: "sigma"

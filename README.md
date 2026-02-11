@@ -1,185 +1,222 @@
-# 🎯 AI Spurs Manager Evaluation 2025 | Unified Scoring System
+# Spurs Manager Evaluation v2 (2026)
 
-**Revolutionary Data-Driven Manager Analysis: Kieran McKenna #1 (79.5/100)**  
-*40% Peer Analysis + 60% Spurs-Fit Model = Clear Strategic Recommendation*
+**Data-driven evaluation of 10 candidates for the Tottenham Hotspur manager position.**
 
-[![🔴 Live Dashboard](https://img.shields.io/badge/🔴%20LIVE-Manager%20Dashboard-success?style=for-the-badge&logo=github)](https://b1rdmania.github.io/ai-spurs-manager-eval/)
-[![📊 Data Analysis](https://img.shields.io/badge/📊%20Analysis-8%20Managers%20Evaluated-blue?style=for-the-badge)](#)
-[![🧠 Methodology](https://img.shields.io/badge/🧠%20AI%20Scoring-Unified%20Final%20System-red?style=for-the-badge)](#)
+Thomas Frank was sacked on Feb 11, 2026 after the worst PL win rate of any Spurs manager ever. Spurs sit 16th, 5 points above relegation. This tool uses a **Unified Final Scoring System** combining peer analysis with Spurs-specific fit modeling to identify the best candidate.
 
-## 🏆 Final Manager Rankings (Unified Scoring)
+🔗 **[Live Dashboard](https://yourusername.github.io/ai-spurs-manager-eval/)** (GitHub Pages)
 
-| Rank | Manager | Final Score | Peer Score | Spurs-Fit Score | Profile |
-|------|---------|-------------|------------|-----------------|---------|
-| **#1** | **Kieran McKenna** | **79.5**/100 | 5.8/10 | 93.9/100 | The Young Virtuoso |
-| **#2** | **Roberto De Zerbi** | **75.6**/100 | 5.6/10 | 88.6/100 | The Technical Virtuoso |
-| **#3** | **Thomas Frank** | **70.9**/100 | 5.6/10 | 80.8/100 | The Value Engineer |
-| #4 | Mauricio Pochettino | 70.6/100 | 5.6/10 | 80.4/100 | The Homecoming Hero |
-| #5 | Xavi Hernández | 63.7/100 | 4.7/10 | 74.8/100 | The Flawed Visionary |
-| #6 | Marco Silva | 60.7/100 | 5.1/10 | 67.1/100 | The Steady Hand |
-| #7 | Oliver Glasner | 55.6/100 | 4.5/10 | 62.6/100 | The Quick-Fix Specialist |
-| #8 | Andoni Iraola | 51.8/100 | 3.9/10 | 60.4/100 | The Wrong Fit |
+---
 
-## 🧠 Unified Final Scoring Methodology
+## Final Rankings (February 2026)
 
-### Core Formula
+| Rank | Manager | Final Score | Peer | Fit | Potential | Available |
+|------|---------|-------------|------|-----|-----------|-----------|
+| 1 | **Xabi Alonso** | 85.3 | 9.3 | 84 | 73 | ✗ (Real Madrid) |
+| 2 | **Andoni Iraola** | 71.2 | 6.8 | 63 | 89 | ✓ |
+| 3 | **Roberto De Zerbi** | 65.7 | 6.1 | 80 | 52 | ✓ |
+| 4 | **Kieran McKenna** | 62.6 | 5.9 | 58 | 75 | ✓ |
+| 5 | **Xavi Hernandez** | 61.4 | 5.5 | 80 | 44 | ✓ |
+| 6 | **Marco Silva** | 54.5 | 4.4 | 50 | 78 | ✓ |
+| 7 | **Robbie Keane** | 45.0 | 2.9 | 35 | 87 | ✓ |
+| 8 | **Mauricio Pochettino** | 38.3 | 2.7 | 33 | 64 | ✗ (USA World Cup) |
+| 9 | **John Heitinga** | 32.8 | 1.3 | 25 | 79 | ✓ |
+| 10 | **Oliver Glasner** | 32.7 | 1.9 | 24 | 70 | ✗ (Palace) |
+
+---
+
+## Scoring Methodology
+
+### Unified Final Scoring Formula
+
 ```
-Final Score = (40% × Peer Score × 10) + (60% × Spurs-Fit Score)
-```
-
-### 1. Peer Analysis Component (40% Weight)
-Traditional 12-category peer-normalized analysis across:
-- **Tactical Style** - Pressing metrics and front-foot approach
-- **Attacking Potency** - xG creation and offensive efficiency  
-- **Defensive Solidity** - Injury management and squad availability
-- **Big Game Performance** - Record vs top-8 opposition
-- **Youth Development** - U23 minutes and academy debuts
-- **Squad Management** - Player availability and fitness
-
-### 2. Spurs-Fit Model Component (60% Weight)
-
-#### Fit Index (60% of Spurs-Fit Component)
-Spurs-specific benchmarks measuring tactical and cultural alignment:
-- **Front-Foot Play:** PPDA ≤11, npxGD ≥0.10, xG/shot ≥0.11
-- **Youth Development:** U23 minutes ≥15%, academy debuts ≥3
-- **Talent Inflation:** Squad value growth vs net spend efficiency
-- **Big Game Mentality:** Top-8 performance and knockout success
-
-#### Potential Index (40% of Spurs-Fit Component)  
-Future-focused ceiling assessment:
-- **Age Factor:** Younger managers score higher (optimal: 38-42)
-- **3-Year Trajectory:** Performance trend analysis
-- **Resource Leverage:** Overperformance relative to budget constraints
-- **Temperament:** Media stability and board relationship management
-
-## 📊 Key Insights & Analysis
-
-### Why Kieran McKenna Ranks #1 (79.5/100)
-- **Age Advantage:** At 38, maximum potential runway ahead
-- **Perfect Spurs DNA Alignment:** Championship success with youth-focused approach
-- **Highest Spurs-Fit Score:** 93.9/100 combining elite fit (98.0) with strong potential (87.8)
-- **Balanced Profile:** Strong across both peer metrics and Spurs-specific criteria
-
-### The Unified Advantage
-Our hybrid approach eliminates the weaknesses of single-metric systems:
-- **Peer Analysis** validates competence against industry standards
-- **Spurs-Fit Model** ensures alignment with club-specific requirements
-- **Combined Scoring** balances immediate capability with long-term potential
-
-## 🔍 Individual Manager Profiles
-
-### Tier 1: Elite Choices (75+ Final Score)
-- **McKenna:** Young virtuoso with perfect trajectory
-- **De Zerbi:** Technical master with immediate impact capability
-
-### Tier 2: Solid Options (65-75 Final Score)  
-- **Frank:** Value engineer with proven efficiency
-- **Pochettino:** Homecoming hero with analytical justification
-
-### Tier 3: Risk/Concern Territory (<65 Final Score)
-- **Xavi:** Flawed visionary with temperament red flags
-- **Silva:** Steady hand with insufficient ambition ceiling
-- **Glasner:** Quick-fix specialist misaligned with long-term vision
-- **Iraola:** Tactical purist fundamentally wrong for Spurs requirements
-
-## 📈 Technical Implementation
-
-### Core Technologies
-- **Python 3.12** - Data processing and scoring engines
-- **Pandas/NumPy** - Statistical analysis and calculations
-- **Matplotlib/Seaborn** - Visualization and radar charts
-- **GitHub Pages** - Deployment and hosting
-- **Bootstrap 5** - Responsive web interface
-
-### Key Files
-```
-├── scripts/
-│   ├── score_engine.py          # Unified scoring calculation
-│   ├── fit_index.py            # Spurs-Fit metrics engine
-│   └── potential_engine.py      # Potential assessment
-├── deliverables/
-│   ├── data/scores_unified.csv  # Final unified scores
-│   ├── reports/*.md            # Individual manager analysis
-│   └── docs/index.html         # Live dashboard
-└── manager_data_real.csv       # Source KPI dataset
+Final Score = (Peer Score × 10 × 0.40) + (Spurs-Fit Total × 0.60)
+Spurs-Fit Total = (Fit Index × 0.60) + (Potential Index × 0.40)
 ```
 
-### Usage
+### Peer Analysis (40%)
+
+Nine categories scored 0-10 against the peer group:
+- **Pressing Intensity** (14%) — PPDA, high press regains, opponent PPDA
+- **Attacking Quality** (14%) — npxGD/90, xG/shot, open play xG
+- **Defensive Solidity** (12%) — xGA/90, player availability
+- **Big Game Performance** (12%) — Big 6 record, knockout win rate
+- **Youth Development** (10%) — U23 minutes %, academy debuts, youth progression
+- **Squad Health** (9%) — Injury days, rotation index, availability
+- **Transfer Acumen** (10%) — Squad value growth, net spend efficiency, sell-on profit
+- **Media Stability** (9%) — Media volatility (sigma)
+- **Stakeholder Alignment** (10%) — Fan sentiment, board backing
+
+Each KPI is percentile-normalized within the peer group (no hard-coded thresholds).
+
+### Spurs-Fit Index (60% within Spurs-Fit Total)
+
+Four Spurs-specific benchmarks scored 0-25 each using **continuous sigmoid curves** (no binary pass/fail):
+- **Front-Foot Play** — PPDA, npxGD/90, xG/shot (pressing intensity + attacking output)
+- **Youth Pathway** — U23 minutes, academy debuts, youth progression
+- **Talent Inflation** — Squad value growth, net spend efficiency, sell-on profit
+- **Big Game Mentality** — Big 6 win %, knockout win rate, Big 6 xGD
+
+### Potential Index (40% within Spurs-Fit Total)
+
+Forward-looking assessment (0-100):
+- **Age Factor** (20%) — Gaussian curve peaking at 43 (not 35)
+- **Trend Score** (30%) — Season-over-season KPI improvements (npxGD, PPDA, league position)
+- **Resource Leverage** (30%) — Overperformance vs squad budget (league finish vs squad value rank)
+- **Temperament** (20%) — Calculated from touchline bans, public disputes, contract stability, mid-season departures
+
+---
+
+## Quick Start
+
+### Prerequisites
+
+- Python 3.12+
+- pip
+
+### Installation
+
 ```bash
-# Generate unified scores
-python3 scripts/score_engine.py
-
-# Create complete deliverable package
-python3 generate_frozen_package.py
-
-# Launch local preview
-python3 preview_site.py
+git clone https://github.com/yourusername/ai-spurs-manager-eval.git
+cd ai-spurs-manager-eval
+pip install -r requirements.txt
 ```
 
-## 🎯 Strategic Recommendations
+### Run the Pipeline
 
-### Immediate Action: Kieran McKenna
-- **Rationale:** Optimal balance of immediate fit and long-term potential
-- **Risk Mitigation:** Surround with experienced Premier League assistants
-- **Timeline:** Can implement immediately with proper support structure
+```bash
+python3 -m scripts.pipeline
+```
 
-### Alternative Consideration: Roberto De Zerbi  
-- **Rationale:** Proven Premier League success with perfect tactical fit
-- **Risk:** Age 44 limits long-term potential ceiling
-- **Suitability:** Excellent short-term choice for immediate improvement
+This will:
+1. Load and validate manager data from `data/managers.csv` and `data/managers_meta.csv`
+2. Calculate peer scores, fit index, potential index, and final scores
+3. Export `docs/data/scores.json` for the frontend
 
-### Avoid: Sentiment-Driven Decisions
-- **Pochettino:** Emotional appeal cannot overcome declining analytical metrics
-- **Iraola:** Poor big-game record fundamentally incompatible with Spurs ambitions
+### View the Dashboard
 
-## 📊 Data Sources & Validation
+Option 1: Open `docs/index.html` directly in a browser
 
-- **FBref:** Advanced tactical and performance metrics
-- **Transfermarkt:** Transfer values and financial data  
-- **Premier Injuries:** Squad availability and fitness data
-- **Custom KPI Framework:** 18 proprietary performance indicators
-- **Analysis Period:** 3-year rolling window (2022-2025)
+Option 2: Serve locally:
+```bash
+python3 -m http.server --directory docs 8000
+```
+Then visit http://localhost:8000
 
-## 🚀 Deployment & Access
+### Run Tests
 
-- **Live Dashboard:** [b1rdmania.github.io/ai-spurs-manager-eval](https://b1rdmania.github.io/ai-spurs-manager-eval/)
-- **Repository:** [github.com/b1rdmania/ai-spurs-manager-eval](https://github.com/b1rdmania/ai-spurs-manager-eval)
-- **Individual Reports:** Available in `/deliverables/reports/` directory
-- **Raw Data:** Complete KPI dataset in `/deliverables/data/`
+```bash
+pytest tests/ -v
+```
 
-## 📋 Change Log
-
-### v2.1 - Data Accuracy & UX Improvements  
-- ✅ Fixed all reports to use correct unified final scores from authoritative CSV source
-- ✅ Eliminated data conflicts by removing outdated scores.json file
-- ✅ Preserved Bitly URL compatibility for all manager reports
-- ✅ Simplified dashboard navigation: "PDF" → "Report", streamlined terminology
-- ✅ Enhanced report accessibility with normal-sized charts and text focus
-- ✅ Verified Kieran McKenna #1 ranking (79.5/100) accuracy across all systems
-
-### v2.0 - Unified Final Scoring System
-- ✅ Integrated peer analysis (40%) with Spurs-Fit model (60%)
-- ✅ Eliminated dual-scoring confusion with single final metric
-- ✅ Enhanced individual manager reports with comprehensive breakdowns
-- ✅ Updated all visualization and documentation
-
-### v1.0 - Spurs-Fit 2-Layer Model  
-- ✅ Revolutionary Spurs-specific scoring methodology
-- ✅ Age-weighted potential assessment
-- ✅ Comprehensive KPI framework
+58 tests covering all scoring functions.
 
 ---
 
-## 🔍 About This Repository
+## Project Structure
 
-This AI-powered analysis platform evaluates 8 potential Tottenham Hotspur managers using advanced data science and machine learning techniques. Built with Python, deployed on GitHub Pages, and featuring a revolutionary unified scoring system that combines peer analysis with Spurs-specific fit metrics.
-
-**Perfect for:** Football analytics enthusiasts, data scientists, Spurs fans, and anyone interested in applied sports analytics and predictive modeling.
-
-**Technologies:** Python 3.12, Pandas, NumPy, Matplotlib, Bootstrap 5, GitHub Actions, Statistical Analysis, Machine Learning
+```
+.
+├── data/
+│   ├── managers.csv              # 10 managers × 22 KPIs
+│   ├── managers_meta.csv         # Metadata (age, availability, temperament inputs)
+│   └── kpi_definitions.yaml      # KPI documentation
+│
+├── config/
+│   └── scoring.yaml              # Unified scoring config (categories, weights, sigmoid params)
+│
+├── scripts/
+│   ├── data_loader.py            # CSV loading + validation
+│   ├── peer_score.py             # 9-category peer analysis
+│   ├── fit_index.py              # Spurs-Fit Index (sigmoid scoring)
+│   ├── potential_index.py        # Potential Index (age, trend, leverage, temperament)
+│   ├── unified_score.py          # Final score composition
+│   ├── export_json.py            # Generate scores.json for frontend
+│   └── pipeline.py               # Orchestrator
+│
+├── docs/                         # GitHub Pages frontend
+│   ├── index.html                # Single-page app
+│   ├── css/style.css             # Dark-mode Spurs theme
+│   ├── js/
+│   │   ├── app.js                # Main logic, table rendering
+│   │   ├── charts.js             # Chart.js radar/bar charts
+│   │   ├── compare.js            # Head-to-head comparison
+│   │   ├── animations.js         # Scroll reveals, count-up
+│   │   └── social.js             # Share card generation
+│   └── data/
+│       └── scores.json           # Generated by pipeline
+│
+├── tests/                        # pytest test suite (58 tests)
+└── archive/                      # v1 files for reference
+```
 
 ---
 
-**Built for Tottenham. Driven by data. Optimized for success.**
+## Data Sources
 
-*"The best managers combine immediate competence with long-term vision. Our unified scoring system identifies exactly that balance."*
+- **Tactical/Attacking/Defensive**: FBref, StatsBomb, Understat
+- **Financial/Transfers**: Transfermarkt
+- **Squad Health**: Premier Injuries, Transfermarkt
+- **Soft Metrics**: Fan polls, media analysis
+
+All data from managers' most recent club management role (not national teams).
+
+---
+
+## Key Improvements from v1
+
+### Model Fixes
+- ✅ Removed duplicate peer categories (Squad Management, Adaptability, Board Harmony)
+- ✅ Fixed "Defensive Solidity" to use actual defensive metrics (xGA) not just injuries
+- ✅ Fixed age formula: now peaks at 43 (Gaussian), not 35 (linear)
+- ✅ Replaced binary threshold cliffs in Fit Index with continuous sigmoid curves
+- ✅ Formalized trend/temperament scores: calculated from observable data, not hand-waved
+- ✅ Removed hard-coded ranking scores — all dynamic from data
+- ✅ Calibrated benchmarks to data percentiles, not arbitrary absolutes
+
+### Engineering
+- ✅ Single unified config file (`config/scoring.yaml`) replacing 3 separate files
+- ✅ Proper input validation with clear error messages
+- ✅ Complete test suite (58 tests, all passing)
+- ✅ Single pipeline orchestrator replacing 917-line monolith
+- ✅ JSON-driven frontend (no hard-coded HTML table rows)
+
+### Frontend
+- ✅ Interactive Chart.js radars (not static PNGs)
+- ✅ Head-to-head comparison mode with overlaid charts
+- ✅ Sortable ranking table
+- ✅ Animated score reveals (count-up on scroll)
+- ✅ Shareable social cards (PNG download)
+- ✅ Dark-mode Spurs branding throughout
+- ✅ Mobile-responsive
+
+---
+
+## Contributing
+
+This is a snapshot evaluation built in February 2026. To update with new data:
+
+1. Edit `data/managers.csv` with new KPIs
+2. Edit `data/managers_meta.csv` with updated metadata
+3. Run `python3 -m scripts.pipeline`
+4. Commit and push — GitHub Pages will auto-deploy
+
+---
+
+## License
+
+MIT License — see [LICENSE](LICENSE)
+
+---
+
+## Acknowledgments
+
+Built with [Claude Code](https://claude.com/claude-code) in February 2026.
+
+Data sources: FBref, StatsBomb, Transfermarkt, Understat, Premier Injuries.
+
+Inspired by the football analytics community and Spurs' need for a data-driven hiring process.
+
+---
+
+**COYS** 🤍💙

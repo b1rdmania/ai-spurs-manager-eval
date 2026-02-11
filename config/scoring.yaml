@@ -1,0 +1,142 @@
+# Scoring Configuration — Spurs Manager Evaluation v2
+# Single source of truth for all scoring parameters
+
+# ============================================================
+# PEER ANALYSIS (40% of Final Score)
+# 9 categories, each scored 0-10, weighted to sum to 1.0
+# ============================================================
+peer_categories:
+  pressing_intensity:
+    weight: 0.14
+    kpis:
+      ppda: { weight: 0.4, invert: true }
+      high_press_regains_90: { weight: 0.3, invert: false }
+      oppda: { weight: 0.3, invert: false }
+
+  attacking_quality:
+    weight: 0.14
+    kpis:
+      npxgd_90: { weight: 0.4, invert: false }
+      xg_per_shot: { weight: 0.3, invert: false }
+      xg_open_play_90: { weight: 0.3, invert: false }
+
+  defensive_solidity:
+    weight: 0.12
+    kpis:
+      xga_90: { weight: 0.5, invert: true }
+      player_availability: { weight: 0.5, invert: false }
+
+  big_game_performance:
+    weight: 0.12
+    kpis:
+      big6_win_pct: { weight: 0.4, invert: false, derived: true }
+      ko_win_rate: { weight: 0.35, invert: false }
+      big6_xgd: { weight: 0.25, invert: false, derived: true }
+
+  youth_development:
+    weight: 0.10
+    kpis:
+      u23_minutes_pct: { weight: 0.4, invert: false }
+      academy_debuts: { weight: 0.35, invert: false }
+      youth_progression_count: { weight: 0.25, invert: false }
+
+  squad_health:
+    weight: 0.09
+    kpis:
+      injury_days_season: { weight: 0.4, invert: true }
+      squad_rotation_index: { weight: 0.3, invert: true }
+      player_availability: { weight: 0.3, invert: false }
+
+  transfer_acumen:
+    weight: 0.10
+    kpis:
+      squad_value_delta_m: { weight: 0.35, invert: false }
+      net_spend_m: { weight: 0.35, invert: true }
+      sell_on_profit_m: { weight: 0.3, invert: false }
+
+  media_stability:
+    weight: 0.09
+    kpis:
+      media_vol_sigma: { weight: 1.0, invert: true }
+
+  stakeholder_alignment:
+    weight: 0.10
+    kpis:
+      fan_sentiment_pct: { weight: 0.5, invert: false }
+      board_backing_score: { weight: 0.5, invert: false }
+
+# ============================================================
+# SPURS-FIT INDEX (60% weight within Spurs-Fit Total)
+# 4 categories, each 0-25 points, sigmoid continuous scoring
+# ============================================================
+fit_index:
+  composition:
+    fit_weight: 0.60
+    potential_weight: 0.40
+
+  front_foot_play:
+    max_points: 25
+    metrics:
+      ppda: { center: 10.0, steepness: 8, invert: true, weight: 0.40 }
+      npxgd_90: { center: 0.12, steepness: 12, invert: false, weight: 0.35 }
+      xg_per_shot: { center: 0.10, steepness: 15, invert: false, weight: 0.25 }
+
+  youth_pathway:
+    max_points: 25
+    metrics:
+      u23_minutes_pct: { center: 12.0, steepness: 6, invert: false, weight: 0.45 }
+      academy_debuts: { center: 4, steepness: 5, invert: false, weight: 0.30 }
+      youth_progression_count: { center: 3, steepness: 5, invert: false, weight: 0.25 }
+
+  talent_inflation:
+    max_points: 25
+    metrics:
+      squad_value_delta_m: { center: 60.0, steepness: 4, invert: false, weight: 0.40 }
+      net_spend_m: { center: 50.0, steepness: 3, invert: true, weight: 0.30 }
+      sell_on_profit_m: { center: 20.0, steepness: 5, invert: false, weight: 0.30 }
+
+  big_game_mentality:
+    max_points: 25
+    metrics:
+      big6_win_pct: { center: 30.0, steepness: 5, invert: false, weight: 0.40 }
+      ko_win_rate: { center: 45.0, steepness: 5, invert: false, weight: 0.35 }
+      big6_xgd: { center: 0.0, steepness: 8, invert: false, weight: 0.25 }
+
+# ============================================================
+# POTENTIAL INDEX (40% weight within Spurs-Fit Total)
+# ============================================================
+potential_index:
+  weights:
+    age_factor: 0.20
+    trend_factor: 0.30
+    resource_leverage: 0.30
+    temperament_factor: 0.20
+
+  age_curve:
+    peak_age: 43
+    sigma: 8.0
+
+  temperament:
+    # Scoring: each incident deducts from a base of 1.0
+    touchline_ban_penalty: 0.10
+    public_disagreement_penalty: 0.15
+    mid_season_departure_penalty: 0.25
+    contract_years_bonus: 0.05  # per year remaining, max 0.15
+
+  trend:
+    # Calculated from season-over-season KPI improvements
+    metrics: [npxgd_90, ppda, league_position_pct]
+    improvement_weight: 0.7
+    consistency_weight: 0.3
+
+  resource_leverage:
+    # Overperformance = league_finish_pct - squad_value_rank_pct
+    # Positive = overperforming, negative = underperforming
+    scale_factor: 2.0  # multiply difference, clip to [0, 1]
+
+# ============================================================
+# FINAL SCORE COMPOSITION
+# ============================================================
+final_score:
+  peer_weight: 0.40
+  spursfit_weight: 0.60

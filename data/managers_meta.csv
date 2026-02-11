@@ -1,0 +1,11 @@
+manager_name,slug,age,nationality,current_club,available,touchline_bans_3yr,public_disagreements,mid_season_departures,contract_years_remaining,board_backing_score,prev_npxgd_90,prev_ppda,prev_league_pos_pct,squad_value_rank_pct,league_finish_pct
+Roberto De Zerbi,roberto-de-zerbi,46,Italian,Free Agent,True,2,2,1,0,5.0,0.28,8.5,65,55,60
+Mauricio Pochettino,mauricio-pochettino,53,Argentine,USA (National Team),False,0,1,0,1.5,6.0,0.05,10.5,50,35,45
+Xavi Hernandez,xavi-hernandez,46,Spanish,Free Agent,True,3,3,0,0,4.0,0.22,9.0,80,85,75
+Andoni Iraola,andoni-iraola,42,Spanish,AFC Bournemouth,True,0,0,0,2.5,8.0,0.10,9.5,55,30,60
+Oliver Glasner,oliver-glasner,50,Austrian,Crystal Palace,False,1,0,0,1.5,6.0,0.02,11.5,40,40,45
+Marco Silva,marco-silva,47,Portuguese,Fulham,True,0,0,0,2.0,7.0,0.08,10.8,50,35,50
+Kieran McKenna,kieran-mckenna,39,Irish,Ipswich Town,True,0,0,0,3.0,8.0,0.15,9.5,60,20,42
+Xabi Alonso,xabi-alonso,44,Spanish,Real Madrid,False,0,0,0,2.0,9.0,0.30,8.2,95,90,95
+Robbie Keane,robbie-keane,45,Irish,Ferencvaros,True,0,0,0,1.0,6.0,0.05,11.0,70,15,75
+John Heitinga,john-heitinga,41,Dutch,Tottenham (Assistant),True,0,0,0,0.5,4.0,0.00,11.5,45,25,40

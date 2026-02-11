@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spurs Manager Evaluation 2025 - Unified Final Scoring System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace']
+                    },
+                    colors: {
+                        'spurs': {
+                            'navy': '#132257',
+                            'blue': '#1e3d72',
+                            'teal': '#50e3c2'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s infinite',
+                        'bounce-slow': 'bounce 2s infinite'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom CSS for advanced effects */
+        .hero-pattern {
+            background-image: 
+                radial-gradient(circle at 25px 25px, rgba(255,255,255,0.1) 2px, transparent 0),
+                radial-gradient(circle at 75px 75px, rgba(255,255,255,0.05) 2px, transparent 0);
+            background-size: 100px 100px;
+        }
+        
+        .score-cell {
+            --hue: calc(120 * var(--score) / 100);
+            background: hsla(var(--hue), 75%, 45%, 0.15);
+            color: hsl(var(--hue), 60%, 35%);
+            border-radius: 6px;
+            padding: 4px 8px;
+            font-weight: 600;
+            text-align: center;
+            position: relative;
+        }
+        
+        .score-badge {
+            background: linear-gradient(135deg, 
+                hsl(calc(120 * var(--score) / 100), 70%, 50%) 0%,
+                hsl(calc(120 * var(--score) / 100), 60%, 40%) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        
+        .radar-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+        
+        .radar-card:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 10px 25px rgba(0,0,0,0.3));
+        }
+        
+        .table-row {
+            transition: all 0.2s ease;
+        }
+        
+        .table-row:hover {
+            background-color: rgba(30, 61, 114, 0.1);
+            transform: translateX(4px);
+        }
+        
+        .table-row.selected {
+            background-color: rgba(80, 227, 194, 0.15);
+            border-left: 4px solid #50e3c2;
+        }
+        
+        .sticky-header {
+            backdrop-filter: blur(12px);
+            background: rgba(19, 34, 87, 0.9);
+        }
+        
+        .github-corner {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 50;
+        }
+        
+        .underline-animate {
+            position: relative;
+        }
+        
+        .underline-animate::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #50e3c2, #1e3d72);
+            transition: width 0.3s ease;
+        }
+        
+        .underline-animate:hover::after {
+            width: 100%;
+        }
+        
+        .stat-chip {
+            background: linear-gradient(135deg, rgba(80, 227, 194, 0.2), rgba(30, 61, 114, 0.2));
+            border: 1px solid rgba(80, 227, 194, 0.3);
+        }
+        
+        .tooltip {
+            position: relative;
+        }
+        
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            z-index: 100;
+        }
+        
+        @media (prefers-color-scheme: light) {
+            .dark\:bg-gray-900 { background-color: #f8fafc; }
+            .dark\:text-white { color: #1e293b; }
+        }
+    </style>
+</head>
+<body class="dark:bg-gray-900 dark:text-white bg-gray-50 text-gray-900 font-sans">
+    <!-- Theme Toggle -->
+    <button id="themeToggle" class="fixed top-4 right-4 z-50 p-2 rounded-lg bg-white/10 hover:bg-white/20 transition-all">
+        <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+        <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+    </button>
+
+    <!-- Hero Section -->
+    <div class="hero-pattern bg-gradient-to-br from-spurs-navy via-spurs-blue to-indigo-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 py-16 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-spurs-teal to-white bg-clip-text text-transparent">
+                <span class="underline-animate">Spurs Manager</span> Evaluation 2025
+            </h1>
+            <p class="text-xl md:text-2xl mb-4 text-gray-200">
+                Revolutionary Unified Final Scoring: 40% Peer Analysis + 60% Spurs-Fit Model
+            </p>
+            
+            <!-- Tech Stack Badges -->
+            <div class="flex flex-wrap justify-center gap-3 mb-8">
+                <span class="stat-chip px-3 py-1 rounded-full text-sm font-mono">Python ⚙️</span>
+                <span class="stat-chip px-3 py-1 rounded-full text-sm font-mono">PCA Analysis ⚙️</span>
+                <span class="stat-chip px-3 py-1 rounded-full text-sm font-mono">Opta Data ⚙️</span>
+                <span class="stat-chip px-3 py-1 rounded-full text-sm font-mono">18 KPIs</span>
+                <span class="stat-chip px-3 py-1 rounded-full text-sm font-mono">12 PCA Traits</span>
+                <span class="stat-chip px-3 py-1 rounded-full text-sm font-mono">8 Candidates</span>
+            </div>
+            
+            <a href="https://github.com/b1rdmania/ai-spurs-manager-eval" 
+               class="inline-flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all transform hover:scale-105 backdrop-blur-sm border border-white/20 mr-4">
+                <i data-lucide="github" class="w-5 h-5 mr-2"></i>
+                View Code & Data
+            </a>
+            
+            </a>
+        </div>
+    </div>
+
+    <!-- Unified Scoring Model Explanation -->
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <div class="bg-gradient-to-r from-spurs-navy to-spurs-blue rounded-2xl p-6 text-white text-center shadow-2xl">
+            <h3 class="text-2xl font-bold mb-6 flex items-center justify-center">
+                <i data-lucide="target" class="w-6 h-6 mr-2"></i>
+                Unified Final Scoring System
+            </h3>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-purple-600/20 rounded-xl p-4 border border-purple-400/30">
+                    <h5 class="text-lg font-semibold mb-2">Peer Analysis (40%)</h5>
+                    <p class="text-sm text-gray-200">12-category peer-normalized scoring across tactical style, attacking potency, defensive solidity, big game performance, youth development, and squad management</p>
+                </div>
+                <div class="bg-red-600/20 rounded-xl p-4 border border-red-400/30">
+                    <h5 class="text-lg font-semibold mb-2">Spurs-Fit Model (60%)</h5>
+                    <p class="text-sm text-gray-200">
+                        <strong>Fit Index:</strong> Front-foot play, youth development, talent inflation, big games<br>
+                        <strong>Potential Index:</strong> Age factor, 3-year trend, resource leverage, temperament
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 py-8">
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Table Section -->
+            <div class="lg:col-span-2">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-3xl font-bold">Unified Final Manager Rankings</h2>
+                </div>
+                <div class="overflow-hidden rounded-2xl shadow-2xl bg-white dark:bg-gray-800">
+                    <div class="sticky top-0 z-30 sticky-header border-b border-spurs-teal/30">
+                        <div class="grid grid-cols-7 gap-4 p-4 font-semibold text-sm">
+                            <div class="text-center">Rank</div>
+                            <div class="col-span-2">Manager</div>
+                            <div class="text-center tooltip" data-tooltip="Combined final score out of 100">Final</div>
+                            <div class="text-center tooltip" data-tooltip="Peer-normalized score out of 10">Peer</div>
+                            <div class="text-center tooltip" data-tooltip="Spurs-specific fit score out of 100">Fit</div>
+                            <div class="text-center">Report</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Table Rows -->
+                    <div class="divide-y divide-gray-200 dark:divide-gray-700">
+                        <div class="table-row grid grid-cols-7 gap-4 p-4 items-center" id="row-kieran-mckenna" data-manager="kieran-mckenna">
+                            <div class="text-center">
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-green-500 text-white font-bold text-sm">#1</span>
+                            </div>
+                            <div class="col-span-2">
+                                <div class="font-semibold">Kieran McKenna</div>
+                                <div class="text-sm text-gray-500">The Young Virtuoso</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="score-badge" style="--score: 79.5">79.5</div>
+                            </div>
+                            <div class="text-center">
+                                <span class="score-cell" style="--score: 58">5.8</span>
+                            </div>
+                            <div class="text-center">
+                                <span class="score-cell" style="--score: 93.9">93.9</span>
+                            </div>
+                            <div class="text-center">
+                                <a href="reports/kieran_mckenna.html" class="inline-flex items-center px-3 py-1 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900 dark:hover:bg-blue-800 text-blue-800 dark:text-blue-200 rounded-md text-sm transition-all">
+                                    <i data-lucide="file-text" class="w-3 h-3 mr-1"></i>
+                                    Report
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row grid grid-cols-7 gap-4 p-4 items-center" id="row-roberto-de-zerbi" data-manager="roberto-de-zerbi">
+                            <div class="text-center">
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-500 text-white font-bold text-sm">#2</span>
+                            </div>
+                            <div class="col-span-2">
+                                <div class="font-semibold">Roberto De Zerbi</div>
+                                <div class="text-sm text-gray-500">The Technical Virtuoso</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="score-badge" style="--score: 75.6">75.6</div>
+                            </div>
+                            <div class="text-center">
+                                <span class="score-cell" style="--score: 56">5.6</span>
+                            </div>
+                            <div class="text-center">
+                                <span class="score-cell" style="--score: 88.6">88.6</span>
+                            </div>
+                            <div class="text-center">
+                                <a href="reports/roberto_de_zerbi.html" class="inline-flex items-center px-3 py-1 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900 dark:hover:bg-blue-800 text-blue-800 dark:text-blue-200 rounded-md text-sm transition-all">
+                                    <i data-lucide="file-text" class="w-3 h-3 mr-1"></i>
+                                    Report
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row grid grid-cols-7 gap-4 p-4 items-center" id="row-thomas-frank" data-manager="thomas-frank">
+                            <div class="text-center">
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-500 text-white font-bold text-sm">#3</span>
+                            </div>
+                            <div class="col-span-2">
+                                <div class="font-semibold">Thomas Frank</div>
+                                <div class="text-sm text-gray-500">The Value Engineer</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="score-badge" style="--score: 70.9">70.9</div>
+                            </div>
+                            <div class="text-center">
+                                <span class="score-cell" style="--score: 56">5.6</span>
+                            </div>
+                            <div class="text-center">
+                                <span class="score-cell" style="--score: 80.8">80.8</span>
+                            </div>
+                            <div class="text-center">
+                                <a href="reports/thomas_frank.html" class="inline-flex items-center px-3 py-1 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900 dark:hover:bg-blue-800 text-blue-800 dark:text-blue-200 rounded-md text-sm transition-all">
+                                    <i data-lucide="file-text" class="w-3 h-3 mr-1"></i>
+                                    Report
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row grid grid-cols-7 gap-4 p-4 items-center" id="row-mauricio-pochettino" data-manager="mauricio-pochettino">
+                            <div class="text-center">
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-orange-500 text-white font-bold text-sm">#4</span>
+                            </div>
+                            <div class="col-span-2">
+                                <div class="font-semibold">Mauricio Pochettino</div>
+                                <div class="text-sm text-gray-500">The Homecoming Hero</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="score-badge" style="--score: 70.6">70.6</div>
+                            </div>
+                            <div class="text-center">
+                                <span class="score-cell" style="--score: 56">5.6</span>
+                            </div>
+                            <div class="text-center">
+                                <span class="score-cell" style="--score: 80.4">80.4</span>
+                            </div>
+                            <div class="text-center">
+                                <a href="reports/mauricio_pochettino.html" class="inline-flex items-center px-3 py-1 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900 dark:hover:bg-blue-800 text-blue-800 dark:text-blue-200 rounded-md text-sm transition-all">
+                                    <i data-lucide="file-text" class="w-3 h-3 mr-1"></i>
+                                    Report
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row grid grid-cols-7 gap-4 p-4 items-center" id="row-xavi-hernandez" data-manager="xavi-hernandez">
+                            <div class="text-center">
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500 text-white font-bold text-sm">#5</span>
+                            </div>
+                            <div class="col-span-2">
+                                <div class="font-semibold">Xavi Hernández</div>
+                                <div class="text-sm text-gray-500">The Flawed Visionary</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="score-badge" style="--score: 63.7">63.7</div>
+                            </div>
+                            <div class="text-center">
+                                <span class="score-cell" style="--score: 47">4.7</span>
+                            </div>
+                            <div class="text-center">
+                                <span class="score-cell" style="--score: 74.8">74.8</span>
+                            </div>
+                            <div class="text-center">
+                                <a href="reports/xavi_hernandez.html" class="inline-flex items-center px-3 py-1 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900 dark:hover:bg-blue-800 text-blue-800 dark:text-blue-200 rounded-md text-sm transition-all">
+                                    <i data-lucide="file-text" class="w-3 h-3 mr-1"></i>
+                                    Report
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row grid grid-cols-7 gap-4 p-4 items-center" id="row-marco-silva" data-manager="marco-silva">
+                            <div class="text-center">
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-600 text-white font-bold text-sm">#6</span>
+                            </div>
+                            <div class="col-span-2">
+                                <div class="font-semibold">Marco Silva</div>
+                                <div class="text-sm text-gray-500">The Steady Hand</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="score-badge" style="--score: 60.7">60.7</div>
+                            </div>
+                            <div class="text-center">
+                                <span class="score-cell" style="--score: 51">5.1</span>
+                            </div>
+                            <div class="text-center">
+                                <span class="score-cell" style="--score: 67.1">67.1</span>
+                            </div>
+                            <div class="text-center">
+                                <a href="reports/marco_silva.html" class="inline-flex items-center px-3 py-1 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900 dark:hover:bg-blue-800 text-blue-800 dark:text-blue-200 rounded-md text-sm transition-all">
+                                    <i data-lucide="file-text" class="w-3 h-3 mr-1"></i>
+                                    Report
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row grid grid-cols-7 gap-4 p-4 items-center" id="row-oliver-glasner" data-manager="oliver-glasner">
+                            <div class="text-center">
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-700 text-white font-bold text-sm">#7</span>
+                            </div>
+                            <div class="col-span-2">
+                                <div class="font-semibold">Oliver Glasner</div>
+                                <div class="text-sm text-gray-500">The Quick-Fix Specialist</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="score-badge" style="--score: 55.6">55.6</div>
+                            </div>
+                            <div class="text-center">
+                                <span class="score-cell" style="--score: 45">4.5</span>
+                            </div>
+                            <div class="text-center">
+                                <span class="score-cell" style="--score: 62.6">62.6</span>
+                            </div>
+                            <div class="text-center">
+                                <a href="reports/oliver_glasner.html" class="inline-flex items-center px-3 py-1 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900 dark:hover:bg-blue-800 text-blue-800 dark:text-blue-200 rounded-md text-sm transition-all">
+                                    <i data-lucide="file-text" class="w-3 h-3 mr-1"></i>
+                                    Report
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="table-row grid grid-cols-7 gap-4 p-4 items-center" id="row-andoni-iraola" data-manager="andoni-iraola">
+                            <div class="text-center">
+                                <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-800 text-white font-bold text-sm">#8</span>
+                            </div>
+                            <div class="col-span-2">
+                                <div class="font-semibold">Andoni Iraola</div>
+                                <div class="text-sm text-gray-500">The Wrong Fit</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="score-badge" style="--score: 51.8">51.8</div>
+                            </div>
+                            <div class="text-center">
+                                <span class="score-cell" style="--score: 39">3.9</span>
+                            </div>
+                            <div class="text-center">
+                                <span class="score-cell" style="--score: 60.4">60.4</span>
+                            </div>
+                            <div class="text-center">
+                                <a href="reports/andoni_iraola.html" class="inline-flex items-center px-3 py-1 bg-blue-100 hover:bg-blue-200 dark:bg-blue-900 dark:hover:bg-blue-800 text-blue-800 dark:text-blue-200 rounded-md text-sm transition-all">
+                                    <i data-lucide="file-text" class="w-3 h-3 mr-1"></i>
+                                    Report
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Radar Charts Section -->
+            <div class="lg:col-span-1">
+                <h3 class="text-2xl font-bold mb-6 text-center">Visual Profiles</h3>
+                <div class="grid grid-cols-2 lg:grid-cols-1 gap-4">
+                    <div class="radar-card bg-white dark:bg-gray-800 rounded-xl p-3 shadow-lg" data-manager="kieran-mckenna">
+                        <img src="assets/radar_kieran_mckenna.png" class="w-full rounded-lg" 
+                             alt="Kieran McKenna radar" title="Kieran McKenna - 79.5/100">
+                        <div class="text-center mt-2">
+                            <div class="font-semibold text-sm">Kieran McKenna</div>
+                            <div class="text-xs text-gray-500">79.5/100</div>
+                        </div>
+                    </div>
+                    
+                    <div class="radar-card bg-white dark:bg-gray-800 rounded-xl p-3 shadow-lg" data-manager="roberto-de-zerbi">
+                        <img src="assets/radar_roberto_de_zerbi.png" class="w-full rounded-lg" 
+                             alt="Roberto De Zerbi radar" title="Roberto De Zerbi - 75.6/100">
+                        <div class="text-center mt-2">
+                            <div class="font-semibold text-sm">Roberto De Zerbi</div>
+                            <div class="text-xs text-gray-500">75.6/100</div>
+                        </div>
+                    </div>
+                    
+                    <div class="radar-card bg-white dark:bg-gray-800 rounded-xl p-3 shadow-lg" data-manager="thomas-frank">
+                        <img src="assets/radar_thomas_frank.png" class="w-full rounded-lg" 
+                             alt="Thomas Frank radar" title="Thomas Frank - 70.9/100">
+                        <div class="text-center mt-2">
+                            <div class="font-semibold text-sm">Thomas Frank</div>
+                            <div class="text-xs text-gray-500">70.9/100</div>
+                        </div>
+                    </div>
+                    
+                    <div class="radar-card bg-white dark:bg-gray-800 rounded-xl p-3 shadow-lg" data-manager="mauricio-pochettino">
+                        <img src="assets/radar_mauricio_pochettino.png" class="w-full rounded-lg" 
+                             alt="Mauricio Pochettino radar" title="Mauricio Pochettino - 70.6/100">
+                        <div class="text-center mt-2">
+                            <div class="font-semibold text-sm">Mauricio Pochettino</div>
+                            <div class="text-xs text-gray-500">70.6/100</div>
+                        </div>
+                    </div>
+                    
+                    <div class="radar-card bg-white dark:bg-gray-800 rounded-xl p-3 shadow-lg" data-manager="xavi-hernandez">
+                        <img src="assets/radar_xavi_hernandez.png" class="w-full rounded-lg" 
+                             alt="Xavi Hernández radar" title="Xavi Hernández - 63.7/100">
+                        <div class="text-center mt-2">
+                            <div class="font-semibold text-sm">Xavi Hernández</div>
+                            <div class="text-xs text-gray-500">63.7/100</div>
+                        </div>
+                    </div>
+                    
+                    <div class="radar-card bg-white dark:bg-gray-800 rounded-xl p-3 shadow-lg" data-manager="marco-silva">
+                        <img src="assets/radar_marco_silva.png" class="w-full rounded-lg" 
+                             alt="Marco Silva radar" title="Marco Silva - 60.7/100">
+                        <div class="text-center mt-2">
+                            <div class="font-semibold text-sm">Marco Silva</div>
+                            <div class="text-xs text-gray-500">60.7/100</div>
+                        </div>
+                    </div>
+                    
+                    <div class="radar-card bg-white dark:bg-gray-800 rounded-xl p-3 shadow-lg" data-manager="oliver-glasner">
+                        <img src="assets/radar_oliver_glasner.png" class="w-full rounded-lg" 
+                             alt="Oliver Glasner radar" title="Oliver Glasner - 55.6/100">
+                        <div class="text-center mt-2">
+                            <div class="font-semibold text-sm">Oliver Glasner</div>
+                            <div class="text-xs text-gray-500">55.6/100</div>
+                        </div>
+                    </div>
+                    
+                    <div class="radar-card bg-white dark:bg-gray-800 rounded-xl p-3 shadow-lg" data-manager="andoni-iraola">
+                        <img src="assets/radar_andoni_iraola.png" class="w-full rounded-lg" 
+                             alt="Andoni Iraola radar" title="Andoni Iraola - 51.8/100">
+                        <div class="text-center mt-2">
+                            <div class="font-semibold text-sm">Andoni Iraola</div>
+                            <div class="text-xs text-gray-500">51.8/100</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Score Matrix -->
+        <div class="mt-16 text-center">
+            <h2 class="text-3xl font-bold mb-8">Complete Unified Scoring Analysis Matrix</h2>
+            <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-2xl">
+                <img src="assets/score_matrix.png" class="w-full max-w-4xl mx-auto rounded-lg" alt="Unified Scoring Matrix">
+            </div>
+        </div>
+        
+        <!-- Methodology -->
+        <div class="mt-16">
+            <h2 class="text-3xl font-bold mb-8 text-center">Unified Final Scoring Methodology</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl">
+                    <h4 class="text-xl font-bold mb-4 text-purple-600 dark:text-purple-400">Peer Analysis (40% Weight)</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start">
+                            <span class="font-semibold text-purple-600 dark:text-purple-400 mr-2">•</span>
+                            <span><strong>Tactical Style:</strong> Pressing metrics and front-foot approach</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-semibold text-purple-600 dark:text-purple-400 mr-2">•</span>
+                            <span><strong>Attacking Potency:</strong> xG creation and offensive efficiency</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-semibold text-purple-600 dark:text-purple-400 mr-2">•</span>
+                            <span><strong>Defensive Solidity:</strong> Injury management and availability</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-semibold text-purple-600 dark:text-purple-400 mr-2">•</span>
+                            <span><strong>Big Game Performance:</strong> Record vs top opposition</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-semibold text-purple-600 dark:text-purple-400 mr-2">•</span>
+                            <span><strong>Youth Development:</strong> U23 minutes and academy debuts</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-semibold text-purple-600 dark:text-purple-400 mr-2">•</span>
+                            <span><strong>Squad Management:</strong> Player availability and fitness</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-xl">
+                    <h4 class="text-xl font-bold mb-4 text-red-600 dark:text-red-400">Spurs-Fit Model (60% Weight)</h4>
+                    <h5 class="font-semibold mb-2 text-red-500">Fit Index (60% of Spurs-Fit)</h5>
+                    <ul class="space-y-1 text-sm mb-4">
+                        <li class="flex items-start">
+                            <span class="font-semibold text-red-600 dark:text-red-400 mr-2">•</span>
+                            <span><strong>Front-Foot Play:</strong> <span class="tooltip font-mono text-xs" data-tooltip="Passes Per Defensive Action ≤11">PPDA</span> ≤11, npxGD ≥0.10, xG/shot ≥0.11</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-semibold text-red-600 dark:text-red-400 mr-2">•</span>
+                            <span><strong>Youth Development:</strong> U23 minutes ≥15%, academy debuts ≥3</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-semibold text-red-600 dark:text-red-400 mr-2">•</span>
+                            <span><strong>Talent Inflation:</strong> Squad value growth vs net spend efficiency</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-semibold text-red-600 dark:text-red-400 mr-2">•</span>
+                            <span><strong>Big Games:</strong> Top-8 performance and knockout success</span>
+                        </li>
+                    </ul>
+                    <h5 class="font-semibold mb-2 text-red-500">Potential Index (40% of Spurs-Fit)</h5>
+                    <ul class="space-y-1 text-sm">
+                        <li class="flex items-start">
+                            <span class="font-semibold text-red-600 dark:text-red-400 mr-2">•</span>
+                            <span><strong>Age Factor:</strong> Younger managers score higher (peak at 38-42)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-semibold text-red-600 dark:text-red-400 mr-2">•</span>
+                            <span><strong>3-Year Trend:</strong> Performance trajectory analysis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-semibold text-red-600 dark:text-red-400 mr-2">•</span>
+                            <span><strong>Resource Leverage:</strong> Overperformance relative to budget</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="font-semibold text-red-600 dark:text-red-400 mr-2">•</span>
+                            <span><strong>Temperament:</strong> Media stability and board relationships</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GitHub Corner -->
+    <div class="github-corner">
+        <a href="https://github.com/b1rdmania/ai-spurs-manager-eval" 
+           class="flex items-center px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white rounded-full shadow-lg transition-all transform hover:scale-105">
+            <i data-lucide="github" class="w-4 h-4 mr-2"></i>
+            <span class="text-sm font-medium">View on GitHub</span>
+            <span class="ml-2 text-xs bg-gray-700 px-2 py-1 rounded-full">⭐</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-spurs-navy to-spurs-blue text-white text-center py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="font-semibold mb-2">&copy; 2025 Spurs Manager Evaluation. Unified Final Scoring System v2.0</p>
+            <p class="text-sm text-gray-300">Data sources: FBref, Transfermarkt, Premier Injuries | Methodology: 40% Peer + 60% Spurs-Fit</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Dark mode toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('dark-mode', html.classList.contains('dark'));
+        });
+        
+        // Load saved theme
+        if (localStorage.getItem('dark-mode') === 'true' || 
+            (!localStorage.getItem('dark-mode') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+        
+        // Radar chart interactions
+        document.querySelectorAll('.radar-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const managerName = card.dataset.manager;
+                const targetRow = document.getElementById(`row-${managerName}`);
+                
+                if (targetRow) {
+                    // Remove previous selections
+                    document.querySelectorAll('.table-row').forEach(row => {
+                        row.classList.remove('selected');
+                    });
+                    
+                    // Add selection to clicked manager
+                    targetRow.classList.add('selected');
+                    
+                    // Smooth scroll to row
+                    targetRow.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }
+            });
+        });
+        
+        // Table row interactions
+        document.querySelectorAll('.table-row').forEach(row => {
+            row.addEventListener('click', () => {
+                const managerName = row.dataset.manager;
+                const targetCard = document.querySelector(`.radar-card[data-manager="${managerName}"]`);
+                
+                if (targetCard) {
+                    // Remove previous selections
+                    document.querySelectorAll('.table-row').forEach(r => {
+                        r.classList.remove('selected');
+                    });
+                    
+                    // Add selection
+                    row.classList.add('selected');
+                    
+                    // Smooth scroll to radar chart
+                    targetCard.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }
+            });
+        });
+        
+        // Add subtle animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for scroll animations
+        document.querySelectorAll('.radar-card, .table-row').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+        
+        // Trigger initial animation
+        setTimeout(() => {
+            document.querySelectorAll('.radar-card, .table-row').forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            });
+        }, 100);
+    </script>
+</body>
+</html>
