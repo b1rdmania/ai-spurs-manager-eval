@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated_at": "2026-02-11T19:18:31.948266",
+  "generated_at": "2026-02-13T17:32:59.868860",
   "methodology": {
     "peer_weight": 0.4,
     "spursfit_weight": 0.6,
@@ -33,21 +33,21 @@
       "current_club": "Real Madrid",
       "available": false,
       "rank": 1,
-      "final_score": 85.3,
-      "peer_score": 9.35,
+      "final_score": 82.4,
+      "peer_score": 8.68,
       "fit_index": 84.4,
-      "potential_index": 73.0,
-      "spursfit_total": 79.8,
+      "potential_index": 72.0,
+      "spursfit_total": 79.4,
       "peer_categories": {
-        "pressing_intensity": 10.0,
+        "pressing_intensity": 8.95,
         "attacking_quality": 10.0,
         "defensive_solidity": 10.0,
         "big_game_performance": 10.0,
-        "youth_development": 4.02,
-        "squad_health": 9.39,
-        "transfer_acumen": 10.0,
+        "youth_development": 3.29,
+        "squad_health": 9.43,
+        "transfer_acumen": 6.38,
         "media_stability": 10.0,
-        "stakeholder_alignment": 10.0
+        "stakeholder_alignment": 9.1
       },
       "fit_categories": {
         "front_foot_play": 22.62,
@@ -56,7 +56,7 @@
         "big_game_mentality": 22.24
       },
       "potential_components": {
-        "age": 0.992,
+        "age": 0.946,
         "trend": 0.504,
         "leverage": 0.6,
         "temperament": 1.0
@@ -78,28 +78,80 @@
       }
     },
     {
+      "slug": "mauricio-pochettino",
+      "name": "Mauricio Pochettino",
+      "nationality": "Argentine",
+      "age": 53,
+      "current_club": "USA (National Team)",
+      "available": false,
+      "rank": 2,
+      "final_score": 77.5,
+      "peer_score": 7.23,
+      "fit_index": 81.6,
+      "potential_index": 80.0,
+      "spursfit_total": 81.0,
+      "peer_categories": {
+        "pressing_intensity": 8.07,
+        "attacking_quality": 7.9,
+        "defensive_solidity": 6.53,
+        "big_game_performance": 4.94,
+        "youth_development": 8.15,
+        "squad_health": 3.78,
+        "transfer_acumen": 8.6,
+        "media_stability": 6.67,
+        "stakeholder_alignment": 10.0
+      },
+      "fit_categories": {
+        "front_foot_play": 23.44,
+        "youth_pathway": 21.97,
+        "talent_inflation": 24.8,
+        "big_game_mentality": 11.36
+      },
+      "potential_components": {
+        "age": 0.917,
+        "trend": 0.439,
+        "leverage": 1.0,
+        "temperament": 0.925
+      },
+      "narrative": {
+        "tagline": "The Prodigal Son",
+        "summary": "Spurs legend who built the club's greatest modern era (2014-2019), reaching the Champions League final. Currently committed to USA for the 2026 World Cup. The emotional favourite but unavailable until July.",
+        "strengths": [
+          "Deep understanding of Spurs culture and DNA",
+          "Proven PL track record building elite teams from scratch",
+          "Elite player development \u2014 Kane, Son, Alli all peaked under him"
+        ],
+        "concerns": [
+          "Unavailable until after World Cup (July 2026)",
+          "Question marks about whether the magic can be recaptured",
+          "Struggled at PSG and had mixed results at Chelsea"
+        ],
+        "verdict": "RECOMMENDED (SUMMER OPTION)"
+      }
+    },
+    {
       "slug": "andoni-iraola",
       "name": "Andoni Iraola",
       "nationality": "Spanish",
       "age": 42,
       "current_club": "AFC Bournemouth",
       "available": true,
-      "rank": 2,
-      "final_score": 71.2,
-      "peer_score": 6.82,
+      "rank": 3,
+      "final_score": 68.3,
+      "peer_score": 6.23,
       "fit_index": 62.9,
-      "potential_index": 88.6,
-      "spursfit_total": 73.2,
+      "potential_index": 86.4,
+      "spursfit_total": 72.3,
       "peer_categories": {
-        "pressing_intensity": 7.65,
-        "attacking_quality": 5.46,
-        "defensive_solidity": 7.65,
-        "big_game_performance": 4.98,
-        "youth_development": 3.42,
-        "squad_health": 8.55,
-        "transfer_acumen": 6.58,
-        "media_stability": 8.87,
-        "stakeholder_alignment": 9.0
+        "pressing_intensity": 6.64,
+        "attacking_quality": 5.41,
+        "defensive_solidity": 7.62,
+        "big_game_performance": 5.02,
+        "youth_development": 2.68,
+        "squad_health": 8.66,
+        "transfer_acumen": 4.02,
+        "media_stability": 9.09,
+        "stakeholder_alignment": 7.56
       },
       "fit_categories": {
         "front_foot_play": 19.99,
@@ -108,7 +160,7 @@
         "big_game_mentality": 10.33
       },
       "potential_components": {
-        "age": 0.992,
+        "age": 0.882,
         "trend": 0.627,
         "leverage": 1.0,
         "temperament": 1.0
@@ -136,22 +188,22 @@
       "age": 46,
       "current_club": "Free Agent",
       "available": true,
-      "rank": 3,
-      "final_score": 65.7,
-      "peer_score": 6.09,
+      "rank": 4,
+      "final_score": 63.6,
+      "peer_score": 5.51,
       "fit_index": 79.9,
-      "potential_index": 52.4,
-      "spursfit_total": 68.9,
+      "potential_index": 53.5,
+      "spursfit_total": 69.3,
       "peer_categories": {
-        "pressing_intensity": 9.08,
-        "attacking_quality": 8.31,
-        "defensive_solidity": 4.05,
-        "big_game_performance": 5.74,
-        "youth_development": 6.0,
-        "squad_health": 4.14,
-        "transfer_acumen": 7.69,
-        "media_stability": 1.6,
-        "stakeholder_alignment": 5.98
+        "pressing_intensity": 7.86,
+        "attacking_quality": 8.25,
+        "defensive_solidity": 4.0,
+        "big_game_performance": 5.79,
+        "youth_development": 4.69,
+        "squad_health": 4.44,
+        "transfer_acumen": 4.38,
+        "media_stability": 3.03,
+        "stakeholder_alignment": 5.0
       },
       "fit_categories": {
         "front_foot_play": 21.93,
@@ -160,7 +212,7 @@
         "big_game_mentality": 13.56
       },
       "potential_components": {
-        "age": 0.932,
+        "age": 0.986,
         "trend": 0.36,
         "leverage": 0.6,
         "temperament": 0.25
@@ -188,22 +240,22 @@
       "age": 39,
       "current_club": "Ipswich Town",
       "available": true,
-      "rank": 4,
-      "final_score": 62.6,
-      "peer_score": 5.92,
+      "rank": 5,
+      "final_score": 59.9,
+      "peer_score": 5.38,
       "fit_index": 58.2,
-      "potential_index": 74.9,
-      "spursfit_total": 64.9,
+      "potential_index": 72.4,
+      "spursfit_total": 63.9,
       "peer_categories": {
-        "pressing_intensity": 5.18,
-        "attacking_quality": 4.69,
-        "defensive_solidity": 6.64,
-        "big_game_performance": 0.28,
-        "youth_development": 7.81,
-        "squad_health": 9.77,
-        "transfer_acumen": 4.92,
-        "media_stability": 9.6,
-        "stakeholder_alignment": 6.88
+        "pressing_intensity": 4.53,
+        "attacking_quality": 4.65,
+        "defensive_solidity": 6.63,
+        "big_game_performance": 0.26,
+        "youth_development": 6.34,
+        "squad_health": 9.79,
+        "transfer_acumen": 3.03,
+        "media_stability": 9.7,
+        "stakeholder_alignment": 5.77
       },
       "fit_categories": {
         "front_foot_play": 14.88,
@@ -212,7 +264,7 @@
         "big_game_mentality": 3.85
       },
       "potential_components": {
-        "age": 0.882,
+        "age": 0.755,
         "trend": 0.302,
         "leverage": 0.94,
         "temperament": 1.0
@@ -240,22 +292,22 @@
       "age": 46,
       "current_club": "Free Agent",
       "available": true,
-      "rank": 5,
-      "final_score": 61.4,
-      "peer_score": 5.49,
+      "rank": 6,
+      "final_score": 59.7,
+      "peer_score": 4.99,
       "fit_index": 80.4,
-      "potential_index": 43.8,
-      "spursfit_total": 65.8,
+      "potential_index": 44.9,
+      "spursfit_total": 66.2,
       "peer_categories": {
-        "pressing_intensity": 6.35,
-        "attacking_quality": 6.24,
-        "defensive_solidity": 6.38,
-        "big_game_performance": 7.01,
-        "youth_development": 10.0,
-        "squad_health": 6.48,
-        "transfer_acumen": 4.55,
-        "media_stability": 0.0,
-        "stakeholder_alignment": 0.83
+        "pressing_intensity": 5.53,
+        "attacking_quality": 6.18,
+        "defensive_solidity": 6.34,
+        "big_game_performance": 7.08,
+        "youth_development": 8.11,
+        "squad_health": 6.7,
+        "transfer_acumen": 2.04,
+        "media_stability": 0.61,
+        "stakeholder_alignment": 0.64
       },
       "fit_categories": {
         "front_foot_play": 19.83,
@@ -264,7 +316,7 @@
         "big_game_mentality": 17.26
       },
       "potential_components": {
-        "age": 0.932,
+        "age": 0.986,
         "trend": 0.372,
         "leverage": 0.3,
         "temperament": 0.25
@@ -292,22 +344,22 @@
       "age": 47,
       "current_club": "Fulham",
       "available": true,
-      "rank": 6,
-      "final_score": 54.5,
-      "peer_score": 4.41,
+      "rank": 7,
+      "final_score": 52.9,
+      "peer_score": 3.88,
       "fit_index": 50.3,
-      "potential_index": 78.1,
-      "spursfit_total": 61.4,
+      "potential_index": 80.4,
+      "spursfit_total": 62.3,
       "peer_categories": {
-        "pressing_intensity": 3.2,
-        "attacking_quality": 4.07,
-        "defensive_solidity": 5.1,
-        "big_game_performance": 0.81,
-        "youth_development": 4.96,
-        "squad_health": 5.8,
-        "transfer_acumen": 5.85,
-        "media_stability": 6.69,
-        "stakeholder_alignment": 4.77
+        "pressing_intensity": 2.92,
+        "attacking_quality": 4.04,
+        "defensive_solidity": 5.06,
+        "big_game_performance": 0.78,
+        "youth_development": 3.22,
+        "squad_health": 5.97,
+        "transfer_acumen": 2.96,
+        "media_stability": 7.27,
+        "stakeholder_alignment": 3.97
       },
       "fit_categories": {
         "front_foot_play": 10.17,
@@ -316,7 +368,7 @@
         "big_game_mentality": 4.39
       },
       "potential_components": {
-        "age": 0.882,
+        "age": 0.997,
         "trend": 0.549,
         "leverage": 0.8,
         "temperament": 1.0
@@ -338,28 +390,72 @@
       }
     },
     {
+      "slug": "igor-tudor",
+      "name": "Igor Tudor",
+      "nationality": "Croatian",
+      "age": 46,
+      "current_club": "Lazio",
+      "available": true,
+      "rank": 8,
+      "final_score": 47.4,
+      "peer_score": 3.34,
+      "fit_index": 51.1,
+      "potential_index": 65.1,
+      "spursfit_total": 56.7,
+      "peer_categories": {
+        "pressing_intensity": 6.32,
+        "attacking_quality": 5.7,
+        "defensive_solidity": 4.05,
+        "big_game_performance": 4.41,
+        "youth_development": 0.31,
+        "squad_health": 1.07,
+        "transfer_acumen": 4.53,
+        "media_stability": 0.0,
+        "stakeholder_alignment": 0.64
+      },
+      "fit_categories": {
+        "front_foot_play": 21.35,
+        "youth_pathway": 2.13,
+        "talent_inflation": 16.3,
+        "big_game_mentality": 11.29
+      },
+      "potential_components": {
+        "age": 0.986,
+        "trend": 0.687,
+        "leverage": 0.56,
+        "temperament": 0.4
+      },
+      "narrative": {
+        "tagline": "Manager Candidate",
+        "summary": "",
+        "strengths": [],
+        "concerns": [],
+        "verdict": "UNDER EVALUATION"
+      }
+    },
+    {
       "slug": "robbie-keane",
       "name": "Robbie Keane",
       "nationality": "Irish",
       "age": 45,
       "current_club": "Ferencvaros",
       "available": true,
-      "rank": 7,
-      "final_score": 45.0,
-      "peer_score": 2.88,
+      "rank": 9,
+      "final_score": 44.4,
+      "peer_score": 2.74,
       "fit_index": 34.9,
       "potential_index": 87.1,
       "spursfit_total": 55.8,
       "peer_categories": {
-        "pressing_intensity": 0.5,
-        "attacking_quality": 0.93,
-        "defensive_solidity": 1.41,
-        "big_game_performance": 3.45,
-        "youth_development": 3.54,
-        "squad_health": 2.84,
-        "transfer_acumen": 2.86,
-        "media_stability": 7.42,
-        "stakeholder_alignment": 5.37
+        "pressing_intensity": 0.36,
+        "attacking_quality": 0.86,
+        "defensive_solidity": 1.36,
+        "big_game_performance": 3.46,
+        "youth_development": 3.43,
+        "squad_health": 3.17,
+        "transfer_acumen": 2.02,
+        "media_stability": 7.88,
+        "stakeholder_alignment": 4.49
       },
       "fit_categories": {
         "front_foot_play": 4.75,
@@ -390,110 +486,6 @@
       }
     },
     {
-      "slug": "mauricio-pochettino",
-      "name": "Mauricio Pochettino",
-      "nationality": "Argentine",
-      "age": 53,
-      "current_club": "USA (National Team)",
-      "available": false,
-      "rank": 8,
-      "final_score": 38.3,
-      "peer_score": 2.74,
-      "fit_index": 33.1,
-      "potential_index": 64.4,
-      "spursfit_total": 45.6,
-      "peer_categories": {
-        "pressing_intensity": 3.75,
-        "attacking_quality": 2.62,
-        "defensive_solidity": 1.84,
-        "big_game_performance": 2.93,
-        "youth_development": 2.95,
-        "squad_health": 1.08,
-        "transfer_acumen": 1.62,
-        "media_stability": 3.78,
-        "stakeholder_alignment": 3.86
-      },
-      "fit_categories": {
-        "front_foot_play": 7.88,
-        "youth_pathway": 11.12,
-        "talent_inflation": 6.65,
-        "big_game_mentality": 7.43
-      },
-      "potential_components": {
-        "age": 0.458,
-        "trend": 0.525,
-        "leverage": 0.7,
-        "temperament": 0.925
-      },
-      "narrative": {
-        "tagline": "The Prodigal Son",
-        "summary": "Spurs legend who built the club's greatest modern era (2014-2019), reaching the Champions League final. Currently committed to USA for the 2026 World Cup. The emotional favourite but unavailable until July.",
-        "strengths": [
-          "Deep understanding of Spurs culture and DNA",
-          "Proven PL track record building elite teams from scratch",
-          "Elite player development \u2014 Kane, Son, Alli all peaked under him"
-        ],
-        "concerns": [
-          "Unavailable until after World Cup (July 2026)",
-          "Question marks about whether the magic can be recaptured",
-          "Struggled at PSG and had mixed results at Chelsea"
-        ],
-        "verdict": "RECOMMENDED (SUMMER OPTION)"
-      }
-    },
-    {
-      "slug": "john-heitinga",
-      "name": "John Heitinga",
-      "nationality": "Dutch",
-      "age": 41,
-      "current_club": "Tottenham (Assistant)",
-      "available": true,
-      "rank": 9,
-      "final_score": 32.8,
-      "peer_score": 1.26,
-      "fit_index": 24.7,
-      "potential_index": 78.7,
-      "spursfit_total": 46.3,
-      "peer_categories": {
-        "pressing_intensity": 0.38,
-        "attacking_quality": 0.0,
-        "defensive_solidity": 0.39,
-        "big_game_performance": 0.51,
-        "youth_development": 2.17,
-        "squad_health": 1.26,
-        "transfer_acumen": 2.36,
-        "media_stability": 5.96,
-        "stakeholder_alignment": 0.0
-      },
-      "fit_categories": {
-        "front_foot_play": 3.91,
-        "youth_pathway": 9.67,
-        "talent_inflation": 7.54,
-        "big_game_mentality": 3.56
-      },
-      "potential_components": {
-        "age": 0.969,
-        "trend": 0.512,
-        "leverage": 0.8,
-        "temperament": 1.0
-      },
-      "narrative": {
-        "tagline": "The Inside Man",
-        "summary": "Already at the club as Frank's assistant. Previously served as interim manager at Ajax twice. Low-risk caretaker option who knows the squad, but limited permanent managerial experience.",
-        "strengths": [
-          "Already knows the squad and facilities",
-          "Can stabilise immediately with no transition",
-          "Low-cost, low-risk appointment"
-        ],
-        "concerns": [
-          "Very limited managerial CV",
-          "Caretaker energy may not inspire long-term",
-          "Two Ajax interim stints were mixed"
-        ],
-        "verdict": "CARETAKER OPTION"
-      }
-    },
-    {
       "slug": "oliver-glasner",
       "name": "Oliver Glasner",
       "nationality": "Austrian",
@@ -501,21 +493,21 @@
       "current_club": "Crystal Palace",
       "available": false,
       "rank": 10,
-      "final_score": 32.7,
-      "peer_score": 1.86,
+      "final_score": 34.0,
+      "peer_score": 1.81,
       "fit_index": 23.8,
-      "potential_index": 69.6,
-      "spursfit_total": 42.1,
+      "potential_index": 75.7,
+      "spursfit_total": 44.6,
       "peer_categories": {
-        "pressing_intensity": 1.64,
-        "attacking_quality": 1.55,
-        "defensive_solidity": 0.89,
-        "big_game_performance": 3.72,
-        "youth_development": 0.0,
-        "squad_health": 0.0,
-        "transfer_acumen": 2.1,
-        "media_stability": 5.24,
-        "stakeholder_alignment": 1.74
+        "pressing_intensity": 1.61,
+        "attacking_quality": 1.53,
+        "defensive_solidity": 0.85,
+        "big_game_performance": 3.74,
+        "youth_development": 0.18,
+        "squad_health": 0.28,
+        "transfer_acumen": 0.85,
+        "media_stability": 6.06,
+        "stakeholder_alignment": 1.41
       },
       "fit_categories": {
         "front_foot_play": 6.23,
@@ -524,7 +516,7 @@
         "big_game_mentality": 7.97
       },
       "potential_components": {
-        "age": 0.682,
+        "age": 0.986,
         "trend": 0.615,
         "leverage": 0.6,
         "temperament": 0.975
@@ -543,6 +535,58 @@
           "Has confirmed commitment to Palace for this season"
         ],
         "verdict": "CAUTIOUSLY RECOMMENDED"
+      }
+    },
+    {
+      "slug": "john-heitinga",
+      "name": "John Heitinga",
+      "nationality": "Dutch",
+      "age": 41,
+      "current_club": "Tottenham (Assistant)",
+      "available": true,
+      "rank": 11,
+      "final_score": 32.5,
+      "peer_score": 1.32,
+      "fit_index": 24.7,
+      "potential_index": 76.2,
+      "spursfit_total": 45.3,
+      "peer_categories": {
+        "pressing_intensity": 0.46,
+        "attacking_quality": 0.0,
+        "defensive_solidity": 0.36,
+        "big_game_performance": 0.5,
+        "youth_development": 2.45,
+        "squad_health": 1.6,
+        "transfer_acumen": 1.63,
+        "media_stability": 6.67,
+        "stakeholder_alignment": 0.0
+      },
+      "fit_categories": {
+        "front_foot_play": 3.91,
+        "youth_pathway": 9.67,
+        "talent_inflation": 7.54,
+        "big_game_mentality": 3.56
+      },
+      "potential_components": {
+        "age": 0.844,
+        "trend": 0.512,
+        "leverage": 0.8,
+        "temperament": 1.0
+      },
+      "narrative": {
+        "tagline": "The Inside Man",
+        "summary": "Already at the club as Frank's assistant. Previously served as interim manager at Ajax twice. Low-risk caretaker option who knows the squad, but limited permanent managerial experience.",
+        "strengths": [
+          "Already knows the squad and facilities",
+          "Can stabilise immediately with no transition",
+          "Low-cost, low-risk appointment"
+        ],
+        "concerns": [
+          "Very limited managerial CV",
+          "Caretaker energy may not inspire long-term",
+          "Two Ajax interim stints were mixed"
+        ],
+        "verdict": "CARETAKER OPTION"
       }
     }
   ]
