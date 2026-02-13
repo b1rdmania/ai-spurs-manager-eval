@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "generated_at": "2026-02-13T18:18:07.947103",
+  "generated_at": "2026-02-13T18:37:42.288488",
   "methodology": {
     "peer_weight": 0.4,
     "spursfit_weight": 0.6,
@@ -427,18 +427,18 @@
       },
       "narrative": {
         "tagline": "The Possession Perfectionist",
-        "summary": "Championship winner with Leicester (97 points) before guiding Chelsea to 4th place and Champions League qualification. Guardiola protégé with elite youth development credentials but weak pressing intensity.",
+        "summary": "Championship winner with Leicester (97 points) before guiding Chelsea to 4th place and Champions League qualification. Guardiola prot\u00e9g\u00e9 with elite youth development credentials but weak pressing intensity.",
         "strengths": [
           "Elite youth development (16% U23 minutes, 8 academy debuts)",
           "Possession mastery (xG open play 1.10, 2nd in Premier League)",
           "Championship pedigree (Leicester 97 points, record promotion)",
-          "Strong sell-on profit (€101m from player sales)",
+          "Strong sell-on profit (\u20ac101m from player sales)",
           "Decent Big 6 record (2-1-2, Conference League winner)",
           "Long-term potential (age 45, Guardiola education)"
         ],
         "concerns": [
           "Weak pressing intensity (PPDA 12.8, ranked 12th in PL)",
-          "Massive net spend dependency (£185m in one season)",
+          "Massive net spend dependency (\u00a3185m in one season)",
           "Fragile fan backing (43% approval, 57% wanted change)",
           "Unavailable (at Chelsea, requires buyout compensation)",
           "Defensive fragility (xGA 1.13, only +2 goal difference)",
@@ -500,7 +500,7 @@
           "High injury burden (820 days/season, overworks squad)",
           "Poor knockout record (42%, lost to 5th-tier Annecy)",
           "Resigned after 1 season citing exhaustion",
-          "Minimal player trading value (€12m sell-on profit)"
+          "Minimal player trading value (\u20ac12m sell-on profit)"
         ],
         "verdict": "SHORT-TERM SURVIVAL HIRE"
       }
