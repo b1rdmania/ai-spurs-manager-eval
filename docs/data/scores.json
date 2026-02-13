@@ -426,11 +426,25 @@
         "temperament": 1.0
       },
       "narrative": {
-        "tagline": "Manager Candidate",
-        "summary": "",
-        "strengths": [],
-        "concerns": [],
-        "verdict": "UNDER EVALUATION"
+        "tagline": "The Possession Perfectionist",
+        "summary": "Championship winner with Leicester (97 points) before guiding Chelsea to 4th place and Champions League qualification. Guardiola protégé with elite youth development credentials but weak pressing intensity.",
+        "strengths": [
+          "Elite youth development (16% U23 minutes, 8 academy debuts)",
+          "Possession mastery (xG open play 1.10, 2nd in Premier League)",
+          "Championship pedigree (Leicester 97 points, record promotion)",
+          "Strong sell-on profit (€101m from player sales)",
+          "Decent Big 6 record (2-1-2, Conference League winner)",
+          "Long-term potential (age 45, Guardiola education)"
+        ],
+        "concerns": [
+          "Weak pressing intensity (PPDA 12.8, ranked 12th in PL)",
+          "Massive net spend dependency (£185m in one season)",
+          "Fragile fan backing (43% approval, 57% wanted change)",
+          "Unavailable (at Chelsea, requires buyout compensation)",
+          "Defensive fragility (xGA 1.13, only +2 goal difference)",
+          "Mixed knockout record (early FA/Carabao Cup exits)"
+        ],
+        "verdict": "TALENTED BUT MISALIGNED"
       }
     },
     {
@@ -470,11 +484,25 @@
         "temperament": 0.4
       },
       "narrative": {
-        "tagline": "Manager Candidate",
-        "summary": "",
-        "strengths": [],
-        "concerns": [],
-        "verdict": "UNDER EVALUATION"
+        "tagline": "The Tactical Mercenary",
+        "summary": "Ultra-aggressive pressing specialist who secured Marseille 3rd place (73 points) in 2022-23. Elite pressing intensity but minimal youth development and toxic dressing room culture. Actually hired by Spurs in Feb 2026.",
+        "strengths": [
+          "Elite pressing intensity (PPDA 8.34, 3rd-most aggressive)",
+          "Strong defensive organization (xGA/90 1.05)",
+          "Proven survival specialist (Marseille 3rd, Verona 9th)",
+          "Immediately available from Lazio",
+          "Competitive in big games (4-6-2 vs top 6)",
+          "Vertical attacking transitions from high press"
+        ],
+        "concerns": [
+          "Abysmal youth development (8% U23 minutes, only 2 debuts)",
+          "Toxic dressing room culture (1.75 media sigma, player revolt)",
+          "High injury burden (820 days/season, overworks squad)",
+          "Poor knockout record (42%, lost to 5th-tier Annecy)",
+          "Resigned after 1 season citing exhaustion",
+          "Minimal player trading value (€12m sell-on profit)"
+        ],
+        "verdict": "SHORT-TERM SURVIVAL HIRE"
       }
     },
     {
