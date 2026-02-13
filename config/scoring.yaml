@@ -113,8 +113,8 @@ potential_index:
     temperament_factor: 0.20
 
   age_curve:
-    peak_age: 43
-    sigma: 8.0
+    peak_age: 48
+    sigma: 12.0  # Wider curve: no penalty for 40-56 range
 
   temperament:
     # Scoring: each incident deducts from a base of 1.0
